@@ -204,7 +204,7 @@
         h1{
             position: absolute;
             top: 60%; left: 50%; transform: translateX(-50%);
-            font: bold 44px/1 '맑은고딕'; color: #fff;
+            font: bold 44px/1 'Noto Sans KR'; color: #fff;
         }
     }
     .inner{
@@ -223,7 +223,7 @@
         width: 1180px;
         margin: 0 auto;
         padding: 0 10px; box-sizing: border-box;
-        font: 14px/1.7 '맑은고딕'; color: #333;
+        font: 14px/1.7 'Noto Sans KR'; color: #333;
 
         ul{
             display: inline-block;
@@ -234,7 +234,7 @@
                 a{
                     display: block;
                     padding: 30px 0;
-                    font: bold 16px/1.7 '맑은고딕'; color: #333;
+                    font: bold 16px/1.7 'Noto Sans KR'; color: #333;
                 }
                 &:last-of-type{padding-right: 0;}
             }
@@ -305,7 +305,7 @@
             h1{
                 position: absolute;
                 top: 60%; left: 50%; transform: translateX(-50%);
-                font: bold 44px/1 '맑은고딕'; color: #fff;
+                font: bold 44px/1 'Noto Sans KR'; color: #fff;
             }
         }
         .inner{
@@ -340,7 +340,7 @@
             height: 60px;
             h1{
                 a{
-                    font: bold 18px/1 '맑은고딕';
+                    font: bold 18px/1 'Noto Sans KR';
                     padding: 0;
                 }
             }
@@ -354,7 +354,7 @@
     //footer
     #footer_sub{
         .inner{
-            font: 12px/1.5 '맑은고딕';
+            font: 12px/1.5 'Noto Sans KR';
             padding: 0 16px;
 
             ul{
@@ -362,7 +362,7 @@
                     padding-right: 20px;
                     a{
                         padding: 20px 0;
-                        font: bold 12px/1.7 '맑은고딕';
+                        font: bold 12px/1.7 'Noto Sans KR';
                     }
                 }
             }
