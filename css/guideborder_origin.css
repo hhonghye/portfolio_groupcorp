@@ -1,0 +1,27 @@
+/* 안내선 */
+*{
+    box-sizing: border-box;
+}
+#header {
+    border: 1px solid red;
+}
+#header .inner{
+    border: 1px solid blue;
+}
+#header .inner ul li a{
+    border: 1px solid green;
+}
+#visual {
+    border: 1px solid violet;
+}
+#visual .inner{
+    border: 1px solid black;
+}
+#brand .inner{
+    border: 1px solid orange;
+}
+
+#comments .inner ul{ border: 1px solid red; box-sizing: border-box;}
+#comments .inner ul li{ border: 1px solid blue;}
+
+#footer .inner{ border: 1px solid aqua;}

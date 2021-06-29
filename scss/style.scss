@@ -1,0 +1,358 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700&display=swap');
+
+@import "reset.scss";
+@import "subpage_layout.scss";
+@import "community.scss";
+@import "department.scss";
+@import "join.scss";
+
+
+//header
+#header{
+    width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 5;
+    transition: 0.2s;
+
+    .inner{
+        width: 1180px; height: 100px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 5;
+
+        h1{
+            position: absolute;
+            top: 50%; left: 0; transform: translateY(-50%);
+            a{
+                display: block;
+                font: bold 28px/1 'arial'; color: #fff;
+                padding: 30px 0; box-sizing: border-box;
+            }
+        }
+
+        .menu_web{
+            #gnb{
+                display: flex;
+                justify-content: center;
+
+                &::after{content: "";display: block;clear: both;}
+                >li{
+                    float: left;
+                    position: relative;
+                    >a{
+                        display: block;
+                        font: bold 18px/1 '맑은고딕'; color: #fff;
+                        padding: 40px 30px; box-sizing: border-box;
+                    }
+                    >ul{
+                        display: none;
+                        width: 100%;
+                        position: absolute;
+                        top: 100px; left: 0;
+                        z-index: 3;
+                        >li{
+                            >a{
+                                display: block;
+                                width: 100%; height: 50px;
+                                font: 16px/50px '맑은고딕'; color: #333;
+                                text-align: center;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            .util{
+                position: absolute;
+                top: 50%; right: 0; transform: translateY(-50%);
+                &::after{content: "";display: block;clear: both;}
+                li{
+                    float: left;
+                    position: relative;
+                    a{
+                        display: block;
+                        font: 16px/1 '맑은고딕'; color: #fff;
+                        padding: 30px 15px; box-sizing: border-box;
+                    }
+                    &::after{
+                        content: ""; display: block;
+                        position: absolute;
+                        top: 50%; right: 0;
+                        transform: translateY(-50%);
+
+                        width: 1px; height: 10px;
+                        background: #ccc;
+                    }
+                    &:last-of-type::after{display: none;}
+                }
+            }
+        }
+
+        .btn_call{
+            display: none;
+            width: 24px; height: 24px;
+            position: absolute; top: 50%; right: 0; transform: translateY(-50%);
+            z-index: 5;
+            &::before{
+                content: "";
+                display: block;
+                width: 100%; height: 2px;
+                background: #fff;
+                position: absolute; top: 0; left: 0;
+                transition: top 0.5s 0s, transform 0.5s 0.5s;
+            }
+            &::after{
+                content: "";
+                display: block;
+                width: 100%; height: 2px;
+                background: #fff;
+                position: absolute; bottom: 0; left: 0;
+                transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+            }
+            span{
+                display: block;
+                width: 100%; height: 2px;
+                background: #fff;
+                text-indent: -9999px;
+                position: absolute; top: 50%; margin-top: -1px;
+                transition: 0.5s, opacity 0.5s 0.5s;
+            }
+            &.on{
+                &::before{
+                    top: calc(50% - 1px);
+                    transform: rotate(45deg);
+                    background: #222;
+                }
+                &::after{
+                    bottom: calc(50% - 1px);
+                    transform: rotate(-45deg);
+                    background: #222;
+                }
+                span{
+                    opacity: 0;
+                }
+            }
+        }
+
+        .menu_mobile{
+            position: fixed;
+            top: 0; right: -50vw;
+            padding-top: 100px; box-sizing: border-box;
+            width: 50vw; height: 100vh;
+            background: #fff;
+            text-align: center;
+            transition: 0.5s;
+            overflow: hidden;
+
+            .util_mobile{
+                li{
+                    a{
+                        display: block;
+                        font: 24px/1 'arial'; color: #222;
+                        padding: 10px 0 ; box-sizing: border-box;
+                    }
+                }
+            }
+            #gnb_mobile{
+                >li{
+                    >a{
+                        display: block;
+                        font: 28px/1 'arial'; color: #222;
+                        padding: 15px 0 ; box-sizing: border-box;
+                    
+                    }
+                    >ul{
+                        display: none;
+                        >li{
+                            >a{
+                                display: block;
+                                font: 24px/1 'arial'; color: #555;
+                                padding: 10px 0 ; box-sizing: border-box;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.on{
+                right: 0;
+            }
+        }
+    }
+
+    &.on{
+        background: #fff;
+        .inner h1 a{
+            color: #333;
+        }
+        .menu_web{
+            #gnb li a{
+                color: #333;
+            }
+            .util li a{
+                color: #333;
+            }
+            
+        }
+        .btn_call{
+            &::before{background: #333;}
+            &::after{background: #333;}
+            span{background: #333;}
+        }
+
+    }
+}
+
+figure{
+    width: 100%; height: 600px;
+    background: rgba(255, 0, 0, 0.5);
+}
+
+//footer
+#footer{
+    border-top: 1px solid #eee;
+    .inner{
+        width: 1180px;
+        margin: 0 auto;
+        padding: 0 10px; box-sizing: border-box;
+        font: 14px/1.7 '맑은고딕'; color: #333;
+
+        ul{
+            display: inline-block;
+            &::after{content: "";display: block;clear: both;}
+            li{
+                float: left;
+                padding-right: 40px;
+                a{
+                    display: block;
+                    padding: 30px 0;
+                    font: bold 16px/1.7 '맑은고딕'; color: #333;
+                }
+                &:last-of-type{padding-right: 0;}
+            }
+        }
+        dl{
+            display: inline-block;
+            dt{
+                float: left;
+                padding: 0 10px;
+                &:nth-of-type(1){padding-left: 0;}
+            }
+            dd{
+                float: left;
+                padding-right: 10px;
+                position: relative;
+                &::after{
+                    content: ""; display: block;
+                    width: 1px; height: 10px; background: #aaa;
+                    position: absolute; top: 50%; right: 0; margin-top: -6px;
+                }
+                &:last-of-type::after{display: none;}
+            }
+        }
+        h1{
+            display: block;
+            padding-bottom: 20px;
+            font: bold 28px/1 'arial';
+        }
+        p{
+            display: block;
+            padding-bottom: 30px;
+        }
+    }
+}
+
+
+
+
+/* ---------- tablet ---------- */
+@media screen and (max-width: 1179px){
+    //header
+    #header{
+        padding: 0 20px; box-sizing: border-box;
+        .inner{
+            width: 100%; height: 80px;
+    
+            .menu_web{
+                #gnb{
+                    display: none;
+                }
+                .util{
+                    display: none;
+                }
+            }
+    
+            .btn_call{
+                display: block;
+            }
+    
+        }
+    }
+
+
+    //footer
+    #footer{
+        .inner{
+            width: 100%;
+            text-align: center;
+            padding: 0 100px;
+            ul{
+                li{
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+    
+}
+
+/* ---------- mobile ---------- */
+@media screen and (max-width: 599px){
+    #header{
+        .inner{
+            height: 60px;
+            h1{
+                a{
+                    font: bold 18px/1 '맑은고딕';
+                    padding: 0;
+                }
+            }
+            .menu_mobile{
+                right: -100%;
+                width: 100%;
+            }
+        }
+
+    }
+    //footer
+    #footer{
+        .inner{
+            font: 12px/1.5 '맑은고딕';
+            padding: 0 16px;
+
+            ul{
+                li{
+                    padding-right: 20px;
+                    a{
+                        padding: 20px 0;
+                        font: bold 12px/1.7 '맑은고딕';
+                    }
+                }
+            }
+            dl{
+                dt{
+                    padding: 0 6px;
+                }
+                dd{
+                    padding-right: 8px;
+                }
+            }
+            h1{
+                padding-bottom: 20px;
+                font: bold 18px/1 'arial';
+            }
+        }
+    }
+}

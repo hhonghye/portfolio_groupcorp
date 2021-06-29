@@ -1,0 +1,35 @@
+.community{
+    .inner{
+        table{
+            width: 100%;
+            text-align: center;
+            thead{
+                th{
+                    background: #333;
+                    font: bold 16px/1 '맑은고딕'; color: #fff;
+                    padding: 16px; box-sizing: border-box;
+                    &:nth-of-type(1){width: 5%;}
+                    &:nth-of-type(2){width: 65%;}
+                    &:nth-of-type(3){width: 15%;}
+                    &:nth-of-type(4){width: 15%;}
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        font: 16px/1 '맑은고딕'; color: #000;
+                        padding: 16px; box-sizing: border-box;
+                        border-bottom: 1px solid #eee;
+                        &:nth-of-type(2){text-align: left;}
+                        a{
+                            color: #000;
+                        }
+                    }
+                    &:hover{
+                        background: #efefef;
+                    }
+                }
+            }
+        }
+    }
+}
