@@ -452,12 +452,7 @@ table, th, td {
     #header .inner .menu_web #gnb {
       display: flex;
       justify-content: center; }
-      #header .inner .menu_web #gnb::after {
-        content: "";
-        display: block;
-        clear: both; }
       #header .inner .menu_web #gnb > li {
-        float: left;
         position: relative; }
         #header .inner .menu_web #gnb > li > a {
           display: block;
