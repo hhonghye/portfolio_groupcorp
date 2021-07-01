@@ -293,23 +293,14 @@ table, th, td {
         display: block; }
 
   .content .subpage_visual {
-    width: 100%;
-    height: 400px;
-    background: rgba(51, 51, 51, 0.445);
-    position: relative; }
+    height: 300px; }
     .content .subpage_visual h1 {
-      position: absolute;
-      top: 60%;
-      left: 50%;
-      transform: translateX(-50%);
-      font: bold 44px/1 'Noto Sans KR';
-      color: #fff; }
+      top: 50%;
+      font-size: 4vw; }
   .content .inner {
-    width: 1180px;
-    min-height: 400px;
-    margin: 0 auto;
-    padding: 100px 0;
-    box-sizing: border-box; }
+    width: 100%;
+    min-height: none;
+    padding: 150px 20px; }
 
   #footer_sub .inner {
     width: 100%;
@@ -322,11 +313,19 @@ table, th, td {
   #header_sub .inner {
     height: 60px; }
     #header_sub .inner h1 a {
-      font: bold 18px/1 'Noto Sans KR';
+      font: bold 21px/1 'Noto Sans KR';
       padding: 0; }
     #header_sub .inner .menu_mobile {
       right: -100%;
       width: 100%; }
+
+  .content .subpage_visual {
+    height: 200px; }
+    .content .subpage_visual h1 {
+      top: 55%;
+      font-size: 24px; }
+  .content .inner {
+    padding: 100px 20px; }
 
   #footer_sub .inner {
     font: 12px/1.5 'Noto Sans KR';
@@ -452,7 +451,7 @@ table, th, td {
   text-align: center; }
 .info ul {
   padding: 30px 0;
-  border-top: 2px solid #ccc;
+  border-top: 1px solid #ccc;
   margin: 50px 0;
   display: flex;
   justify-content: space-between; }
@@ -464,12 +463,49 @@ table, th, td {
       font: bold 21px/1 'Noto Sans KR';
       color: #333;
       padding-bottom: 20px;
-      border-bottom: 2px solid #ccc;
+      border-bottom: 1px solid #ccc;
       margin-bottom: 20px; }
     .info ul li p {
       font: 16px/1.75 'Noto Sans KR';
       color: #555; }
 
+@media screen and (max-width: 1179px) {
+  .info > h2 {
+    font-size: 24px; }
+  .info > p {
+    font-size: 16px; }
+  .info ul li h3 {
+    font-size: 18px; }
+  .info ul li p {
+    font-size: 16px; } }
+@media screen and (max-width: 599px) {
+  .map_wrap .branch li {
+    height: 60px; }
+    .map_wrap .branch li a {
+      font: bold 14px/60px 'Noto Sans KR'; }
+  .map_wrap #map {
+    height: 300px; }
+
+  .info > h2 {
+    font-size: 18px;
+    padding-bottom: 10px; }
+  .info > p {
+    font-size: 14px; }
+  .info ul {
+    display: block; }
+    .info ul li {
+      width: 100%;
+      padding: 0; }
+      .info ul li h3 {
+        font-size: 16px;
+        padding-bottom: 10px;
+        margin-bottom: 0;
+        border: none; }
+      .info ul li p {
+        font-size: 14px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ccc; } }
 #header {
   width: 100%;
   position: fixed;

@@ -297,20 +297,15 @@
 
     .content{
         .subpage_visual{
-            width: 100%; height: 400px;
-            background: rgba(51, 51, 51, 0.445);
-            position: relative;
+            height: 300px;
             h1{
-                position: absolute;
-                top: 60%; left: 50%; transform: translateX(-50%);
-                font: bold 44px/1 'Noto Sans KR'; color: #fff;
+                top: 50%;
+                font-size: 4vw;
             }
         }
         .inner{
-            width: 1180px; min-height: 400px;
-            margin: 0 auto;
-            padding: 100px 0; box-sizing: border-box;
-    
+            width: 100%; min-height: none;
+            padding: 150px 20px;
         }
     }
 
@@ -338,7 +333,7 @@
             height: 60px;
             h1{
                 a{
-                    font: bold 18px/1 'Noto Sans KR';
+                    font: bold 21px/1 'Noto Sans KR';
                     padding: 0;
                 }
             }
@@ -349,6 +344,21 @@
         }
 
     }
+
+    .content{
+        .subpage_visual{
+            height: 200px;
+            h1{
+                top: 55%;
+                font-size: 24px;
+            }
+        }
+        .inner{
+            padding: 100px 20px;
+        }
+    }
+
+
     //footer
     #footer_sub{
         .inner{

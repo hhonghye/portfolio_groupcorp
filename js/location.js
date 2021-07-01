@@ -112,7 +112,7 @@ function callTo(target) {
 	var call = document.querySelector(".info>p");
 	call.innerText = target;
 }
-/*-- 지하철 --*/
+/*-- 지하철, 버스, 차 --*/
 function howToGo(sub, bus, car){
     var howToGo = document.querySelectorAll(".info ul li p");
     howToGo[0].innerText = sub;
@@ -120,11 +120,6 @@ function howToGo(sub, bus, car){
     howToGo[2].innerText = car;
 
 }
-/*-- 버스 --*/
-/*-- 자가용 --*/
-
-
-
 
 /* ------------- resize -------------- */
 window.onresize = function(){
