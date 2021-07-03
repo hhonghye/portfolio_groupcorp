@@ -19,6 +19,8 @@ function getFlickr(url, id, search_tags){
     .success(function(data){
         var imgs = data.photos.photo;
 
+        $("#gallery ul").empty();
+
         $(imgs).each(function(index, data){
             $("#gallery .list")
                 .append(
@@ -40,13 +42,17 @@ function getFlickr(url, id, search_tags){
                 )
         });
 
-        iso = new Isotope(".list",{
-            itemSelector: ".list>li",
-            columnWidth: ".list>li",
-            transitionDuration: "0.5s",
-            percentPosition: true,
-            isPercent:true
-        });
+        setTimeout(function(){
+            iso = new Isotope(".list",{
+                itemSelector: ".list>li",
+                columnWidth: ".list>li",
+                transitionDuration: "0.5s",
+                percentPosition: true,
+                isPercent:true
+            });
+            $(".list").addClass("on");
+        },500);
+        
 
     
     })
@@ -83,3 +89,10 @@ function createPopup(img_src){
     );
     $("body").css("overflow", "hidden");
 }
+
+//서치 클릭 이벤트
+$(".search button").on("click", function(){
+    var tags = $(this).prev().val();
+
+    getFlickr(url_search, "", tags);
+});

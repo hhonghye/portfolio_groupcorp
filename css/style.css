@@ -422,8 +422,9 @@ input, a, button {
         background: #efefef;
         transform: scale(1.2); }
 
-.inner {
-  width: 85% !important; }
+.inner.gallery {
+  width: 85% !important;
+  min-height: 800px; }
 
 .search {
   position: absolute;
@@ -459,7 +460,13 @@ input, a, button {
     width: 100%;
     display: flex;
     align-content: space-between;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.8s; }
+    #gallery .list.on {
+      transform: translateY(0);
+      opacity: 1; }
     #gallery .list li {
       width: 25%;
       padding: 18px;
@@ -485,7 +492,7 @@ input, a, button {
       #gallery .list li:hover {
         transform: scale(1.03); }
       #gallery .list li:hover a img {
-        filter: saturate(1); }
+        filter: saturate(1.2); }
 
 .popup {
   position: fixed;
