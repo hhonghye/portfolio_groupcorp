@@ -518,6 +518,21 @@ input, a, button {
     color: #fff;
     cursor: pointer; }
 
+/* ---------- tablet ---------- */
+@media screen and (max-width: 1179px) {
+  .search input[type=text] {
+    width: 50vw;
+    font-size: 16px; }
+
+  #gallery .list li {
+    width: 33.3%;
+    padding: 15px;
+    margin-bottom: 35px; }
+    #gallery .list li h3 {
+      font-size: 16px; }
+    #gallery .list li p {
+      font-size: 12px; } }
+/* ---------- mobile ---------- */
 .map_wrap {
   width: 100%; }
   .map_wrap .branch {

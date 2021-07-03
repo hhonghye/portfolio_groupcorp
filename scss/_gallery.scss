@@ -77,3 +77,21 @@
         cursor: pointer;
     }
 }
+
+/* ---------- tablet ---------- */
+@media screen and (max-width: 1179px){
+    .search{input[type=text]{width: 50vw; font-size: 16px;}}
+
+    #gallery{
+        .list{
+            li{
+                width: 33.3%; padding: 15px; margin-bottom: 35px;
+                h3{font-size: 16px;}
+                p{font-size: 12px;}
+            }
+        }
+    }
+}
+/* ---------- mobile ---------- */
+@media screen and (max-width: 599px){
+}
