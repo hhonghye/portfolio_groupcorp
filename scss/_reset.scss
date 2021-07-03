@@ -3,5 +3,6 @@
 ul, ol {list-style: none;}
 a {text-decoration: none;}
 table, th, td {border-collapse: collapse;}
+input, a, button {outline: none; border: none;}
 .wrap::after {content:""; display: block; clear: both;}
 .hidden{position: absolute; top: -9999px; opacity: 0;}
