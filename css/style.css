@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700&display=swap");
 * {
   margin: 0px;
@@ -462,10 +463,64 @@ input, select, a, button {
         transform: scale(1.15); }
 
 .youtube .inner {
-  width: 90%; }
+  width: 100%; }
   .youtube .inner #wrap {
-    width: 100%;
-    height: 100%; }
+    width: 100%; }
+    .youtube .inner #wrap .swiper-wrapper {
+      width: 100%;
+      height: 100%; }
+      .youtube .inner #wrap .swiper-wrapper .swiper-slide {
+        width: 500px;
+        height: 400px;
+        padding: 30px;
+        box-sizing: border-box; }
+        .youtube .inner #wrap .swiper-wrapper .swiper-slide .thumbnail {
+          width: 100%;
+          height: 250px; }
+          .youtube .inner #wrap .swiper-wrapper .swiper-slide .thumbnail a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: relative; }
+            .youtube .inner #wrap .swiper-wrapper .swiper-slide .thumbnail a::after {
+              content: "영상보기";
+              font: 14px/1 'Noto Sans KR';
+              color: #fff;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.5);
+              position: absolute;
+              top: 0;
+              left: 0;
+              opacity: 0;
+              transition: 0.5s; }
+            .youtube .inner #wrap .swiper-wrapper .swiper-slide .thumbnail a:hover::after {
+              opacity: 1; }
+        .youtube .inner #wrap .swiper-wrapper .swiper-slide .contents h2 {
+          position: relative;
+          font: bold 18px/1 'Noto Sans KR';
+          color: #333;
+          margin-top: 15px;
+          padding-top: 18px;
+          box-sizing: border-box; }
+          .youtube .inner #wrap .swiper-wrapper .swiper-slide .contents h2::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background: #333; }
+        .youtube .inner #wrap .swiper-wrapper .swiper-slide .contents p {
+          font: 14px/1.7 'Noto Sans KR';
+          color: #757575;
+          padding-top: 5px; }
 
 .gallery .inner {
   width: 85%;

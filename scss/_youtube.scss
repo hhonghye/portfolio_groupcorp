@@ -1,9 +1,62 @@
 .youtube{
     .inner{
-        width: 90%;
-        
+        width: 100%;
+
         #wrap{
-            width: 100%; height: 100%;
+            width: 100%; 
+            .swiper-wrapper{
+                width: 100%; height: 100%;
+
+                .swiper-slide{
+                    width: 500px; height: 400px;
+                    padding: 30px; box-sizing: border-box;
+    
+                    .thumbnail{
+                        width: 100%; height: 250px;
+                        a{
+                            display: block;
+                            width: 100%; height: 100%;
+                            background-repeat:no-repeat; 
+                            background-position:center; 
+                            background-size:cover; 
+                            position: relative;
+                            &::after{
+                                content:"영상보기"; 
+                                font:14px/1 'Noto Sans KR'; color:#fff; 
+                                display:flex; 
+                                justify-content:center; align-items:center; 
+                                width: 100%; height: 100%;
+                                background:rgba(0,0,0,0.5); 
+                                position:absolute; 
+                                top:0; left:0; 
+                                opacity: 0;
+                                transition: 0.5s;
+                            }
+                            &:hover::after{opacity: 1;}
+                        }
+                    }
+                    .contents{
+                        h2{
+                            position: relative;
+                            font: bold 18px/1 'Noto Sans KR'; color: #333;
+                            margin-top: 15px;
+                            padding-top: 18px; box-sizing: border-box;
+                            &::before{
+                                content: ""; 
+                                position: absolute; top: 0; left: 0;
+                                width: 20px; height: 3px;
+                                background: #333;
+                            }
+                        }
+                        p{
+                            font: 14px/1.7 'Noto Sans KR'; color: #757575;
+                            padding-top: 5px
+                        }
+                    }
+    
+                }
+            }
+            
         
         }
     }
