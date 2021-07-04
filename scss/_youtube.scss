@@ -3,12 +3,12 @@
         width: 100%;
 
         #wrap{
-            width: 100%; 
+            width: 100%; overflow: hidden;
             .swiper-wrapper{
                 width: 100%; height: 100%;
 
                 .swiper-slide{
-                    width: 500px; height: 400px;
+                    width: 500px;
                     padding: 30px; box-sizing: border-box;
     
                     .thumbnail{
@@ -38,19 +38,24 @@
                     .contents{
                         h2{
                             position: relative;
-                            font: bold 18px/1 'Noto Sans KR'; color: #333;
-                            margin-top: 15px;
-                            padding-top: 18px; box-sizing: border-box;
+                            font: bold 18px/1.5 'Noto Sans KR'; color: #333;
+                            margin-top: 30px;
+                            padding-top: 25px; box-sizing: border-box;
                             &::before{
                                 content: ""; 
                                 position: absolute; top: 0; left: 0;
                                 width: 20px; height: 3px;
-                                background: #333;
+                                background: #757575;
                             }
                         }
                         p{
                             font: 14px/1.7 'Noto Sans KR'; color: #757575;
-                            padding-top: 5px
+                            padding-top: 10px;
+                        }
+                        span{
+                            display: block;
+                            font: 12px/1 'Noto Sans KR'; color: orange;
+                            padding-top: 20px;
                         }
                     }
     
