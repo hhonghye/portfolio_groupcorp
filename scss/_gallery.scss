@@ -44,8 +44,16 @@
                 img{width: 100%; filter: saturate(0); transition: 0.3s;}
             }
             h3{
+                position: relative;
                 font: bold 18px/1 'Noto Sans KR'; color: #333;
-                padding-top: 10px;
+                margin-top: 15px;
+                padding-top: 18px; box-sizing: border-box;
+                &::before{
+                    content: ""; 
+                    position: absolute; top: 0; left: 0;
+                    width: 20px; height: 3px;
+                    background: #333;
+                }
             }
             p{
                 font: 14px/1.7 'Noto Sans KR'; color: #757575;
