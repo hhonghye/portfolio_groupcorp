@@ -71,7 +71,7 @@ $("body").on("click", "#gallery .list li a", function(e){
 });
 
 //팝업 close 클릭 이벤트 등록
-$("body").on("click", ".popup span", function(){
+$("body").on("click", ".popup .close", function(){
     $(".popup").fadeOut(300, function(){
         $(".popup").remove();
     });
@@ -84,7 +84,7 @@ function createPopup(img_src){
         $("<aside class='popup'>")
             .append(
                 $("<img>").attr({src: img_src}),
-                $("<span>").text("close")
+                $("<span class='close'>").text("close")
             ).fadeIn(300)
     );
     $("body").css("overflow", "hidden");
