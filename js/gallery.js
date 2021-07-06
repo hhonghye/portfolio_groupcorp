@@ -62,7 +62,6 @@ function getFlickr(url, id, search_tags){
     })
     .success(function(data){
         var imgs = data.photos.photo;
-        var imgNum = 0;
 
         $("#gallery ul").empty();
 
@@ -87,16 +86,17 @@ function getFlickr(url, id, search_tags){
                 );
         });
 
-        setTimeout(function(){
-            iso = new Isotope(".list",{
-                itemSelector: ".list>li",
-                columnWidth: ".list>li",
-                transitionDuration: "0.5s",
-                percentPosition: true,
-                isPercent:true
-            });
-            $(".list").addClass("on");
-        },500);
+        // setTimeout(function(){
+        //     iso = new Isotope(".list",{
+        //         itemSelector: ".list>li",
+        //         columnWidth: ".list>li",
+        //         transitionDuration: "0.5s",
+        //         percentPosition: true,
+        //         isPercent:true
+        //     });
+        //     $(".list").addClass("on");
+        // },500);
+        $(".list").addClass("on");
 
     
     })
