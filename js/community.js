@@ -1,5 +1,5 @@
 const url = "data/board.json"; //상대경로x?
-const target = $(".community .inner");
+const target = $(".community .inner .table_wrap");
 const resultData = callData(url);
 
 createTable(target, resultData);

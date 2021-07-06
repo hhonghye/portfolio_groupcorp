@@ -419,11 +419,13 @@ input, select, a, button {
     .community .inner .search button svg {
       font-size: 18px;
       color: #333; }
+.community .inner .table_wrap {
+  width: 100%; }
 .community .inner .pagination {
   width: 100%;
   text-align: center;
   position: absolute;
-  bottom: 180px;
+  bottom: 70px;
   left: 0;
   font-size: 0; }
   .community .inner .pagination .prev {
