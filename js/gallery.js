@@ -3,6 +3,50 @@ var url = "https://www.flickr.com/services/rest/?method=flickr.people.getPhotos"
 var url_search = "https://www.flickr.com/services/rest/?method=flickr.photos.search";
 
 getFlickr(url,"-ajm");
+
+
+/*--------이벤트등록--------*/
+
+
+//이미지 클릭시 팝업 뜨는 이벤트
+$("body").on("click", "#gallery .list li a", function(e){
+    e.preventDefault();
+    var img_src = $(this).attr("href");
+    createPopup(img_src);
+
+});
+
+//팝업 close 클릭 이벤트
+$("body").on("click", ".popup .close", function(){
+    $(".popup").fadeOut(300, function(){
+        $(".popup").remove();
+    });
+    $("body").css("overflow", "visible");
+});
+
+//서치 클릭 이벤트
+$(".search_gallery button").on("click", function(){
+    var tags = $(this).prev().val();
+
+    getFlickr(url_search, "", tags);
+});
+
+//윈도우상에서 키보드 이벤트
+$(window).on("keypress", function(e){
+    // console.log(e.keyCode);
+    if(e.keyCode == 13) {
+        var tags = $(".search_gallery input[type=text]").val();
+
+        getFlickr(url_search, "", tags);
+    }
+
+})
+
+
+/*--------함수정의--------*/
+
+
+//플리커api 함수
 function getFlickr(url, id, search_tags){
     $.ajax({
         url: url,
@@ -61,23 +105,6 @@ function getFlickr(url, id, search_tags){
     })
 }
 
-
-//이미지 클릭시 팝업 뜨는 이벤트 등록
-$("body").on("click", "#gallery .list li a", function(e){
-    e.preventDefault();
-    var img_src = $(this).attr("href");
-    createPopup(img_src);
-
-});
-
-//팝업 close 클릭 이벤트 등록
-$("body").on("click", ".popup .close", function(){
-    $(".popup").fadeOut(300, function(){
-        $(".popup").remove();
-    });
-    $("body").css("overflow", "visible");
-});
-
 //팝업 생성 함수
 function createPopup(img_src){
     $("body").append(
@@ -89,10 +116,3 @@ function createPopup(img_src){
     );
     $("body").css("overflow", "hidden");
 }
-
-//서치 클릭 이벤트
-$(".search_gallery button").on("click", function(){
-    var tags = $(this).prev().val();
-
-    getFlickr(url_search, "", tags);
-});
