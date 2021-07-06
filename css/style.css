@@ -356,7 +356,7 @@ input, select, a, button {
     color: #333;
     border-top: 1px solid #555;
     border-bottom: 1px solid #eee;
-    padding: 24px;
+    padding: 24px 0;
     box-sizing: border-box; }
     .community .inner table thead th:nth-of-type(1) {
       width: 5%; }
@@ -369,14 +369,15 @@ input, select, a, button {
   .community .inner table tbody tr {
     transition: 0.3s; }
     .community .inner table tbody tr td {
-      font: 16px/1 'Noto Sans KR';
+      font: 16px/1.7 'Noto Sans KR';
       color: #666;
-      padding: 24px;
+      padding: 24px 0;
       box-sizing: border-box;
       border-bottom: 1px solid #eee; }
       .community .inner table tbody tr td:nth-of-type(2) {
         text-align: left;
-        color: #000; }
+        color: #000;
+        padding-left: 24px; }
       .community .inner table tbody tr td a {
         color: #000; }
     .community .inner table tbody tr:hover {
@@ -389,7 +390,7 @@ input, select, a, button {
   .community .inner .search select {
     width: 150px;
     height: 48px;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 1px solid #ccc;
     padding: 0 16px;
     margin-right: 5px; }
@@ -399,7 +400,7 @@ input, select, a, button {
     padding-left: 16px;
     padding-right: 50px;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 16px;
     transition: 0.3s; }
@@ -464,6 +465,58 @@ input, select, a, button {
         color: #fff;
         transform: scale(1.15); }
 
+/* ---------- tablet ---------- */
+@media screen and (max-width: 1179px) {
+  .community .inner table thead th {
+    font-size: 14px;
+    padding: 20px 0; }
+  .community .inner table tbody tr td {
+    font-size: 15px;
+    padding: 20px 0; }
+    .community .inner table tbody tr td:nth-of-type(2) {
+      padding-left: 20px; }
+  .community .inner .search select {
+    width: 120px;
+    height: 46px;
+    padding: 0 14px; }
+  .community .inner .search input[type=text] {
+    width: 330px;
+    height: 46px;
+    padding-left: 14px;
+    font-size: 14px; }
+  .community .inner .search button svg {
+    font-size: 16px; }
+  .community .inner .pagination {
+    bottom: 50px; }
+    .community .inner .pagination p a:nth-of-type(n+6):nth-of-type(n-10) {
+      display: none; } }
+/* ---------- mobile ---------- */
+@media screen and (max-width: 599px) {
+  .community .inner table thead th {
+    font-size: 13px;
+    padding: 18px 0; }
+    .community .inner table thead th:nth-of-type(4) {
+      display: none; }
+  .community .inner table tbody tr td {
+    font-size: 13px; }
+    .community .inner table tbody tr td:nth-of-type(2) {
+      padding: 0 18px; }
+    .community .inner table tbody tr td:nth-of-type(4) {
+      display: none; }
+  .community .inner .search {
+    width: 100%; }
+    .community .inner .search select {
+      width: 25%;
+      height: 44px;
+      padding: 0 10px; }
+    .community .inner .search input[type=text] {
+      width: 70%;
+      height: 44px;
+      padding-left: 10px;
+      padding-right: 30px;
+      font-size: 13px; }
+    .community .inner .search button svg {
+      font-size: 14px; } }
 .youtube .inner #wrap {
   width: 100%;
   overflow: hidden; }
