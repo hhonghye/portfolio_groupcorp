@@ -41,24 +41,19 @@ function getFlickr(url, id, search_tags){
                                 $("<p>").text("photo id - "+data.id)
                         )
                 );
-
-            data.onload = function(){
-                imgNum++;
-
-                if(imgNum === imgs.length){
-                    new Isotope(".list",{
-                        itemSelector: ".list>li",
-                        columnWidth: ".list>li",
-                        transitionDuration: "0.5s",
-                        percentPosition: true,
-                        isPercent:true
-                    });
-                }
-            }
-            $(".list").addClass("on");
         });
 
-    
+        setTimeout(function(){
+            iso = new Isotope(".list",{
+                itemSelector: ".list>li",
+                columnWidth: ".list>li",
+                transitionDuration: "0.5s",
+                percentPosition: true,
+                isPercent:true
+            });
+            $(".list").addClass("on");
+        },500);
+
     
     })
     .error(function(err){
