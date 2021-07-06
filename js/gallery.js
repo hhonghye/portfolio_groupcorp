@@ -91,7 +91,7 @@ function createPopup(img_src){
 }
 
 //서치 클릭 이벤트
-$(".search button").on("click", function(){
+$(".search_gallery button").on("click", function(){
     var tags = $(this).prev().val();
 
     getFlickr(url_search, "", tags);
