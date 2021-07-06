@@ -18,6 +18,7 @@ function getFlickr(url, id, search_tags){
     })
     .success(function(data){
         var imgs = data.photos.photo;
+        var imgNum = 0;
 
         $("#gallery ul").empty();
 
@@ -39,21 +40,25 @@ function getFlickr(url, id, search_tags){
                                 $("<h3>").text(data.title),
                                 $("<p>").text("photo id - "+data.id)
                         )
-                )
+                );
+
+            data.onload = function(){
+                imgNum++;
+
+                if(imgNum === imgs.length){
+                    new Isotope(".list",{
+                        itemSelector: ".list>li",
+                        columnWidth: ".list>li",
+                        transitionDuration: "0.5s",
+                        percentPosition: true,
+                        isPercent:true
+                    });
+                }
+            }
+            $(".list").addClass("on");
         });
 
-        setTimeout(function(){
-            iso = new Isotope(".list",{
-                itemSelector: ".list>li",
-                columnWidth: ".list>li",
-                transitionDuration: "0.5s",
-                percentPosition: true,
-                isPercent:true
-            });
-            $(".list").addClass("on");
-        },500);
-        
-
+    
     
     })
     .error(function(err){

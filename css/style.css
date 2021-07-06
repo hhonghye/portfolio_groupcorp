@@ -611,8 +611,8 @@ input, select, a, button {
       align-content: space-between;
       flex-wrap: wrap;
       transform: translateY(100px);
-      opacity: 0;
-      transition: 0.8s; }
+      transition: 0.8s;
+      opacity: 0; }
       .gallery .inner #gallery .list.on {
         transform: translateY(0);
         opacity: 1; }

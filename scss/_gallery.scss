@@ -33,7 +33,8 @@
                 display: flex;
                 align-content: space-between;
                 flex-wrap: wrap;
-                transform: translateY(100px); opacity: 0; transition: 0.8s;
+                transform: translateY(100px); transition: 0.8s;
+                opacity: 0;
                 &.on{transform: translateY(0); opacity: 1;}
                 li{
                     width: 25%;
