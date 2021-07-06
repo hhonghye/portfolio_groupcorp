@@ -18,13 +18,7 @@ $("body").on("click", ".popup .close", function(){
     $("body").css({overflow: "visible"});
 });
 
-//swiper-wrapper에 mouseenter/leave
-$(".swiper-wrapper").on("mouseenter", function(){
-    swiper.autoplay.stop();
-});
-$(".swiper-wrapper").on("mouseleave", function(){
-    swiper.autoplay.start();
-});
+
 
 
 //Youtube data 불러오는 함수 정의
@@ -75,29 +69,7 @@ function callData(){
                     )
             )
         });
-        //swiper연결
-        swiper = new Swiper("#wrap",{
-            direction : "horizontal",
-            loop : true,
-            spaceBetween : 0,
-            slidesPerView : "auto",
-            centeredSlides : true,
-            effect : "coverflow",
-            coverflowEffect : {
-                rotate: 50,  //슬라이드 회전각 
-                stretch: -80, //슬라이더간 거리  
-                depth: 300, //깊이 효과값  
-                modifier: 1, //효과 배수 
-                slideShadows: false,  //슬라이더 그림자 
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false, //스와이프 후 자동재생
-            },
-            pagination: {
-                el: '.swiper-pagination',
-            }
-        });
+        
         
     })
     .error(function(err){
