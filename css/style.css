@@ -305,7 +305,7 @@ input, select, a, button {
   .content .inner {
     width: 100%;
     min-height: none;
-    padding: 150px 20px; }
+    padding: 80px 20px; }
 
   #footer_sub .inner {
     width: 100%;
@@ -330,7 +330,7 @@ input, select, a, button {
       top: 55%;
       font-size: 24px; }
   .content .inner {
-    padding: 100px 20px; }
+    padding: 60px 20px; }
 
   #footer_sub .inner {
     font: 12px/1.5 'Noto Sans KR';
@@ -565,9 +565,17 @@ input, select, a, button {
     color: #fff;
     cursor: pointer; }
 
+/* ---------- tablet ---------- */
+@media screen and (max-width: 1179px) {
+  .youtube .inner #wrap .swiper-wrapper .swiper-slide .thumbnail {
+    height: 20vw; } }
+/* ---------- mobile ---------- */
 @media screen and (max-width: 599px) {
   .youtube .inner #wrap .swiper-wrapper .swiper-slide {
-    width: 100%; }
+    width: 100%;
+    padding: 15px; }
+    .youtube .inner #wrap .swiper-wrapper .swiper-slide .thumbnail {
+      height: 40vw; }
     .youtube .inner #wrap .swiper-wrapper .swiper-slide .contents h2 {
       font-size: 14px; }
     .youtube .inner #wrap .swiper-wrapper .swiper-slide .contents p {
