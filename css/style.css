@@ -13,7 +13,10 @@ a {
 table, th, td {
   border-collapse: collapse; }
 
-input, select, a, button {
+fieldset {
+  border: none; }
+
+input, select, a, button, textarea {
   outline: none;
   border: none; }
 
@@ -932,6 +935,126 @@ input, select, a, button {
         padding-bottom: 20px;
         margin-bottom: 20px;
         border-bottom: 1px solid #ccc; } }
+.join .inner {
+  width: 90vmin; }
+  .join .inner h3 {
+    font: bold 22px/1 'Noto Sans KR';
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 20px; }
+  .join .inner .terms {
+    width: 100%; }
+    .join .inner .terms textarea {
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      resize: none;
+      font: 14px/1.7 'Noto Sans KR';
+      color: #777;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px; }
+    .join .inner .terms > label {
+      display: block;
+      text-align: right;
+      margin-bottom: 20px;
+      font: 16px/1 'Noto Sans KR';
+      color: #222;
+      cursor: pointer; }
+      .join .inner .terms > label input[type=checkbox] {
+        margin-right: 10px; }
+  .join .inner table {
+    width: 100%; }
+    .join .inner table tbody tr label[required]::after {
+      content: "*";
+      color: #3d5afe; }
+    .join .inner table tbody tr th {
+      width: 30%;
+      height: 80px;
+      text-align: left;
+      padding: 30px 0 0 40px;
+      box-sizing: border-box;
+      vertical-align: top;
+      font: 16px/1 "Noto Sans KR";
+      color: #333; }
+      .join .inner table tbody tr th input[type=reset], .join .inner table tbody tr th input[type=submit] {
+        width: 200px;
+        height: 50px;
+        background: #999;
+        color: #fff;
+        border-radius: 5px;
+        margin: 0 10px;
+        cursor: pointer;
+        font: 18px/50px 'Noto Sans KR'; }
+      .join .inner table tbody tr th input[type=submit] {
+        background: #3d5afe; }
+      .join .inner table tbody tr th:last-child {
+        text-align: center;
+        padding: 50px 0; }
+    .join .inner table tbody tr td {
+      width: 70%; }
+      .join .inner table tbody tr td input[type=text] {
+        width: 100%;
+        border: 1px solid #e1e1e1;
+        border-radius: 5px;
+        padding: 14px;
+        box-sizing: border-box;
+        font: 14px/1 'Noto Sans KR';
+        color: #333; }
+        .join .inner table tbody tr td input[type=text]:focus {
+          border: 1px solid #3d5afe;
+          box-shadow: 0px 5px 10px rgba(61, 90, 254, 0.15); }
+      .join .inner table tbody tr td input[type=password] {
+        width: 100%;
+        border: 1px solid #e1e1e1;
+        border-radius: 5px;
+        padding: 14px;
+        box-sizing: border-box;
+        font: 14px/1 'Noto Sans KR';
+        color: #333; }
+        .join .inner table tbody tr td input[type=password]:focus {
+          border: 1px solid #3d5afe;
+          box-shadow: 0px 5px 10px rgba(61, 90, 254, 0.185); }
+      .join .inner table tbody tr td input[type=radio] {
+        margin: 0 10px;
+        cursor: pointer; }
+      .join .inner table tbody tr td label {
+        font: 14px/1 'Noto Sans KR';
+        color: #333; }
+      .join .inner table tbody tr td p {
+        font: 14px/1.5 'Noto Sans KR';
+        color: #666;
+        display: none; }
+      .join .inner table tbody tr td textarea {
+        width: 100%;
+        height: 100px;
+        border: 1px solid #e1e1e1;
+        border-radius: 5px;
+        padding: 14px;
+        box-sizing: border-box;
+        resize: none;
+        font: 14px/1.5 'Noto Sans KR'; }
+        .join .inner table tbody tr td textarea:focus {
+          border: 1px solid #3d5afe;
+          box-shadow: 0px 5px 10px rgba(61, 90, 254, 0.15); }
+    .join .inner table tbody tr:nth-of-type(5) td input[type=text] {
+      width: 50%; }
+    .join .inner table tbody tr:nth-of-type(5) td select {
+      width: 49%;
+      border: 1px solid #e1e1e1;
+      border-radius: 5px;
+      padding: 17px;
+      box-sizing: border-box;
+      font: 14px/1 'Noto Sans KR';
+      color: #444;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background: url(../img/arrow-down-solid.png) no-repeat 95% center; }
+      .join .inner table tbody tr:nth-of-type(5) td select:focus {
+        border: 1px solid #3d5afe;
+        box-shadow: 0px 5px 10px rgba(61, 90, 254, 0.15); }
+
 #header {
   width: 100%;
   position: fixed;

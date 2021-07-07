@@ -122,11 +122,12 @@
                 <fieldset>
                     <legend class="hidden">회원가입 인증 폼</legend>
 
-                    <h3>이용약관 동의</h3>
-                    <textarea name="" id="" cols="30" rows="10">
+                    <section class="terms">
+                        <h3>이용약관 동의</h3>
+                        <textarea name="terms" id="conditions" cols="30" rows="4" disabled>
 제 1 조 (목적)
 
-이 약관(이하 “약관”이라고 합니다)은 GroupCorp(이하 “회사”라고 합니다)가 제공하는 검색광고 관련 제반 서비스의 이용과 관련하여 “회원”과 “회사” 간에 필요한 사항을 규정함을 목적으로 합니다.
+이 약관(이하 “약관”이라고 합니다)은 GroupCorp 주식회사(이하 “회사”라고 합니다)가 제공하는 검색광고 관련 제반 서비스의 이용과 관련하여 “회원”과 “회사” 간에 필요한 사항을 규정함을 목적으로 합니다.
 
 제 2 조 (정의)
 
@@ -215,18 +216,14 @@
 ① “회원”은 “권한설정”을 통해 다른 “회원”에게 자신의 “회원계정”에의 접근 및 관리 권한의 일부 또는 전부를 위임할 수 있습니다. “권한설정”과 관련된 세부 사항은 광고운영정책에서 정합니다.
 
 ② 권한을 위탁한 “회원”의 “회원계정”에서의 권한을 위탁받은 “회원”의 행위는 모두 권한을 위탁한 “회원“의 행위로 인정됩니다.
-
-제 7 조 (개인정보의 보호)
-
-“회사”는 “정보통신망 이용촉진 및 정보보호 등에 관한 법률”, “개인정보보호법” 등 관련 법령이 정하는 바에 따라 “회원”의 개인정보를 보호하기 위해 노력합니다. 개인정보의 보호 및 사용에 대해서는 관련 법령 및 “회사”의 개인정보 처리방침이 적용됩니다. 다만, “회사”의 공식 사이트 이외의 링크된 사이트에서는 “회사”의 개인정보 처리방침이 적용되지 않습니다.
-
-                    </textarea>
-                    <input type="checkbox" name="terms" id="conditions" value="conditions"><label for="conditions">약관에 동의합니다.(필수)</label>
-
-                    <h3>개인정보 수집 및 이용 동의</h3>
-                    <textarea name="" id="" cols="30" rows="10">
- GroupCorp회사(이하 “회사”)는 이용자의 개인정보를 중요시하며, ‘개인정보 보호법’, ‘정보통신망 이용촉진 및 정보보호 등에 관한 법률’ 등 관계법령에 의거하여 개인정보를 관리 및 보호하고 있습니다.
-                        
+                        </textarea>
+                        <label for="conditions">
+                            <input type="checkbox" name="terms" id="conditions" value="conditions">약관에 동의합니다.(필수)
+                        </label>
+                        <h3>개인정보 수집 및 이용 동의</h3>
+                        <textarea name="terms" id="privacy" cols="30" rows="4" disabled>
+GroupCorp주식회사(이하 “회사”)는 이용자의 개인정보를 중요시하며, ‘개인정보 보호법’, ‘정보통신망 이용촉진 및 정보보호 등에 관한 법률’ 등 관계법령에 의거하여 개인정보를 관리 및 보호하고 있습니다.
+                    
 이용자는 개인정보의 수집 및 이용 동의를 거부할 권리가 있습니다. 회원가입 시 수집하는 최소한의 개인정보, 즉, 필수 항목에 대한 수집 및 이용 동의를 거부하실 경우, 회원가입이 어려울 수 있습니다.
 
 1. 개인정보의 수집·이용목적
@@ -304,67 +301,75 @@
 - 보존 이유 : 통신비밀보호법
 
 - 보존 기간 : 3개월
-                    </textarea>
-                    <input type="checkbox" name="terms" id="privacy" value="privacy"><label for="privacy">약관에 동의합니다.(필수)</label>
+                        </textarea>
+                        <label for="privacy">
+                            <input type="checkbox" name="terms" id="privacy" value="privacy">약관에 동의합니다.(필수)
+                        </label>
+                    </section>
 
-                    <h3>기본정보</h3>
                     <table summery="회원가입 인증 폼">
                         <caption class="hidden">회원가입 인증 폼 테이블</caption>
-
+                        <h3>기본정보</h3>
                         <tbody>
                             <tr>
-                                <th scope="row"><label for="userid">아이디</label></th>
+                                <th scope="row"><label for="userid" required>아이디</label></th>
                                 <td>
                                     <input type="text" name="userid" id="userid">
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><label for="pwd1">비밀번호</label></th>
+                                <th scope="row"><label for="pwd1" required>비밀번호</label></th>
                                 <td>
-                                    <input type="password" name="pwd1" id="pwd1">
+                                    <input type="password" name="pwd1" id="pwd1" placeholder="특수문자(~!@#$%^&*_+)와 숫자를 포함한 영문자 5자 이상 입력해주세요.">
+                                    <p>비밀번호를 2개 모두 입력하세요.</p>
+                                    <p>비밀번호가 서로 다릅니다.</p>
+                                    <p>비밀번호는 5글자 이상이어야 합니다.</p>
+                                    <p>비밀번호에 숫자를 포함해 주세요.</p>
+                                    <p>비밀번호에 특수문자(~!@#$%^&*_+)를 포함해 주세요.</p>
+                                    <p>비밀번호에 영문자를 포함해 주세요.</p>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><label for="pwd2">비밀번호 재확인</label></th>
+                                <th scope="row"><label for="pwd2" required>비밀번호 재확인</label></th>
                                 <td>
                                     <input type="password" name="pwd2" id="pwd2">
-                                    <p>· 8자 이상</p>
-                                    <p>· 영문 대소문자 포함</p>
-                                    <p>· 특수문자(~!@#$%^&*_+) 포함</p>
-                                    <p>· 숫자 포함</p>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">성별</th>
                                 <td>
                                     <input type="radio" name="gender" id="male" value="male"><label for="male">남성</label>
-                                    <input type="radio" name="gender" id="female" value="female"><label for="male">여성</label>
-                                    <p>· 성별을 선택해 주세요.</p>
+                                    <input type="radio" name="gender" id="female" value="female"><label for="female">여성</label>
+                                    <p>성별을 선택해 주세요.</p>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row"><label for="email">이메일</label></th>
-                                <input type="text" name="email1" id="email">
-                                <select name="email2" id="email2">
-                                    <option value="">이메일 서비스를 선택하세요.</option>
-                                    <option value="naver.com">@naver.com</option>
-									<option value="nate.com">@nate.com</option>
-									<option value="gmail.com">@gmail.com</option>
-                                </select>
+                                <td>
+                                    <input type="text" name="email1" id="email">
+                                    <select name="email2" id="email2">
+                                        <option value="">이메일 서비스를 선택하세요.</option>
+                                        <option value="naver.com">@naver.com</option>
+                                        <option value="nate.com">@nate.com</option>
+                                        <option value="gmail.com">@gmail.com</option>
+                                    </select>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row"><label for="comments">메시지 남기기</label></th>
-                                <textarea name="comments" id="comments" cols="30" rows="10" placeholder="남기고싶은 한마디를 남겨주세요.">
+                                <td>
+                                    <textarea name="comments" id="comments" cols="30" rows="10" placeholder="남기고싶은 한마디를 작성해 주세요."></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">
+                                    <input type="reset" value="취소">
+                                    <input type="submit" value="회원가입">
+                                </th>
                             </tr>
                         </tbody>
 
-
-
-
-                        
-
                     </table>
-
 
                 </fieldset>
             </form>
