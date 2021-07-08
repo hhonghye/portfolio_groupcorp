@@ -1,10 +1,13 @@
 $("input[type=submit]").on("click",function(e){     
-    e.preventDefault();
-    isTxt("userid");
-    isPwd("pwd1","pwd2");
+    //return값이 false면 result.html으로 넘어가는것 방지
+    if(!isTxt("userid", 5)) e.preventDefault();
+    if(!isPwd("pwd1","pwd2")) e.preventDefault();
+    if(!isCheck("gender")) e.preventDefault();
+    if(!isTxt("email1")) e.preventDefault();
+    if(!isSelect("email2")) e.preventDefault();
 });
 
-function isTxt(name){
+function isTxt(name, length){
     var $txt = $("input[name="+name+"]");
     var txt = $txt.val();
     //초기화
@@ -19,7 +22,7 @@ function isTxt(name){
         return false;
     }
     //텍스트 길이가 5자 미만인지 판별
-    else if(txt.length < 5){
+    else if(txt.length < length){
         $("input[name="+name+"]").addClass("error");
         $("input[name="+name+"]").parent().children("p").eq(1).css({display: "block"});
         return false;
@@ -98,7 +101,28 @@ function isPwd(name1, name2){
         $("input[type=password]").addClass("error");
         return isConfirm;
     };
-
-
+}
+function isCheck(name){
+    var isCheck = $("input[name="+name+"]").is(":checked");
+    $("input[name="+name+"]").siblings("p").css({display: "none"});
     
+    if(isCheck){
+        return true;
+    }else{
+        $("input[name="+name+"]").siblings("p").css({display: "block"});
+        return false;
+    }
+}
+function isSelect(name){
+    var selected = $("select[name="+name+"]").children("option:selected").val();
+    $("select[name="+name+"]").siblings("p").eq(1).css({display: "none"});
+    $("select[name="+name+"]").removeClass("error");
+
+    if(selected == ""){
+        $("select[name="+name+"]").addClass("error");
+        $("select[name="+name+"]").siblings("p").eq(1).css({display: "block"});
+        return false;
+    }else{
+        return true;
+    }
 }
