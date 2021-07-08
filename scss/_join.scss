@@ -36,10 +36,7 @@
                 tr{
                     label[required]::after {content: "*"; color: #3d5afe}
                     th{
-                        
-                        // border: 1px solid red;
                         width: 30%; 
-                        // height: 80px;
                         text-align: left;
                         padding: 30px 0 0 40px; box-sizing: border-box;
                         vertical-align: top;
@@ -56,7 +53,6 @@
                         &:last-child { text-align: center; padding: 50px 0;}
                     }
                     td{
-                        // border: 1px solid blue;
                         width: 70%;
                         padding: 10px 0; box-sizing: border-box;
                         input[type=text]{
@@ -92,10 +88,11 @@
                             }
                         }
                         input[type=radio]{
-                            margin: 0 10px; 
+                            margin-right: 10px;
+
                             cursor: pointer;
                         }
-                        label{font: 14px/1 'Noto Sans KR'; color: #333;}
+                        label{font: 14px/1 'Noto Sans KR'; color: #333; margin-right: 30px;}
                         p{
                             font: 14px/1.5 'Noto Sans KR'; color: #d32f2f;
                             padding-top: 5px;

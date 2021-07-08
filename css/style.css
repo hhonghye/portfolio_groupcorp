@@ -1023,11 +1023,12 @@ input, select, a, button, textarea {
           border: 1px solid #d32f2f;
           box-shadow: 0px 5px 10px rgba(211, 47, 47, 0.15); }
       .join .inner table tbody tr td input[type=radio] {
-        margin: 0 10px;
+        margin-right: 10px;
         cursor: pointer; }
       .join .inner table tbody tr td label {
         font: 14px/1 'Noto Sans KR';
-        color: #333; }
+        color: #333;
+        margin-right: 30px; }
       .join .inner table tbody tr td p {
         font: 14px/1.5 'Noto Sans KR';
         color: #d32f2f;
