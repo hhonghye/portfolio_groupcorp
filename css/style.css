@@ -970,7 +970,6 @@ input, select, a, button, textarea {
       color: #3d5afe; }
     .join .inner table tbody tr th {
       width: 30%;
-      height: 80px;
       text-align: left;
       padding: 30px 0 0 40px;
       box-sizing: border-box;
@@ -992,7 +991,9 @@ input, select, a, button, textarea {
         text-align: center;
         padding: 50px 0; }
     .join .inner table tbody tr td {
-      width: 70%; }
+      width: 70%;
+      padding: 10px 0;
+      box-sizing: border-box; }
       .join .inner table tbody tr td input[type=text] {
         width: 100%;
         border: 1px solid #bbb;
@@ -1029,7 +1030,8 @@ input, select, a, button, textarea {
         color: #333; }
       .join .inner table tbody tr td p {
         font: 14px/1.5 'Noto Sans KR';
-        color: #666;
+        color: #d32f2f;
+        padding-top: 5px;
         display: none; }
         .join .inner table tbody tr td p.error {
           display: block; }
