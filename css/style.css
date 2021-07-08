@@ -962,7 +962,8 @@ input, select, a, button, textarea {
       color: #222;
       cursor: pointer; }
       .join .inner .terms > label input[type=checkbox] {
-        margin-right: 10px; }
+        margin-right: 10px;
+        vertical-align: middle; }
   .join .inner table {
     width: 100%; }
     .join .inner table tbody tr label[required]::after {
@@ -1055,7 +1056,8 @@ input, select, a, button, textarea {
       height: 50px;
       border: 1px solid #bbb;
       border-radius: 5px;
-      padding: 0 14px;
+      padding-left: 14px;
+      padding-right: 34px;
       box-sizing: border-box;
       font: 14px/1 'Noto Sans KR';
       color: #444;
@@ -1070,6 +1072,47 @@ input, select, a, button, textarea {
         border: 1px solid #d32f2f;
         box-shadow: 0px 5px 10px rgba(211, 47, 47, 0.15); }
 
+/* ---------- tablet ---------- */
+@media screen and (max-width: 1179px) {
+  .join .inner table tbody tr th {
+    padding-left: 0; } }
+/* ---------- mobile ---------- */
+@media screen and (max-width: 599px) {
+  .join .inner {
+    width: 100%; }
+    .join .inner h3 {
+      font-size: 18px; }
+    .join .inner .terms textarea {
+      font-size: 12px; }
+    .join .inner .terms > label {
+      font-size: 13px;
+      margin-bottom: 30px; }
+    .join .inner table tbody tr th {
+      width: 25%;
+      font-size: 14px;
+      padding: 25px 10px 0 0;
+      line-height: 1.5; }
+      .join .inner table tbody tr th input[type=reset], .join .inner table tbody tr th input[type=submit] {
+        width: 45%;
+        height: 46px;
+        margin: 0 5px;
+        font: 15px/46px 'Noto Sans KR'; }
+    .join .inner table tbody tr td {
+      width: 75%;
+      padding: 12px 0; }
+      .join .inner table tbody tr td input[type=text] {
+        font-size: 12px; }
+      .join .inner table tbody tr td input[type=password] {
+        font-size: 12px; }
+      .join .inner table tbody tr td p {
+        font-size: 12px; }
+      .join .inner table tbody tr td textarea {
+        font-size: 12px; }
+    .join .inner table tbody tr:nth-of-type(4) th {
+      padding-top: 10px; }
+    .join .inner table tbody tr:nth-of-type(5) td select {
+      font-size: 12px;
+      padding-right: 28px; } }
 #header {
   width: 100%;
   position: fixed;
