@@ -1,5 +1,7 @@
 $("input[type=submit]").on("click",function(e){     
     //return값이 false면 result.html으로 넘어가는것 방지
+    if(!isCheck("terms")) e.preventDefault();
+
     if(!isTxt("userid", 5)) e.preventDefault();
     if(!isPwd("pwd1","pwd2")) e.preventDefault();
     if(!isCheck("gender")) e.preventDefault();
@@ -110,6 +112,9 @@ function isCheck(name){
         return true;
     }else{
         $("input[name="+name+"]").siblings("p").css({display: "block"});
+        if(name == "terms"){
+            alert("약관에 모두 동의하셔야 회원가입이 가능합니다.");
+        }
         return false;
     }
 }

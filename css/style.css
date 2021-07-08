@@ -992,7 +992,7 @@ input, select, a, button, textarea {
         padding: 50px 0; }
     .join .inner table tbody tr td {
       width: 70%;
-      padding: 10px 0;
+      padding: 15px 0;
       box-sizing: border-box; }
       .join .inner table tbody tr td input[type=text] {
         width: 100%;
@@ -1046,6 +1046,8 @@ input, select, a, button, textarea {
         .join .inner table tbody tr td textarea:focus {
           border: 1px solid #3d5afe;
           box-shadow: 0px 5px 10px rgba(61, 90, 254, 0.15); }
+    .join .inner table tbody tr:nth-of-type(4) th {
+      padding-top: 15px; }
     .join .inner table tbody tr:nth-of-type(5) td input[type=text] {
       width: 49%; }
     .join .inner table tbody tr:nth-of-type(5) td select {
