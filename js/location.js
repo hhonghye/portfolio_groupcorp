@@ -33,7 +33,7 @@ var markerOption = [
         bus : "간선/순환 - 571, 603, 6624, 6637, 양천02, 700",
         car : "올림픽대로 - 양화대교 남단에서 문래동 사거리 방향으로 직진, 약 10분 소요",
 		imgSrc: "img/Location-marker.svg",
-		imgSize: new kakao.maps.Size(54, 121),
+		imgSize: new kakao.maps.Size(54, 110),
 		imgPos: {offset: new kakao.maps.Point(28, 114)},
 		button: branch_btns[0]
 	},
@@ -46,7 +46,7 @@ var markerOption = [
         bus : "1187, 유덕65",
         car : "광주역 - 북광주우체국 방면으로 우회전 후 492m 직진, 우회전 후 235m 직진, 좌회전 후 88m 직진 후 우측 위치",
 		imgSrc: "img/Location-marker.svg",
-		imgSize: new kakao.maps.Size(54, 121),
+		imgSize: new kakao.maps.Size(54, 110),
 		imgPos: {offset: new kakao.maps.Point(28, 114)},
 		button: branch_btns[1]
 	},
@@ -59,7 +59,7 @@ var markerOption = [
         bus : "100, 100-1, 139, 141, 181, 200, 38, 39, 40, 63, 141(심야), 182, 185, 해운대구9",
         car : "송정역 - 해운대로 475m 직진 후 국립수산과학원 방면으로 좌회전 후 480m 직진, 송정해변로 송정 방면으로 우회전 후 353m 직진, 송정해변로 우회전 후 14m 이동 우측 위치",
 		imgSrc: "img/Location-marker.svg",
-		imgSize: new kakao.maps.Size(54, 121),
+		imgSize: new kakao.maps.Size(54, 110),
 		imgPos: {offset: new kakao.maps.Point(28, 114)},
 		button: branch_btns[2]
 	}
