@@ -1,7 +1,7 @@
 /* ------------- 지도를 띄우는 코드 작성 -------------- */
 var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
 var options = { //지도를 생성할 때 필요한 기본 옵션
-	center: new window.kakao.maps.LatLng(37.5282401,126.8736026), //지도의 중심좌표.
+	center: new window.kakao.maps.LatLng(37.52801104423197, 126.87573029490142), //지도의 중심좌표.
 	level: 3 //지도의 레벨(확대, 축소 정도)
 };
 
@@ -34,7 +34,7 @@ var markerOption = [
         car : "올림픽대로 - 양화대교 남단에서 문래동 사거리 방향으로 직진, 약 10분 소요",
 		imgSrc: "img/Location-marker.svg",
 		imgSize: new kakao.maps.Size(54, 110),
-		imgPos: {offset: new kakao.maps.Point(28, 114)},
+		imgPos: {offset: new kakao.maps.Point(0, 0)},
 		button: branch_btns[0]
 	},
 	{
