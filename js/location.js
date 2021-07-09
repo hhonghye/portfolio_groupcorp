@@ -34,7 +34,7 @@ var markerOption = [
         car : "올림픽대로 - 양화대교 남단에서 문래동 사거리 방향으로 직진, 약 10분 소요",
 		imgSrc: "img/Location-marker.svg",
 		imgSize: new kakao.maps.Size(54, 110),
-		imgPos: {offset: new kakao.maps.Point(0, 0)},
+		imgPos: {offset: new kakao.maps.Point(28, 55)},
 		button: branch_btns[0]
 	},
 	{
