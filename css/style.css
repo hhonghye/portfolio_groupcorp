@@ -848,8 +848,18 @@ input, select, a, button, textarea {
     width: 100%;
     margin-bottom: 30px; } }
 .map_wrap {
-  width: 100%; }
+  width: 100%;
+  position: relative; }
+  .map_wrap #map {
+    width: 100%;
+    height: 500px; }
   .map_wrap .branch {
+    width: 60%;
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
     text-align: center; }
@@ -864,9 +874,6 @@ input, select, a, button, textarea {
         .map_wrap .branch li a.on {
           background: #3d5afe;
           color: #fff; }
-  .map_wrap #map {
-    width: 100%;
-    height: 500px; }
 
 .info > h2 {
   font: bold 30px/1 "Noto Sans KR";
@@ -887,13 +894,23 @@ input, select, a, button, textarea {
   .info ul li {
     width: calc(100%/3);
     padding: 0 20px;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    position: relative; }
     .info ul li h3 {
+      text-align: center;
       font: bold 21px/1 'Noto Sans KR';
       color: #333;
+      padding-top: 70px;
       padding-bottom: 20px;
       border-bottom: 1px solid #ccc;
       margin-bottom: 20px; }
+      .info ul li h3 svg {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -25px;
+        font-size: 50px;
+        color: rgba(61, 90, 254, 0.5); }
     .info ul li p {
       font: 16px/1.75 'Noto Sans KR';
       color: #555; }
