@@ -2,18 +2,18 @@
     .inner{
         #wrap{
             width: 100%; overflow: hidden;
-            .swiper-wrapper{
+            .list-wrapper{
                 width: 100%; height: 100%;
                 display: flex; flex-wrap: wrap; justify-content: space-between;
 
-                .swiper-slide{
-                    width: 49%; //rwd
+                .list{
+                    width: 33.3%; //rwd
                     padding: 30px; box-sizing: border-box;
                     filter: saturate(0); transition: 0.3s;
                     &:hover{filter: saturate(1.2); transform: scale(1.03);}
     
                     .thumbnail{
-                        width: 100%; height: 250px;
+                        width: 100%; height: 180px;
                         a{
                             display: block;
                             width: 100%; height: 100%;
@@ -61,7 +61,6 @@
                     }
     
                 }
-                .swiper-slide-active{opacity: 1;}
 
             }
         
@@ -95,12 +94,15 @@
 
 /* ---------- tablet ---------- */
 @media screen and (max-width: 1179px){
-    .youtube .inner #wrap .swiper-wrapper .swiper-slide .thumbnail{height: 20vw;}
+    .youtube .inner #wrap .list-wrapper .list{
+        width: 50%;
+        .thumbnail{height: 20vw;}
+    }
 }
 
 /* ---------- mobile ---------- */
 @media screen and (max-width: 599px){
-    .youtube .inner #wrap .swiper-wrapper .swiper-slide{
+    .youtube .inner #wrap .list-wrapper .list{
         width: 100%; padding: 15px;
         .thumbnail{height: 40vw;}
         .contents{

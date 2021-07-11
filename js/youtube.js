@@ -1,4 +1,3 @@
-var swiper;
 
 callData();
 
@@ -42,17 +41,17 @@ function callData(){
 
             var title = data.snippet.title;
             var title_length = title.length;
-            (title_length>50) ? title = title.substr(0, 50)+"..." : title;
+            (title_length>30) ? title = title.substr(0, 30)+"..." : title;
 
             var subTxt = data.snippet.description;
             var subTxt_length = subTxt.length;
-            (subTxt_length>80) ? subTxt = subTxt.substr(0,80)+"..." : subTxt;
+            (subTxt_length>50) ? subTxt = subTxt.substr(0,50)+"..." : subTxt;
 
             var subDate = data.snippet.publishedAt;
             subDate = subDate.split("T")[0];
 
-            $("#wrap .swiper-wrapper").append(
-                $("<article class='swiper-slide'>")
+            $("#wrap .list-wrapper").append(
+                $("<article class='list'>")
                     .append(
                         $("<div class='thumbnail'>")
                             .append(
