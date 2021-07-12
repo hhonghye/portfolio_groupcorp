@@ -1,6 +1,5 @@
 
 callData();
-callTopData();
 
 //썸네일 onclick 이벤트 등록
 $("body").on("click", ".thumbnail a", function(e){
@@ -70,71 +69,6 @@ function callData(){
             )
         });
         
-        
-    })
-    .error(function(err){
-        console.log("데이터를 불러오는데 실패하였습니다.ㅜㅜ");
-    })
-}
-
-function callTopData(){
-    $.ajax({
-        url: 'https://www.googleapis.com/youtube/v3/playlistItems',
-        dataType:"jsonp",
-        data:{
-            part:"snippet",
-            key: "AIzaSyD9-sPn5Yod86JXZq6J3yIVlF92BD28QeY", 
-            maxResults: 10, 
-            playlistId : "PLJdfyLd9bUGuDNLBmOO8K5WWtPK41X0O1"
-        }
-    })
-    .success(function(data){
-        console.log(data.items);
-
-        var item = data.items;
-
-        $(item).each(function(index,data){
-
-            var title = data.snippet.title;
-            var title_length = title.length;
-            (title_length>30) ? title = title.substr(0, 30)+"..." : title;
-
-            var subTxt = data.snippet.description;
-            var subTxt_length = subTxt.length;
-            (subTxt_length>50) ? subTxt = subTxt.substr(0,50)+"..." : subTxt;
-
-            var subDate = data.snippet.publishedAt;
-            subDate = subDate.split("T")[0];
-
-            $("#wrap .swiper-wrapper").append(
-                $("<article class='swiper-slide'>")
-                    .append(
-                        $("<div class='thumbnail'>")
-                            .append(
-                                $("<a>")
-                                    .attr({href: data.snippet.resourceId.videoId})
-                                    .css({backgroundImage :"url("+ data.snippet.thumbnails.high.url +")"})
-                            ),
-                        $("<div class='contents'>")
-                            .append(
-                                $("<h2>").text(title),
-                                $("<p>").text(subTxt),
-                                $("<span>").text(subDate)
-                            )
-                    )
-            )
-        });
-        
-        var swiper = new Swiper('#wrap', {
-            pagination: {
-              el: '.swiper-pagination',
-              type: 'progressbar',
-            },
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-          });
         
     })
     .error(function(err){
