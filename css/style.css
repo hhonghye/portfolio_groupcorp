@@ -162,7 +162,7 @@ input, select, a, button, textarea {
       position: fixed;
       top: 0;
       right: -50vw;
-      padding-top: 100px;
+      padding: 100px 30px;
       box-sizing: border-box;
       width: 50vw;
       height: 100vh;
@@ -170,26 +170,41 @@ input, select, a, button, textarea {
       text-align: center;
       transition: 0.5s;
       overflow: hidden; }
-      #header_sub .inner .menu_mobile .util_mobile li a {
-        display: block;
-        font: 24px/1 'arial';
-        color: #222;
-        padding: 10px 0;
-        box-sizing: border-box; }
+      #header_sub .inner .menu_mobile .util_mobile {
+        display: inline-block;
+        text-align: center; }
+        #header_sub .inner .menu_mobile .util_mobile::after {
+          content: "";
+          display: block;
+          clear: both; }
+        #header_sub .inner .menu_mobile .util_mobile li {
+          float: left;
+          position: relative; }
+          #header_sub .inner .menu_mobile .util_mobile li a {
+            display: block;
+            font: 16px/1 'Noto Sans KR';
+            color: #222;
+            padding: 20px;
+            box-sizing: border-box; }
+          #header_sub .inner .menu_mobile .util_mobile li::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-30%);
+            width: 1px;
+            height: 10px;
+            background: #ccc; }
+          #header_sub .inner .menu_mobile .util_mobile li:last-of-type::after {
+            display: none; }
       #header_sub .inner .menu_mobile #gnb_mobile > li > a {
         display: block;
-        font: 28px/1 'arial';
+        font: bold 34px/1 'Noto Sans KR';
         color: #222;
+        letter-spacing: 2px;
         padding: 15px 0;
         box-sizing: border-box; }
-      #header_sub .inner .menu_mobile #gnb_mobile > li > ul {
-        display: none; }
-        #header_sub .inner .menu_mobile #gnb_mobile > li > ul > li > a {
-          display: block;
-          font: 24px/1 'arial';
-          color: #555;
-          padding: 10px 0;
-          box-sizing: border-box; }
       #header_sub .inner .menu_mobile.on {
         right: 0; }
   #header_sub.on {
@@ -937,20 +952,11 @@ input, select, a, button, textarea {
     box-sizing: border-box;
     position: relative; }
     .info ul li h3 {
-      text-align: center;
       font: bold 21px/1 'Noto Sans KR';
       color: #333;
-      padding-top: 70px;
       padding-bottom: 20px;
       border-bottom: 1px solid #ccc;
       margin-bottom: 20px; }
-      .info ul li h3 svg {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        margin-left: -25px;
-        font-size: 50px;
-        color: rgba(61, 90, 254, 0.5); }
     .info ul li p {
       font: 16px/1.75 'Noto Sans KR';
       color: #555; }
@@ -1302,7 +1308,7 @@ input, select, a, button, textarea {
       position: fixed;
       top: 0;
       right: -50vw;
-      padding-top: 100px;
+      padding: 100px 30px;
       box-sizing: border-box;
       width: 50vw;
       height: 100vh;
@@ -1310,26 +1316,41 @@ input, select, a, button, textarea {
       text-align: center;
       transition: 0.5s;
       overflow: hidden; }
-      #header .inner .menu_mobile .util_mobile li a {
-        display: block;
-        font: 24px/1 'arial';
-        color: #222;
-        padding: 10px 0;
-        box-sizing: border-box; }
+      #header .inner .menu_mobile .util_mobile {
+        display: inline-block;
+        text-align: center; }
+        #header .inner .menu_mobile .util_mobile::after {
+          content: "";
+          display: block;
+          clear: both; }
+        #header .inner .menu_mobile .util_mobile li {
+          float: left;
+          position: relative; }
+          #header .inner .menu_mobile .util_mobile li a {
+            display: block;
+            font: 16px/1 'Noto Sans KR';
+            color: #222;
+            padding: 20px;
+            box-sizing: border-box; }
+          #header .inner .menu_mobile .util_mobile li::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-30%);
+            width: 1px;
+            height: 10px;
+            background: #ccc; }
+          #header .inner .menu_mobile .util_mobile li:last-of-type::after {
+            display: none; }
       #header .inner .menu_mobile #gnb_mobile > li > a {
         display: block;
-        font: 28px/1 'arial';
+        font: bold 34px/1 'Noto Sans KR';
         color: #222;
+        letter-spacing: 2px;
         padding: 15px 0;
         box-sizing: border-box; }
-      #header .inner .menu_mobile #gnb_mobile > li > ul {
-        display: none; }
-        #header .inner .menu_mobile #gnb_mobile > li > ul > li > a {
-          display: block;
-          font: 24px/1 'arial';
-          color: #555;
-          padding: 10px 0;
-          box-sizing: border-box; }
       #header .inner .menu_mobile.on {
         right: 0; }
   #header.on {

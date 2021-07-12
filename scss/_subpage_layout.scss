@@ -27,7 +27,6 @@
             #gnb{
                 display: flex;
                 justify-content: center;
-
                 >li{
                     position: relative;
                     >a{
@@ -128,7 +127,7 @@
         .menu_mobile{
             position: fixed;
             top: 0; right: -50vw;
-            padding-top: 100px; box-sizing: border-box;
+            padding: 100px 30px; box-sizing: border-box;
             width: 50vw; height: 100vh;
             background: #fff;
             text-align: center;
@@ -136,31 +135,37 @@
             overflow: hidden;
 
             .util_mobile{
+                display: inline-block; text-align: center;
+                &::after{content: ""; display: block; clear: both;}
                 li{
+                    float: left; position: relative;
                     a{
                         display: block;
-                        font: 24px/1 'arial'; color: #222;
-                        padding: 10px 0 ; box-sizing: border-box;
+                        font: 16px/1 'Noto Sans KR'; color: #222;
+                        padding: 20px; box-sizing: border-box;
+                        
                     }
+                    &::after{
+                        content: ""; display: block;
+                        position: absolute;
+                        top: 50%; right: 0;
+                        transform: translateY(-30%);
+
+                        width: 1px; height: 10px;
+                        background: #ccc;
+                    }
+                    &:last-of-type::after{display: none;}
+                    
                 }
             }
             #gnb_mobile{
                 >li{
                     >a{
                         display: block;
-                        font: 28px/1 'arial'; color: #222;
+                        font: bold 34px/1 'Noto Sans KR'; color: #222;
+                        letter-spacing: 2px;
                         padding: 15px 0 ; box-sizing: border-box;
                     
-                    }
-                    >ul{
-                        display: none;
-                        >li{
-                            >a{
-                                display: block;
-                                font: 24px/1 'arial'; color: #555;
-                                padding: 10px 0 ; box-sizing: border-box;
-                            }
-                        }
                     }
                 }
             }
