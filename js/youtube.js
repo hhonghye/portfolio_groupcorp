@@ -41,11 +41,11 @@ function callData(){
 
             var title = data.snippet.title;
             var title_length = title.length;
-            (title_length>40) ? title = title.substr(0, 40)+"..." : title;
+            (title_length>50) ? title = title.substr(0, 50)+"..." : title;
 
             var subTxt = data.snippet.description;
             var subTxt_length = subTxt.length;
-            (subTxt_length>50) ? subTxt = subTxt.substr(0,50)+"..." : subTxt;
+            (subTxt_length>80) ? subTxt = subTxt.substr(0,80)+"..." : subTxt;
 
             var subDate = data.snippet.publishedAt;
             subDate = subDate.split("T")[0];
