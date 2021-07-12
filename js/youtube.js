@@ -41,7 +41,7 @@ function callData(){
 
             var title = data.snippet.title;
             var title_length = title.length;
-            (title_length>30) ? title = title.substr(0, 30)+"..." : title;
+            (title_length>40) ? title = title.substr(0, 40)+"..." : title;
 
             var subTxt = data.snippet.description;
             var subTxt_length = subTxt.length;
@@ -75,6 +75,7 @@ function callData(){
         console.log("데이터를 불러오는데 실패하였습니다.ㅜㅜ");
     })
 }
+
 
 //popup 함수 정의
 function createPopup(videoId){
