@@ -307,8 +307,8 @@ GroupCorp주식회사(이하 “회사”)는 이용자의 개인정보를 중�
                         </label>
                     </section>
 
-                    <table summery="회원가입 인증 폼">
-                        <caption class="hidden">회원가입 인증 폼 테이블</caption>
+                    <table summery="회원가입 기본정보 인증 폼">
+                        <caption class="hidden">회원가입 기본정보 인증 폼 테이블</caption>
                         <h3>기본정보</h3>
                         <tbody>
                             <tr>
@@ -337,7 +337,7 @@ GroupCorp주식회사(이하 “회사”)는 이용자의 개인정보를 중�
                                     <input type="password" name="pwd2" id="pwd2">
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="gender">
                                 <th scope="row"><label for="gender" required>성별</label></th>
                                 <td>
                                     <input type="radio" name="gender" id="male" value="male"><label for="male">남성</label>
@@ -345,7 +345,7 @@ GroupCorp주식회사(이하 “회사”)는 이용자의 개인정보를 중�
                                     <p>성별을 선택해 주세요.</p>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="email">
                                 <th scope="row"><label for="email" required>이메일</label></th>
                                 <td>
                                     <input type="text" name="email1" id="email">
@@ -357,6 +357,30 @@ GroupCorp주식회사(이하 “회사”)는 이용자의 개인정보를 중�
                                     </select>
                                     <p>이메일 주소를 입력해 주세요.</p>
                                     <p>이메일 서비스를 선택해 주세요.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                    <table summery="회원가입 추가정보 인증 폼">
+                        <caption class="hidden">회원가입 추가정보 인증 폼 테이블</caption>
+                        <h3>추가정보</h3>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><label for="nickname">닉네임</label></th>
+                                <td>
+                                    <input type="text" name="nickname" id="nickname">
+                                </td>
+                            </tr>
+                            <tr class="interest">
+                                <th scope="row"><label for="interest">관심분야</label></th>
+                                <td>
+                                    <input type="checkbox" name="interest" value="art" id="art"><label for="art">예술</label>
+                                    <input type="checkbox" name="interest" value="sports" id="sports"><label for="arsportst">스포츠</label>
+                                    <input type="checkbox" name="interest" value="meditation" id="meditation"><label for="meditation">명상</label>
+                                    <input type="checkbox" name="interest" value="stock" id="stock"><label for="stock">주식</label>
+                                    <input type="checkbox" name="interest" value="property" id="property"><label for="property">부동산</label>
                                 </td>
                             </tr>
                             <tr>
@@ -374,6 +398,8 @@ GroupCorp주식회사(이하 “회사”)는 이용자의 개인정보를 중�
                         </tbody>
 
                     </table>
+
+                    
 
                 </fieldset>
             </form>
