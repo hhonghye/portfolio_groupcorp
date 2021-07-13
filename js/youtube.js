@@ -39,16 +39,18 @@ function callData(){
 
         $(item).each(function(index,data){
 
-            var title = data.snippet.title;
-            var title_length = title.length;
-            (title_length>50) ? title = title.substr(0, 50)+"..." : title;
+            var vidTitle = data.snippet.title;
+            var vidTitle_length = vidTitle.length;
+            (vidTitle_length>50) ? vidTitle = vidTitle.substr(0, 50)+"..." : vidTitle;
 
-            var subTxt = data.snippet.description;
-            var subTxt_length = subTxt.length;
-            (subTxt_length>80) ? subTxt = subTxt.substr(0,80)+"..." : subTxt;
+            var vidTxt = data.snippet.description;
+            var vidTxt_length = vidTxt.length;
+            (vidTxt_length>80) ? vidTxt = vidTxt.substr(0,80)+"..." : vidTxt;
 
-            var subDate = data.snippet.publishedAt;
-            subDate = subDate.split("T")[0];
+            var vidDate = data.snippet.publishedAt;
+            vidDate = vidDate.split("T")[0];
+
+            var vidChannel = data.snippet.videoOwnerChannelTitle;
 
             $("#wrap .list-wrapper").append(
                 $("<article class='list'>")
@@ -61,9 +63,9 @@ function callData(){
                             ),
                         $("<div class='contents'>")
                             .append(
-                                $("<h2>").text(title),
-                                $("<p>").text(subTxt),
-                                $("<span>").text(subDate)
+                                $("<span>").text(vidChannel),
+                                $("<h2>").text(vidTitle),
+                                $("<p>").text(vidTxt)
                             )
                     )
             )
