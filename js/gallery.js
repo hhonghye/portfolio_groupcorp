@@ -2,7 +2,10 @@
 var url = "https://www.flickr.com/services/rest/?method=flickr.people.getPhotos";
 var url_search = "https://www.flickr.com/services/rest/?method=flickr.photos.search";
 
-getFlickr(url,"-ajm");
+getFlickr(url,"suzi54241");
+// getFlickr(url,"-ajm");
+// getFlickr(url,"95223279@N04");
+
 
 
 /*--------이벤트등록--------*/
