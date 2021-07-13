@@ -56,6 +56,7 @@ function openSub(){
                     top: 0,
                     left: 0,
                     zIndex: 2,
+                    borderBottom: "1px solid #efefef",
                     display:"none"
                 })
         );
