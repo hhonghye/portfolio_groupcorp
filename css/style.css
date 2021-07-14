@@ -478,8 +478,12 @@ input, select, a, button, textarea {
       .community .inner .table_wrap table thead th:nth-of-type(4) {
         width: 15%; }
     .community .inner .table_wrap table tbody tr {
-      transition: 0.3s; }
+      transition: 0.3s;
+      position: relative;
+      cursor: pointer; }
       .community .inner .table_wrap table tbody tr td {
+        position: relative;
+        z-index: 2;
         font: 16px/1.7 'Noto Sans KR';
         color: #666;
         padding: 24px 0;
@@ -491,8 +495,18 @@ input, select, a, button, textarea {
           padding-left: 24px; }
         .community .inner .table_wrap table tbody tr td a {
           color: #000; }
-      .community .inner .table_wrap table tbody tr:hover {
-        background: #efefef; }
+      .community .inner .table_wrap table tbody tr::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #efefef;
+        z-index: 1; }
+      .community .inner .table_wrap table tbody tr:hover::after {
+        animation: heightFill 0.2s linear forwards; }
 .community .inner .pagination {
   width: 100%;
   text-align: center;
@@ -594,6 +608,12 @@ input, select, a, button, textarea {
       padding: 0 18px; }
     .community .inner .table_wrap table tbody tr td:nth-of-type(4) {
       display: none; } }
+/* ---------- animation ---------- */
+@keyframes heightFill {
+  from {
+    height: 0%; }
+  to {
+    height: 100%; } }
 .department .inner .story {
   width: 80%;
   margin: 150px auto 200px; }

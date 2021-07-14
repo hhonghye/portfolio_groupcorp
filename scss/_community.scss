@@ -73,7 +73,10 @@
                 tbody{
                     tr{
                         transition: 0.3s;
+                        position: relative;
+                        cursor: pointer;
                         td{
+                            position: relative; z-index: 2;
                             font: 16px/1.7 'Noto Sans KR'; color: #666;
                             padding: 24px 0; box-sizing: border-box;
                             border-bottom: 1px solid #eee;
@@ -82,9 +85,19 @@
                                 color: #000;
                             }
                         }
-                        &:hover{
+                        &::after{
+                            content: "";
+                            display: block;
+                            width: 100%; height: 0%;
+                            position: absolute;
+                            top: 0; left: 0;
                             background: #efefef;
+                            z-index: 1;
                         }
+                        &:hover {
+                            &::after{animation: heightFill 0.2s linear forwards;}
+                        }
+                        
                     }
                 }
             }
@@ -223,4 +236,11 @@
     
         }
     }
+}
+
+
+/* ---------- animation ---------- */
+@keyframes heightFill{
+    from{height: 0%;}
+    to{height: 100%;}
 }
