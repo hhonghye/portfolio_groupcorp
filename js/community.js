@@ -3,6 +3,7 @@ const target = $(".community .inner .table_wrap");
 const resultData = callData(url);
 
 createTable(target, resultData);
+toggle();
 
 function callData(url){
     let result;
@@ -61,4 +62,12 @@ function createTable(target,data){
                 )
         )
     }
+}
+
+function toggle(){
+    //수정할것임
+    $(".faq_wrap dl dt").on("click", function(){
+        $(".faq_wrap dl dt").next().slideUp(200);
+        $(this).next().slideDown(200);
+    });
 }

@@ -51,6 +51,43 @@
                 }
             }
         }
+        .faq_wrap{
+            width: 100%;
+            padding-bottom: 130px;
+            dl{
+                width: 100%;
+                text-align: left;
+                border-top: 1px solid #555; border-bottom: 1px solid #555; 
+                box-sizing: border-box;
+                dt{
+                    font: 18px/1.7 'Noto Sans KR'; color: #121212;
+                    padding: 24px 50px; 
+                    box-sizing: border-box;
+                    border-bottom: 1px solid #eee;
+                    cursor: pointer;
+                    position: relative;
+                    &::before{
+                        content: "Q";
+                        position: absolute; top: 50%; left: 15px; margin-top: -18px;
+                        font: 200 30px/1 'Noto Sans KR'; color: #666;
+                    }
+                    &::after{
+                        content: "+";
+                        position: absolute; top: 50%; right: 30px; margin-top: -22px;
+                        font: 200 40px/1 'Noto Sans KR'; color: #666;
+                    }
+                    &.on{
+                        // &::after{content: "-";}
+                    }
+                }
+                dd{
+                    font: 16px/1.7 'Noto Sans KR'; color: #333;
+                    padding: 40px 50px; box-sizing: border-box;
+                    background: rgba(239, 239, 239, 0.7);
+                    display: none;
+                }
+            }
+        }
 
         .table_wrap{
             width: 100%;
@@ -80,7 +117,7 @@
                             font: 16px/1.7 'Noto Sans KR'; color: #666;
                             padding: 24px 0; box-sizing: border-box;
                             border-bottom: 1px solid #eee;
-                            &:nth-of-type(2){text-align: left; color: #000; padding-left: 24px;}
+                            &:nth-of-type(2){text-align: left; color: #121212; padding-left: 24px;}
                             a{
                                 color: #000;
                             }
@@ -91,7 +128,7 @@
                             width: 100%; height: 0%;
                             position: absolute;
                             top: 0; left: 0;
-                            background: #efefef;
+                            background: rgba(239, 239, 239, 0.7);
                             z-index: 1;
                         }
                         &:hover {

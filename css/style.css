@@ -233,7 +233,7 @@ input, select, a, button, textarea {
       top: 60%;
       left: 50%;
       transform: translateX(-50%);
-      font: bold 44px/1 'Noto Sans KR';
+      font: bold 24px/1 'Noto Sans KR';
       color: #fff; }
   .content .inner {
     width: 1180px;
@@ -456,6 +456,46 @@ input, select, a, button, textarea {
       .community .inner .search_wrap .search .inputTxt_wrap button svg {
         font-size: 18px;
         color: #333; }
+.community .inner .faq_wrap {
+  width: 100%;
+  padding-bottom: 130px; }
+  .community .inner .faq_wrap dl {
+    width: 100%;
+    text-align: left;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
+    box-sizing: border-box; }
+    .community .inner .faq_wrap dl dt {
+      font: 18px/1.7 'Noto Sans KR';
+      color: #121212;
+      padding: 24px 50px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      position: relative; }
+      .community .inner .faq_wrap dl dt::before {
+        content: "Q";
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        margin-top: -18px;
+        font: 200 30px/1 'Noto Sans KR';
+        color: #666; }
+      .community .inner .faq_wrap dl dt::after {
+        content: "+";
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        margin-top: -22px;
+        font: 200 40px/1 'Noto Sans KR';
+        color: #666; }
+    .community .inner .faq_wrap dl dd {
+      font: 16px/1.7 'Noto Sans KR';
+      color: #333;
+      padding: 40px 50px;
+      box-sizing: border-box;
+      background: rgba(239, 239, 239, 0.7);
+      display: none; }
 .community .inner .table_wrap {
   width: 100%; }
   .community .inner .table_wrap table {
@@ -491,7 +531,7 @@ input, select, a, button, textarea {
         border-bottom: 1px solid #eee; }
         .community .inner .table_wrap table tbody tr td:nth-of-type(2) {
           text-align: left;
-          color: #000;
+          color: #121212;
           padding-left: 24px; }
         .community .inner .table_wrap table tbody tr td a {
           color: #000; }
@@ -503,7 +543,7 @@ input, select, a, button, textarea {
         position: absolute;
         top: 0;
         left: 0;
-        background: #efefef;
+        background: rgba(239, 239, 239, 0.7);
         z-index: 1; }
       .community .inner .table_wrap table tbody tr:hover::after {
         animation: heightFill 0.2s linear forwards; }
