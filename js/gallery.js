@@ -51,6 +51,7 @@ $(window).on("keypress", function(e){
 
 //플리커api 함수
 function getFlickr(url, id, search_tags){
+    $(".list").removeClass("on");
     $.ajax({
         url: url,
         dataType: "json",
@@ -89,16 +90,6 @@ function getFlickr(url, id, search_tags){
                 );
         });
 
-        // setTimeout(function(){
-        //     iso = new Isotope(".list",{
-        //         itemSelector: ".list>li",
-        //         columnWidth: ".list>li",
-        //         transitionDuration: "0.5s",
-        //         percentPosition: true,
-        //         isPercent:true
-        //     });
-        //     $(".list").addClass("on");
-        // },500);
         $(".list").addClass("on");
 
     

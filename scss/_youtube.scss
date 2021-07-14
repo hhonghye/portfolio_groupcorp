@@ -152,7 +152,7 @@
                     &:nth-of-type(odd){padding: 0;}
     
                     .thumbnail{
-                        height: 50vw;
+                        height: 50vw; filter: saturate(1);
                     }
                     .contents{
                         &::before{
