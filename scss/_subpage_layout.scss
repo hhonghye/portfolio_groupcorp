@@ -216,17 +216,37 @@
         margin: 0 auto;
         padding: 100px 0; box-sizing: border-box;
         position: relative;
+        // .subTitle{
+        //     width: 100%;
+        //     display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap;
+        //     text-align: left;
+        //     padding-bottom: 30px; box-sizing: border-box;
+        //     strong{
+        //         display: inline-block;
+        //         padding-bottom: 20px;
+        //         font: bold 40px/1.3 'Noto Sans KR'; color: #121212;
+        //     }
+        //     p{
+        //         display: inline-block;
+        //         width: 500px;
+        //         padding-right: 30px; padding-bottom: 30px; box-sizing: border-box;
+        //         font: 18px/1.7 'Noto Sans KR'; color: #666;
+        //     }
+        // }
         .subTitle{
             width: 100%;
             display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap;
             text-align: left;
             padding-bottom: 30px; box-sizing: border-box;
-            strong{
-                display: inline-block;
-                padding-bottom: 20px;
-                font: bold 40px/1.3 'Noto Sans KR'; color: #121212;
-            }
             p{
+                font: 200 40px/1.3 'Noto Sans KR'; color: #222;
+                    strong{
+                    display: block;
+                    padding-bottom: 20px;
+                    font: bold 40px/1.3 'Noto Sans KR'; color: #121212;
+                }
+            }
+            span{
                 display: inline-block;
                 width: 500px;
                 padding-right: 30px; padding-bottom: 30px; box-sizing: border-box;
@@ -334,8 +354,7 @@
             .subTitle{
                 display: block;
                 padding-bottom: 30px;
-                strong{display: block;}
-                p{
+                span{
                     display: block;
                     width: 500px;
                 }
@@ -391,11 +410,12 @@
         .inner{
             padding: 60px 20px;
             .subTitle{
-                strong{
-                    font-size: 24px;
-                }
                 p{
-                    width: 60vw;
+                    font-size: 24px;
+                    strong{font-size: 26px;}
+                }
+                span{
+                    width: 65vw;
                     font-size: 16px;
                     padding-right: 0;
                 }
