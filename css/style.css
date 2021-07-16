@@ -686,15 +686,53 @@ input, select, a, button, textarea {
       .department .inner .story ul li span {
         font: 14px/1.5 'Noto Sans KR';
         color: #666; }
+.department .inner .organization {
+  width: 80%;
+  margin: 70px auto; }
+  .department .inner .organization ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .department .inner .organization ul li {
+      width: calc(100% / 4);
+      height: 17vw;
+      position: relative;
+      overflow: hidden; }
+      .department .inner .organization ul li img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+      .department .inner .organization ul li .mask {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        border-top-left-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: flex-end;
+        flex-wrap: wrap; }
+        .department .inner .organization ul li .mask p {
+          font: bold 12px/1 "Noto Sans KR";
+          color: #fff;
+          padding-bottom: 8px; }
+          .department .inner .organization ul li .mask p::after {
+            content: "*";
+            font: 20px/1 'arial';
+            color: yellow; }
+        .department .inner .organization ul li .mask span {
+          font: 200 20px/1 "Noto Sans KR";
+          color: #fff;
+          padding-bottom: 30px; }
 .department .inner .division {
-  width: 100%;
-  height: 700px;
-  background-image: url(../img/department.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain; }
-  .department .inner .division .division_tree {
-    display: none; }
+  display: none; }
 
 /* ---------- tablet ---------- */
 @media screen and (max-width: 1179px) {
@@ -709,8 +747,13 @@ input, select, a, button, textarea {
         width: 260px;
         height: 260px;
         border-radius: 130px; }
-  .department .inner .division {
-    height: 60vw; } }
+  .department .inner .organization {
+    width: 100%;
+    margin: 40px auto; }
+    .department .inner .organization ul li {
+      height: 22vw; }
+      .department .inner .organization ul li .mask span {
+        font-size: 16px; } }
 /* ---------- mobile ---------- */
 @media screen and (max-width: 599px) {
   .department .inner .story {
@@ -728,6 +771,8 @@ input, select, a, button, textarea {
         font-size: 16px; }
       .department .inner .story ul li span {
         font-size: 12px; }
+  .department .inner .organization {
+    display: none; }
   .department .inner .division {
     background-image: none;
     height: auto;
@@ -750,7 +795,7 @@ input, select, a, button, textarea {
           content: "";
           display: block;
           width: 1px;
-          height: calc(68px * 13 - 24px);
+          height: calc(68px * 5 - 24px);
           background: #bbb;
           position: absolute;
           top: 48px;
@@ -769,13 +814,9 @@ input, select, a, button, textarea {
           top: 50%;
           left: -20px; }
       .department .inner .division .division_tree li ul li:nth-of-type(1) span::after {
-        height: calc(68px * 1 - 24px); }
+        height: calc(68px * 3 - 24px); }
       .department .inner .division .division_tree li ul li:nth-of-type(2) span::after {
         height: calc(68px * 3 - 24px); }
-      .department .inner .division .division_tree li ul li:nth-of-type(3) span::after {
-        height: calc(68px * 5 - 24px); }
-      .department .inner .division .division_tree li ul li:nth-of-type(4) span::after {
-        height: calc(68px * 1 - 24px); }
       .department .inner .division .division_tree li ul li ul li span {
         background: #ebebeb;
         color: #777;
