@@ -63,7 +63,23 @@ input, select, a, button, textarea {
           font: bold 18px/1 'Noto Sans KR';
           color: #fff;
           padding: 40px 30px;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+          position: relative; }
+          #header_sub .inner .menu_web #gnb > li > a::after {
+            content: "";
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            margin-left: -10px;
+            transform: scaleX(0);
+            width: 20px;
+            height: 4px;
+            border-radius: 2px;
+            background: #ccc;
+            transition: 0.2s;
+            transform-origin: center; }
+          #header_sub .inner .menu_web #gnb > li > a:hover::after {
+            transform: scaleX(1); }
         #header_sub .inner .menu_web #gnb > li > ul {
           display: none;
           width: 100%;
@@ -75,7 +91,7 @@ input, select, a, button, textarea {
             display: block;
             width: 100%;
             height: 50px;
-            font: 16px/50px 'Noto Sans KR';
+            font: 14px/50px 'Noto Sans KR';
             color: #333;
             text-align: center; }
     #header_sub .inner .menu_web .util {
@@ -1449,7 +1465,23 @@ input, select, a, button, textarea {
           font: bold 18px/1 'Noto Sans KR';
           color: #fff;
           padding: 40px 30px;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+          position: relative; }
+          #header .inner .menu_web #gnb > li > a::after {
+            content: "";
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            margin-left: -10px;
+            transform: scaleX(0);
+            width: 20px;
+            height: 4px;
+            border-radius: 2px;
+            background: #ccc;
+            transition: 0.2s;
+            transform-origin: center; }
+          #header .inner .menu_web #gnb > li > a:hover::after {
+            transform: scaleX(1); }
         #header .inner .menu_web #gnb > li > ul {
           display: none;
           width: 100%;
@@ -1461,7 +1493,7 @@ input, select, a, button, textarea {
             display: block;
             width: 100%;
             height: 50px;
-            font: 16px/50px 'Noto Sans KR';
+            font: 14px/50px 'Noto Sans KR';
             color: #333;
             text-align: center; }
     #header .inner .menu_web .util {

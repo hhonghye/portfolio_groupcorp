@@ -17,8 +17,8 @@ let speed = 200;
 // });
 
 //header
-$header.on("mouseenter", openSub);
-$header.on("mouseleave", closeSub);
+$gnb_li.on("mouseenter", openSub);
+$gnb_li.on("mouseleave", closeSub);
 $(window).on("scroll", function(){
     if($(window).scrollTop()==0){
         $header.removeClass("on");
@@ -27,7 +27,7 @@ $(window).on("scroll", function(){
     }
     
 });
-
+$gnb_li[3].on("mouseenter", closeSub);
 //햄버거메뉴
 $btn_call.on("click", function(e){
     e.preventDefault();
