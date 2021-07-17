@@ -1192,13 +1192,13 @@ input, select, a, button, textarea {
   padding-bottom: 15px;
   text-align: center; }
 .info > p {
-  font: 18px/1 "Noto Sans KR";
+  font: 16px/1 "Noto Sans KR";
   color: #757575;
   text-align: center; }
 .info ul {
   padding: 30px 0;
-  border-top: 1px solid #ccc;
-  margin: 50px 0;
+  text-align: center;
+  margin: 30px 0;
   display: flex;
   justify-content: space-between; }
   .info ul li {
@@ -1206,15 +1206,20 @@ input, select, a, button, textarea {
     padding: 0 20px;
     box-sizing: border-box;
     position: relative; }
+    .info ul li span svg {
+      font-size: 30px;
+      color: #333;
+      padding-bottom: 10px; }
     .info ul li h3 {
-      font: bold 21px/1 'Noto Sans KR';
+      font: 200 24px/1 'Noto Sans KR';
       color: #333;
       padding-bottom: 20px;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid #ddd;
       margin-bottom: 20px; }
     .info ul li p {
       font: 16px/1.75 'Noto Sans KR';
-      color: #555; }
+      color: #555;
+      text-align: left; }
 
 @media screen and (max-width: 1179px) {
   .info > h2 {
@@ -1260,6 +1265,8 @@ input, select, a, button, textarea {
     color: #333;
     margin-top: 80px;
     margin-bottom: 20px; }
+    .join .inner h3:nth-of-type(1) {
+      margin-top: 10px; }
   .join .inner .terms {
     width: 100%; }
     .join .inner .terms textarea {
