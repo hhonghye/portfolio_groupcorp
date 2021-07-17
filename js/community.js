@@ -1,17 +1,19 @@
 const url = "data/board.json"; //상대경로x?
-const target = $(".community .inner .table_wrap");
-const resultData = callData(url);
+const boardTarget = $(".community .inner .table_wrap");
+const faqTarget = $(".community .inner .faq_wrap");
+const resultBoardData = callBoardData(url);
+const resultFaqData = callFaqData(url);
 
-createTable(target, resultData);
-toggle();
+createBoardTable(boardTarget, resultBoardData);
+createFaqTable(faqTarget, resultFaqData);
 
-function callData(url){
+
+function callBoardData(url){
     let result;
     $.ajax({
         url : url,
         data : "json",
         async : false
-        
     })
     .success(function(data){
 
@@ -23,8 +25,25 @@ function callData(url){
     });
     return result;
 }
+function callFaqData(url){
+    let result;
+    $.ajax({
+        url : url,
+        data : "json",
+        async : false
+    })
+    .success(function(data){
 
-function createTable(target,data){
+        result = data.faq;
+
+    })
+    .error(function(err){
+        console.log(err);
+    });
+    return result;
+}
+
+function createBoardTable(target,data){
     target.append(
         $("<table>")
             .attr("summery", "자유게시판의 글번호, 제목, 작성자, 작성일")
@@ -63,11 +82,46 @@ function createTable(target,data){
         )
     }
 }
+function createFaqTable(target,data){
+    target.append(
+        $("<dl>")
+    )
+    for(let i=0 ; i<data.length ; i++){
+        target.find("dl")
+            .append(
+                $("<dt>").text(data[i].title),
+                $("<dd>").text(data[i].content)
+            )
+    }
+}
 
-function toggle(){
-    //수정할것임
-    $(".faq_wrap dl dt").on("click", function(){
-        $(".faq_wrap dl dt").next().slideUp(200);
-        $(this).next().slideDown(200);
-    });
+var $faq_wrap = $(".faq_wrap");
+var $faq_btns = $faq_wrap.find("dt");
+var $faq_boxs = $faq_wrap.find("dd");
+var enableClick = true;
+
+faqToggle();
+
+function faqToggle(){
+    $faq_btns.on("click", function(){
+        if(enableClick){
+            enableClick = false;
+
+            var isOn = $(this).hasClass("on");
+            $faq_btns.removeClass("on");
+            $faq_boxs.slideUp();
+
+            if(isOn){
+                $(this).removeClass("on");
+                $(this).next().slideUp(function(){
+                    enableClick = true;
+                });
+            }else{
+                $(this).addClass("on");
+                $(this).next().slideDown(function(){
+                    enableClick = true;
+                });
+            }
+        }
+    })
 }
