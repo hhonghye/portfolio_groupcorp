@@ -230,6 +230,106 @@ figure{
     width: 100%; height: 600px;
     background: rgba(255, 0, 0, 0.5);
 }
+#client{
+    background: #efefef;
+    .inner{
+        width: 90%; 
+        margin: 0 auto;
+        padding: 50px 0; box-sizing: border-box;
+        p{
+            text-align: center;
+            font: 200 38px/1.3 'Noto Sans KR'; color: #121212;
+            strong{color: #121212;}
+        }
+
+        .swiper-container{
+            width: 100%;
+            margin-top: 80px;
+            position: relative;
+            .swiper-wrapper{
+                width: 100%;
+                .swiper-slide{
+                    width: 600px; height: 400px;
+                    opacity: 0;
+                    background-color: #fff;
+                    margin-bottom: 20px;
+                    display: flex;
+                    flex-direction: column; justify-content: center; align-items: center;flex-wrap: wrap;
+                    text-align: center;
+                    border-radius: 5px;
+                    img{
+                        display: block;
+                        margin: 0 auto;
+                        width: 300px; height: 200px;
+                        margin-bottom: 30px;
+
+                        background: rgba(255, 0, 0, 0.425);
+                    }
+                    p{
+                        font: bold 20px/1 "Noto Sans KR"; color: #121212;
+                        padding-bottom: 15px;
+                    }
+                    span{
+                        width: 300px;
+                        font: 200 15px/1.5 "Noto Sans KR"; color: #111;
+                        padding-bottom: 15px;
+                    }
+                    a{
+                        font: 200 14px/1.7 "Noto Sans KR"; color: #555;
+                        border-bottom: 1px solid #888;
+                    }
+                    &.swiper-slide-active{opacity: 1;}
+                    &.swiper-slide-prev{opacity: 0.5;}
+                    &.swiper-slide-next{opacity: 0.5;}
+                }
+            }
+            
+            .swiper-button-prev{
+                background: none;
+                &::before{
+                    content: "";
+                    width: 40px; height: 1px;
+                    background: #333;
+                    position: absolute; top: 50%; left: 0;
+                    transform: rotate(-45deg);
+                    transform-origin: left center;
+                    transition: 0.2s;
+                }
+                &::after{
+                    content: "";
+                    width: 40px; height: 1px;
+                    background: #333;
+                    position: absolute; top: 50%; left: 0px;
+                    transform: rotate(45deg);
+                    transform-origin: left center;
+                    transition: 0.2s;
+                }
+            }
+            .swiper-button-next{
+                background: none;
+                &::before{
+                    content: "";
+                    width: 40px; height: 1px;
+                    background: #333;
+                    position: absolute; top: 50%; right: 0px;
+                    transform: rotate(45deg);
+                    transform-origin: right center;
+                    transition: 0.2s;
+                }
+                &::after{
+                    content: "";
+                    width: 40px; height: 1px;
+                    background: #333;
+                    position: absolute; top: 50%; right: 0px;
+                    transform: rotate(-45deg);
+                    transform-origin: right center;
+                    transition: 0.2s;
+                }
+            }
+
+        }
+    }
+}
 
 //footer
 #footer{
@@ -284,8 +384,6 @@ figure{
         }
     }
 }
-
-
 
 
 /* ---------- tablet ---------- */

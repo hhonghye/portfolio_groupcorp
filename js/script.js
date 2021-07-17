@@ -87,3 +87,30 @@ function headerTabFocus(){
         });
     });
 }
+
+var swiper = new Swiper('#client .swiper-container', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    loop: true,
+    speed: 500,
+    direction:'horizontal',
+    centeredSlides: true, //가운데 패널을 화면 중앙에 위치
+    slidesPerView: 'auto',  //개별슬라이더의 고정 너비값 적용
+    coverflowEffect: {
+        rotate: 0, //슬라이더 회전 각
+        stretch: 80, //슬라이더 사이 거리
+        depth: 400, //깊이효과
+        modifier:1,  //효과 배수
+        slideShadows: false, //슬라이더그림자
+    },
+    navigation:{
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false, //스와이프 후 자동재생
+    }
+});
