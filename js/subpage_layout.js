@@ -9,6 +9,7 @@ const $btn_call = $header_sub.find(".btn_call");
 const $menu_mobile = $header_sub.find(".menu_mobile");
 let speed = 200;
 
+headerTabFocus();
 
 /*---------- 이벤트등록 ----------*/
 //리사이즈
@@ -77,4 +78,16 @@ function closeSub(){
         $gnb_li_ul.stop().slideUp(speed);
         if($(window).scrollTop()==0) $header_sub.removeClass("on");
     }
+}
+
+//tab focusEvent
+function headerTabFocus(){
+    $gnb_li.each(function(index){
+        $gnb_li.eq(index).find("a").first().on("focusin", function(){
+            openSub();
+        });
+        $gnb_li.eq(index).find("a").last().on("focusout", function(){
+            closeSub();
+        });
+    });
 }

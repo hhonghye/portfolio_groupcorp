@@ -9,6 +9,7 @@ const $btn_call = $header.find(".btn_call");
 const $menu_mobile = $header.find(".menu_mobile");
 let speed = 200;
 
+headerTabFocus();
 
 /*---------- 이벤트등록 ----------*/
 //리사이즈
@@ -27,7 +28,6 @@ $(window).on("scroll", function(){
     }
     
 });
-$gnb_li[3].on("mouseenter", closeSub);
 //햄버거메뉴
 $btn_call.on("click", function(e){
     e.preventDefault();
@@ -74,4 +74,16 @@ function closeSub(){
         $gnb_li_ul.stop().slideUp(speed);
         if($(window).scrollTop()==0) $header.removeClass("on");
     }
+}
+
+//tab focusEvent
+function headerTabFocus(){
+    $gnb_li.each(function(index){
+        $gnb_li.eq(index).find("a").first().on("focusin", function(){
+            openSub();
+        });
+        $gnb_li.eq(index).find("a").last().on("focusout", function(){
+            closeSub();
+        });
+    });
 }
