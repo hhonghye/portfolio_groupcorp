@@ -1939,6 +1939,90 @@ figure {
         #introduce .inner > span:hover::after {
           display: none; }
 
+#product {
+  width: 100%; }
+  #product .inner {
+    width: 100%; }
+    #product .inner ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      #product .inner ul li {
+        width: calc(100% / 3);
+        height: 20vw;
+        border: 1px solid red;
+        box-sizing: border-box;
+        flex: 1;
+        transition: 0.3s; }
+        #product .inner ul li a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: url();
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative; }
+          #product .inner ul li a::after {
+            display: none;
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.6); }
+          #product .inner ul li a p {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            z-index: 2;
+            font: 200 21px/2 "Noto Sans KR";
+            color: #fff; }
+          #product .inner ul li a span {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            content: "";
+            display: block;
+            width: 30px;
+            height: 1px;
+            background: #fff;
+            z-index: 2;
+            transition: 0.3s; }
+            #product .inner ul li a span::before {
+              content: "";
+              width: 20px;
+              height: 1px;
+              background: #fff;
+              transform-origin: right center;
+              transform: rotate(45deg);
+              position: absolute;
+              top: 0;
+              right: 0;
+              transition: 0.3s; }
+            #product .inner ul li a span::after {
+              content: "";
+              width: 20px;
+              height: 1px;
+              background: #fff;
+              transform-origin: right center;
+              transform: rotate(-45deg);
+              position: absolute;
+              top: 0;
+              right: 0;
+              transition: 0.3s; }
+        #product .inner ul li:hover {
+          flex: 1.3; }
+          #product .inner ul li:hover a::after {
+            display: block; }
+          #product .inner ul li:hover a span {
+            width: 100px; }
+            #product .inner ul li:hover a span::before {
+              transform: rotate(0); }
+            #product .inner ul li:hover a span::after {
+              transform: rotate(0); }
+
 #footer {
   border-top: 1px solid #eee; }
   #footer .inner {

@@ -454,7 +454,6 @@ figure{
     background-size: cover;
     background-attachment: fixed;
 }
-
 #introduce{
     width: 100%;
     .inner{
@@ -464,7 +463,7 @@ figure{
         .sectionTitle{
             justify-content: center;
             p{text-align: center; padding-bottom: 50px;}
-            span{text-align: center;  font-size: 16px;}
+            span{text-align: center; font-size: 16px;}
         }
         >span{
             display: block;
@@ -500,6 +499,87 @@ figure{
             }
         }
         
+    }
+}
+#product{
+    width: 100%;
+    .inner{
+        width: 100%;
+        ul{
+            display: flex;
+            justify-content: space-between; align-items: center;
+            li{
+                width: calc(100% / 3);
+                height: 20vw;
+                border: 1px solid red; box-sizing: border-box;
+                flex: 1; transition: 0.3s;
+                a{
+                    display: block;
+                    width: 100%; height: 100%;
+                    background: url();
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    position: relative;
+                    &::after{
+                        display: none;
+                        content: "";
+                        width: 100%; height: 100%;
+                        position: absolute; top: 0; left: 0;
+                        background: rgba(0, 0, 0, 0.6);
+                    }
+                    p{
+                        position: absolute; top: 30px; left: 30px;
+                        z-index: 2;
+                        font: 200 21px/2 "Noto Sans KR"; color: #fff;
+                    }
+                    span{
+                        position: absolute; bottom: 30px; right: 30px;
+                        content: "";
+                        display: block;
+                        width: 30px; height: 1px;
+                        background: #fff;
+                        z-index: 2;
+                        transition: 0.3s;
+                        &::before{
+                            content: "";
+                            width: 20px; height: 1px;
+                            background: #fff;
+                            transform-origin: right center;
+                            transform: rotate(45deg);
+                            position: absolute; top: 0; right: 0;
+                            transition: 0.3s;
+                        }
+                        &::after{
+                            content: "";
+                            width: 20px; height: 1px;
+                            background: #fff;
+                            transform-origin: right center;
+                            transform: rotate(-45deg);
+                            position: absolute; top: 0; right: 0;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+                &:hover{
+                    flex: 1.3;
+                    a{
+                        &::after{
+                            display: block;
+                        }
+                        span{
+                            width: 100px;
+                            &::before{
+                                transform: rotate(0);
+                            }
+                            &::after{
+                                transform: rotate(0);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
