@@ -1666,7 +1666,7 @@ figure {
     padding-bottom: 30px;
     box-sizing: border-box;
     font: 18px/1.7 'Noto Sans KR';
-    color: #666; }
+    color: #757575; }
 
 #history .inner {
   width: 1180px;
@@ -1848,7 +1848,7 @@ figure {
   #service .inner {
     width: 1180px;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 100px 20px;
     box-sizing: border-box; }
     #service .inner::after {
       content: "";
@@ -1884,6 +1884,60 @@ figure {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; }
+
+#introduce {
+  width: 100%; }
+  #introduce .inner {
+    width: 1180px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    box-sizing: border-box; }
+    #introduce .inner .sectionTitle {
+      justify-content: center; }
+      #introduce .inner .sectionTitle p {
+        text-align: center;
+        padding-bottom: 50px; }
+      #introduce .inner .sectionTitle span {
+        text-align: center;
+        font-size: 16px; }
+    #introduce .inner > span {
+      display: block;
+      margin: 0 auto;
+      width: 34px;
+      height: 34px;
+      background: #121212;
+      border-radius: 17px;
+      position: relative;
+      cursor: pointer;
+      transition: width 0.6s;
+      font-size: 0; }
+      #introduce .inner > span::before {
+        content: "";
+        width: 1px;
+        height: 14px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+      #introduce .inner > span::after {
+        content: "";
+        width: 14px;
+        height: 1px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+      #introduce .inner > span:hover {
+        width: 100px;
+        font: 200 14px/34px "Noto Sans KR";
+        color: #fff;
+        text-align: center; }
+        #introduce .inner > span:hover::before {
+          display: none; }
+        #introduce .inner > span:hover::after {
+          display: none; }
 
 #footer {
   border-top: 1px solid #eee; }

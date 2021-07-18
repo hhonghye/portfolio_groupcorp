@@ -239,7 +239,7 @@ figure{
     span{
         display: inline-block;
         padding-right: 30px; padding-bottom: 30px; box-sizing: border-box;
-        font: 18px/1.7 'Noto Sans KR'; color: #666;
+        font: 18px/1.7 'Noto Sans KR'; color: #757575;
     }
     
 }
@@ -420,7 +420,7 @@ figure{
     .inner{
         width: 1180px;
         margin: 0 auto;
-        padding: 100px 0; box-sizing: border-box;
+        padding: 100px 20px; box-sizing: border-box;
         &::after{content: ""; display: block; clear: both;}
         article{
             width: 900px;
@@ -453,6 +453,54 @@ figure{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+
+#introduce{
+    width: 100%;
+    .inner{
+        width: 1180px;
+        margin: 0 auto;
+        padding: 80px 20px; box-sizing: border-box; 
+        .sectionTitle{
+            justify-content: center;
+            p{text-align: center; padding-bottom: 50px;}
+            span{text-align: center;  font-size: 16px;}
+        }
+        >span{
+            display: block;
+            margin: 0 auto;
+            width: 34px; height: 34px;
+            background: #121212;
+            border-radius: 17px;
+            position: relative;
+            cursor: pointer;
+            transition: width 0.6s;
+            font-size: 0;
+            &::before{
+                content: "";
+                width: 1px; height: 14px;
+                background: #fff;
+                position: absolute;
+                top: 50%; left: 50%; transform: translate(-50%, -50%);
+            }
+            &::after{
+                content: "";
+                width: 14px; height: 1px;
+                background: #fff;
+                position: absolute;
+                top: 50%; left: 50%; transform: translate(-50%, -50%);
+            }
+            &:hover{
+                width: 100px;
+                font: 200 14px/34px "Noto Sans KR"; color: #fff;
+                text-align: center;
+                &::before{display: none;}
+                &::after{display: none;}
+                
+            }
+        }
+        
+    }
 }
 
 //footer
