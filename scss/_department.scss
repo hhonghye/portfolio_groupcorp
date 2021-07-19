@@ -1,6 +1,6 @@
 .department{
     .inner{
-        .story{
+        #story{
             width: 80%; margin: 0 auto;
             ul{
                 display: flex;
@@ -26,7 +26,7 @@
             }
         }
 
-        .organization{
+        #organization{
             width: 80%;
             margin: 70px auto;
             ul{
@@ -79,7 +79,7 @@
 /* ---------- tablet ---------- */
 @media screen and (max-width: 1179px){
    .department .inner{
-        .story{
+        #story{
             width: 100%;
             ul{
                 width: 500px;
@@ -92,7 +92,7 @@
                 }
             }
         }
-        .organization{
+        #organization{
             width: 100%;
             margin: 40px auto;
             ul{
@@ -112,7 +112,7 @@
 @media screen and (max-width: 599px){
     .department{
         .inner{
-            .story{
+            #story{
                 ul{
                     width: 100%;
                     margin: 0;
@@ -126,7 +126,7 @@
                     }
                 }
             }
-            .organization{
+            #organization{
                 .subTitle{padding: 0;}
                 ul{display: none;}
             }

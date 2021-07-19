@@ -7,9 +7,12 @@ getFlickr(url,"suzi54241");
 // getFlickr(url,"95223279@N04");
 
 
-
 /*--------이벤트등록--------*/
 
+//scroll subTitle event
+$(window).on("scroll", function(){
+    subTitle("#gallery");
+});
 
 //이미지 클릭시 팝업 뜨는 이벤트
 $("body").on("click", "#gallery .list li a", function(e){

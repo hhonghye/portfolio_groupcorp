@@ -1,3 +1,11 @@
+/*---------- 이벤트등록 ----------*/
+
+//scroll subTitle event
+$(window).on("scroll", function(){
+    subTitle("#location");
+});
+
+/*---------- kakao API ----------*/
 /* ------------- 지도를 띄우는 코드 작성 -------------- */
 var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
 var options = { //지도를 생성할 때 필요한 기본 옵션

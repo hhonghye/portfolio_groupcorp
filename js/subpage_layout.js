@@ -11,8 +11,6 @@ let speed = 200;
 
 headerTabFocus();
 
-
-
 /*---------- 이벤트등록 ----------*/
 //리사이즈
 // let resize;
@@ -43,10 +41,6 @@ $btn_call.on("click", function(e){
         $(this).addClass("on");
         $menu_mobile.addClass("on");
     }
-});
-
-$(window).on("scroll", function(){
-
 });
 
 
@@ -88,14 +82,11 @@ function closeSub(){
 }
 function subTitle(target){
     var currentPos = $(window).scrollTop();
-    console.log(currentPos);
-    console.log($(target).offset().top);
-    console.log($(target).offset().top - 300);
 
-    if(currentPos >= $(target).offset().top - 300 ){
-        $(target).prev().addClass("on");
+    if(currentPos >= $(target).offset().top - 600){
+        $(target).find(".subTitle").addClass("on");
     }else{
-        $(target).prev().removeClass("on");
+        $(target).find(".subTitle").removeClass("on");
     }
 }
 

@@ -1,12 +1,22 @@
 const url = "data/board.json"; //상대경로x?
-const boardTarget = $(".community .inner .board .table_wrap");
-const faqTarget = $(".community .inner .faq");
+const boardTarget = $("#board .table_wrap");
+const faqTarget = $("#faq");
 const resultBoardData = callBoardData(url);
 const resultFaqData = callFaqData(url);
 
 createBoardTable(boardTarget, resultBoardData);
 createFaqTable(faqTarget, resultFaqData);
 
+/*---------- 이벤트등록 ----------*/
+
+//scroll subTitle event
+$(window).on("scroll", function(){
+    subTitle("#faq");
+    subTitle("#board");
+});
+
+
+/*---------- 함수정의 ----------*/
 
 function callBoardData(url){
     let result;
@@ -94,6 +104,8 @@ function createFaqTable(target,data){
             )
     }
 }
+
+/*---------- toggle ----------*/
 
 var $faq_wrap = $(".faq_wrap");
 var $faq_btns = $faq_wrap.find("dt");

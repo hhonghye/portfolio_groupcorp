@@ -1,157 +1,164 @@
 .join{
     .inner{
-        width: 90vmin;
-        h3{
-            font: bold 22px/1 'Noto Sans KR'; color: #333;
-            margin-top: 80px; margin-bottom: 20px;
-            &:nth-of-type(1){
-                margin-top: 10px;
-            }
-        }
-
-        .terms{
+        width: 90vmin; margin: 0 auto;
+        #join{
             width: 100%;
-            
-            textarea{
+            .subTitle{
+                padding: 0;
+            }
+            h3{
+                font: bold 22px/1 'Noto Sans KR'; color: #333;
+                margin-top: 50px; margin-bottom: 20px;
+            }
+
+            .terms{
                 width: 100%;
-                padding: 20px; box-sizing: border-box;
-                resize: none;
-                font: 14px/1.7 'Noto Sans KR'; color: #555;
-                border: 1px solid #bbb;
-                border-radius: 5px;
-                margin-bottom: 10px;
-            }
-            >label{
-                display: block;
-                text-align: right;
-                margin-bottom: 20px;
-                font: 16px/1 'Noto Sans KR'; color: #222;
-                cursor: pointer;
-                input[type=checkbox]{
-                    margin-right: 10px; vertical-align: middle;
+                
+                textarea{
+                    width: 100%;
+                    padding: 20px; box-sizing: border-box;
+                    resize: none;
+                    font: 14px/1.7 'Noto Sans KR'; color: #555;
+                    border: 1px solid #bbb;
+                    border-radius: 5px;
+                    margin-bottom: 10px;
+                }
+                >label{
+                    display: block;
+                    text-align: right;
+                    margin-bottom: 20px;
+                    font: 16px/1 'Noto Sans KR'; color: #222;
+                    cursor: pointer;
+                    input[type=checkbox]{
+                        margin-right: 10px; vertical-align: middle;
+                    }
                 }
             }
-        }
 
-        table{
-            width: 100%;
-            tbody{
-                tr{
-                    label[required]::after {content: "*"; color: #3d5afe}
-                    th{
-                        width: 30%; 
-                        text-align: left;
-                        padding: 30px 0 0 40px; box-sizing: border-box;
-                        vertical-align: top;
-                        font: 16px/1 "Noto Sans KR"; color: #333;
-                        input[type=reset], input[type=submit]{
-                            width: 200px; height: 50px;
-                            background: #999; color: #fff;
-                            border-radius: 5px;
-                            margin: 0 10px;
-                            cursor: pointer;
-                            font: 18px/50px 'Noto Sans KR';
+            table{
+                width: 100%;
+                tbody{
+                    tr{
+                        label[required]::after {content: "*"; color: #3d5afe}
+                        th{
+                            width: 30%; 
+                            text-align: left;
+                            padding: 30px 0 0 40px; box-sizing: border-box;
+                            vertical-align: top;
+                            font: 16px/1 "Noto Sans KR"; color: #333;
+                            input[type=reset], input[type=submit]{
+                                width: 200px; height: 50px;
+                                background: #999; color: #fff;
+                                border-radius: 5px;
+                                margin: 0 10px;
+                                cursor: pointer;
+                                font: 18px/50px 'Noto Sans KR';
+                            }
+                            input[type=submit]{background: #3d5afe;}
+                            &:last-child { text-align: center; padding: 50px 0;}
                         }
-                        input[type=submit]{background: #3d5afe;}
-                        &:last-child { text-align: center; padding: 50px 0;}
+                        td{
+                            width: 70%;
+                            padding: 15px 0; box-sizing: border-box;
+                            input[type=text]{
+                                width: 100%; 
+                                border: 1px solid #bbb;
+                                border-radius: 5px;
+                                padding: 14px;
+                                box-sizing: border-box;
+                                font: 14px/1 'Noto Sans KR'; color: #333;
+                                &:focus{
+                                    border: 1px solid #3d5afe;
+                                    box-shadow: 0px 5px 10px rgba(61, 90, 254, 0.15);
+                                }
+                                &.error{
+                                    border: 1px solid #d32f2f;
+                                    box-shadow: 0px 5px 10px rgba(211, 47, 47, 0.15);
+                                }
+                            }
+                            input[type=password]{
+                                width: 100%; 
+                                border: 1px solid #bbb;
+                                border-radius: 5px;
+                                padding: 14px;
+                                box-sizing: border-box;
+                                font: 14px/1 'Noto Sans KR'; color: #333;
+                                &:focus{
+                                    border: 1px solid rgb(61, 90, 254);
+                                    box-shadow: 0px 5px 10px rgba(61, 90, 254, 0.185);
+                                }
+                                &.error{
+                                    border: 1px solid #d32f2f;
+                                    box-shadow: 0px 5px 10px rgba(211, 47, 47, 0.15);
+                                }
+                            }
+                            input[type=radio],input[type=checkbox]{
+                                margin-right: 10px;
+                                cursor: pointer;
+                            }
+                            label{font: 14px/1 'Noto Sans KR'; color: #333; margin-right: 30px;}
+                            p{
+                                font: 14px/1.5 'Noto Sans KR'; color: #d32f2f;
+                                padding-top: 5px;
+                                display: none;
+                            }
+                            textarea{
+                                width: 100%; height: 100px;
+                                border: 1px solid #bbb;
+                                border-radius: 5px;
+                                padding: 14px; box-sizing: border-box;
+                                resize: none;
+                                font: 14px/1.5 'Noto Sans KR';
+                                &:focus{
+                                    border: 1px solid #3d5afe;
+                                    box-shadow: 0px 5px 10px rgba(61, 90, 254, 0.15);
+                                }
+                            }
+                        }
                     }
-                    td{
-                        width: 70%;
-                        padding: 15px 0; box-sizing: border-box;
-                        input[type=text]{
-                            width: 100%; 
-                            border: 1px solid #bbb;
-                            border-radius: 5px;
-                            padding: 14px;
-                            box-sizing: border-box;
-                            font: 14px/1 'Noto Sans KR'; color: #333;
-                            &:focus{
-                                border: 1px solid #3d5afe;
-                                box-shadow: 0px 5px 10px rgba(61, 90, 254, 0.15);
-                            }
-                            &.error{
-                                border: 1px solid #d32f2f;
-                                box-shadow: 0px 5px 10px rgba(211, 47, 47, 0.15);
-                            }
-                        }
-                        input[type=password]{
-                            width: 100%; 
-                            border: 1px solid #bbb;
-                            border-radius: 5px;
-                            padding: 14px;
-                            box-sizing: border-box;
-                            font: 14px/1 'Noto Sans KR'; color: #333;
-                            &:focus{
-                                border: 1px solid rgb(61, 90, 254);
-                                box-shadow: 0px 5px 10px rgba(61, 90, 254, 0.185);
-                            }
-                            &.error{
-                                border: 1px solid #d32f2f;
-                                box-shadow: 0px 5px 10px rgba(211, 47, 47, 0.15);
-                            }
-                        }
-                        input[type=radio],input[type=checkbox]{
-                            margin-right: 10px;
-                            cursor: pointer;
-                        }
-                        label{font: 14px/1 'Noto Sans KR'; color: #333; margin-right: 30px;}
-                        p{
-                            font: 14px/1.5 'Noto Sans KR'; color: #d32f2f;
-                            padding-top: 5px;
-                            display: none;
-                        }
-                        textarea{
-                            width: 100%; height: 100px;
-                            border: 1px solid #bbb;
-                            border-radius: 5px;
-                            padding: 14px; box-sizing: border-box;
-                            resize: none;
-                            font: 14px/1.5 'Noto Sans KR';
-                            &:focus{
-                                border: 1px solid #3d5afe;
-                                box-shadow: 0px 5px 10px rgba(61, 90, 254, 0.15);
-                            }
-                        }
+                    .gender, .interest{
+                        th{padding-top: 15px;}
                     }
-                }
-                .gender, .interest{
-                    th{padding-top: 15px;}
-                }
-                .email{
-                    td{
-                        input[type=text]{width: 49%;}
-                        select{
-                            width: 49%; height: 50px;
-                            border: 1px solid #bbb;
-                            border-radius: 5px;
-                            padding-left: 14px; padding-right: 34px;
-                            box-sizing: border-box;
-                            font: 14px/1 'Noto Sans KR'; color: #444;
-                            -webkit-appearance: none;
-                            -moz-appearance: none;
-                            appearance: none;
-                            background: url(../img/arrow-down-solid.png) no-repeat 95% center;
-                            &:focus{
-                                border: 1px solid #3d5afe;
-                                box-shadow: 0px 5px 10px rgba(61, 90, 254, 0.15);
+                    .email{
+                        td{
+                            input[type=text]{width: 49%;}
+                            select{
+                                width: 49%; height: 50px;
+                                border: 1px solid #bbb;
+                                border-radius: 5px;
+                                padding-left: 14px; padding-right: 34px;
+                                box-sizing: border-box;
+                                font: 14px/1 'Noto Sans KR'; color: #444;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                appearance: none;
+                                background: url(../img/arrow-down-solid.png) no-repeat 95% center;
+                                &:focus{
+                                    border: 1px solid #3d5afe;
+                                    box-shadow: 0px 5px 10px rgba(61, 90, 254, 0.15);
+                                }
+                                &.error{
+                                    border: 1px solid #d32f2f;
+                                    box-shadow: 0px 5px 10px rgba(211, 47, 47, 0.15);
+                                }
                             }
-                            &.error{
-                                border: 1px solid #d32f2f;
-                                box-shadow: 0px 5px 10px rgba(211, 47, 47, 0.15);
-                            }
+                            // select::-ms-expand {display: none;}
                         }
-                        // select::-ms-expand {display: none;}
                     }
                 }
             }
         }
+        
     }
 }
 /* ---------- tablet ---------- */
 @media screen and (max-width: 1179px){
     .join{
         .inner{
-            table tbody tr th{padding-left: 0;}
+            #join{
+                table tbody tr th{padding-left: 0;}
+            }
+            
         }
     }
 }
@@ -160,52 +167,67 @@
     .join{
         .inner{
             width: 100%;
-            h3{font-size: 18px;}
+            #join{
+                width: 100%;
+                h3{font-size: 18px;}
+        
+                .terms{
+                    textarea{font-size: 12px;}
+                    >label{font-size: 13px; margin-bottom: 30px;}
+                }
+        
+                table{
+                    tbody{
+                        tr{
+                            th{
+                                width: 25%; 
+                                font-size: 14px;
+                                padding: 25px 10px 0 0;
+                                line-height: 1.5;
     
-            .terms{
-                textarea{font-size: 12px;}
-                >label{font-size: 13px; margin-bottom: 30px;}
-            }
-    
-            table{
-                tbody{
-                    tr{
-                        th{
-                            width: 25%; 
-                            font-size: 14px;
-                            padding: 25px 10px 0 0;
-                            line-height: 1.5;
-
-                            input[type=reset], input[type=submit]{
-                                width: 45%; height: 46px;
-                                margin: 0 5px;
-                                font: 15px/46px 'Noto Sans KR';
+                                input[type=reset], input[type=submit]{
+                                    width: 45%; height: 46px;
+                                    margin: 0 5px;
+                                    font: 15px/46px 'Noto Sans KR';
+                                }
                             }
-                        }
-                        td{
-                            width: 75%; padding: 12px 0;
-                            input[type=text]{
-                                font-size: 12px;
-                            }
-                            input[type=password]{
-                                font-size: 12px;
-                            }
-                            p{
-                                font-size: 12px;
-                            }
-                            textarea{
-                                font-size: 12px;
-                            }
-                        }
-                        &:nth-of-type(4){th{padding-top: 10px;}}
-                        &:nth-of-type(5){
                             td{
-                                select{font-size: 12px; padding-right: 28px;}
+                                width: 75%; padding: 12px 0;
+                                input[type=text]{
+                                    font-size: 12px;
+                                }
+                                input[type=password]{
+                                    font-size: 12px;
+                                }
+                                p{
+                                    font-size: 12px;
+                                }
+                                textarea{
+                                    font-size: 12px;
+                                }
+                                input[type=radio],input[type=checkbox]{
+                                    margin-right: 5px;
+                                }
                             }
+                            &:nth-of-type(4){th{padding-top: 10px;}}
+                            &:nth-of-type(5){
+                                td{
+                                    select{font-size: 12px; padding-right: 28px;}
+                                }
+                            }
+                            
+                        }
+                        .email{
+                            td{
+                                input[type=text]{width: 100%; margin-bottom: 5px;}
+                                select{width: 100%;;}
+                            }
+
                         }
                     }
                 }
             }
+            
         }
     }
 }

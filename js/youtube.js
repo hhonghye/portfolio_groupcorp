@@ -1,5 +1,11 @@
-
 callData();
+
+/*---------- 이벤트등록 ----------*/
+
+//scroll subTitle event
+$(window).on("scroll", function(){
+    subTitle("#youtube");
+});
 
 //썸네일 onclick 이벤트 등록
 $("body").on("click", ".thumbnail a", function(e){
@@ -18,7 +24,7 @@ $("body").on("click", ".popup .close", function(){
 });
 
 
-
+/*---------- 함수정의 ----------*/
 
 //Youtube data 불러오는 함수 정의
 function callData(){
@@ -77,7 +83,6 @@ function callData(){
         console.log("데이터를 불러오는데 실패하였습니다.ㅜㅜ");
     })
 }
-
 
 //popup 함수 정의
 function createPopup(videoId){

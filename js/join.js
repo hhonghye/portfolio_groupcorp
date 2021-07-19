@@ -1,3 +1,10 @@
+/*---------- 이벤트등록 ----------*/
+
+//scroll subTitle event
+$(window).on("scroll", function(){
+    subTitle("#join");
+});
+
 $("input[type=submit]").on("click",function(e){     
     //return값이 false면 result.html으로 넘어가는것 방지
     if(!isCheck("terms")) e.preventDefault();
@@ -8,6 +15,8 @@ $("input[type=submit]").on("click",function(e){
     if(!isTxt("email1")) e.preventDefault();
     if(!isSelect("email2")) e.preventDefault();
 });
+
+/*---------- 함수정의 ----------*/
 
 function isTxt(name, length){
     var $txt = $("input[name="+name+"]");

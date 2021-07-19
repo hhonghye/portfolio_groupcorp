@@ -1,6 +1,6 @@
 .community{
     .inner{
-        .faq{
+        #faq{
             width: 100%;
             padding-bottom: 130px;
             dl{
@@ -37,7 +37,7 @@
                 }
             }
         }
-        .board{
+        #board{
             .search_wrap{
                 display: flex; justify-content: flex-end;
                 padding-bottom: 30px;
@@ -142,7 +142,6 @@
             }
         }
         
-        
         .pagination{
             width: 100%;
             text-align: center;
@@ -193,7 +192,7 @@
 @media screen and (max-width: 1179px){
     .community{
         .inner{
-            .board{
+            #board{
                 .search_wrap{
                     justify-content: center;
                     .search{
@@ -240,7 +239,7 @@
 @media screen and (max-width: 599px){
     .community{
         .inner{
-            .board{
+            #board{
                 .search_wrap{
                     width: 100%;
                     justify-content: left;
