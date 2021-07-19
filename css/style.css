@@ -1733,15 +1733,12 @@ figure {
       #product .inner ul li {
         width: calc(100% / 3);
         height: 20vw;
-        border: 1px solid red;
-        box-sizing: border-box;
         flex: 1;
         transition: 0.3s; }
         #product .inner ul li a {
           display: block;
           width: 100%;
           height: 100%;
-          background: url();
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
@@ -1805,11 +1802,17 @@ figure {
               transform: rotate(0); }
             #product .inner ul li:hover a span::after {
               transform: rotate(0); }
+        #product .inner ul li:nth-of-type(1) a {
+          background: url(../img/main/product1.jpg); }
+        #product .inner ul li:nth-of-type(2) a {
+          background: url(../img/main/product2.jpg); }
+        #product .inner ul li:nth-of-type(3) a {
+          background: url(../img/main/product3.jpg); }
 
 #history .inner {
   width: 1180px;
   margin: 0 auto;
-  padding: 100px 20px;
+  padding: 100px 20px 50px;
   box-sizing: border-box; }
   #history .inner .txt {
     display: flex;
@@ -1839,33 +1842,24 @@ figure {
             font: 16px/1.5 "Noto Sans KR";
             color: #777; }
 #history .pic {
-  width: 100%;
-  height: 25vw;
-  margin-bottom: 130px;
+  width: 80%;
+  height: 30vw;
   position: relative; }
   #history .pic img {
-    width: 75%;
+    width: 100%;
     height: 100%;
-    border: 1px solid red;
-    box-sizing: border-box;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2; }
-  #history .pic p {
-    position: absolute;
-    bottom: -50px;
-    right: 0;
-    font: bold 150px/1 "Noto Sans KR";
-    color: rgba(239, 239, 239, 0.7); }
 
 #service {
   width: 100%; }
   #service .inner {
     width: 1180px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 100px 20px;
     padding-bottom: 100px;
     box-sizing: border-box; }
     #service .inner::after {
@@ -1882,14 +1876,14 @@ figure {
         align-items: center; }
         #service .inner article ul li {
           width: calc(100% / 3);
-          padding: 20px;
+          padding: 40px 20px 0;
           box-sizing: border-box; }
-          #service .inner article ul li a {
+          #service .inner article ul li img {
             display: block;
             width: 100%;
             height: 150px;
-            border: 1px solid red;
-            margin-bottom: 20px; }
+            margin-bottom: 50px;
+            object-fit: contain; }
           #service .inner article ul li p {
             font: 200 16px/1.5 "Noto Sans KR";
             color: #121212; }
@@ -1897,7 +1891,7 @@ figure {
 #pic {
   width: 100%;
   height: 330px;
-  background: url(../img/visual_bg.jpg);
+  background: url(../img/main/pic1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1939,10 +1933,11 @@ figure {
           #client .inner .swiper-container .swiper-wrapper .swiper-slide img {
             display: block;
             margin: 0 auto;
-            width: 300px;
-            height: 200px;
+            width: 250px;
+            height: 180px;
             margin-bottom: 30px;
-            background: rgba(255, 0, 0, 0.425); }
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px; }
           #client .inner .swiper-container .swiper-wrapper .swiper-slide p {
             font: bold 20px/1 "Noto Sans KR";
             color: #121212;
