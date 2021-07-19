@@ -41,6 +41,16 @@ $btn_call.on("click", function(e){
     }
 });
 
+//scroll event
+$(window).on("scroll", function(){
+
+    sectionTitle("#introduce");
+    sectionTitle("#history");
+    sectionTitle("#service");
+    sectionTitle("#client");
+
+});
+
 /*---------- 함수정의 ----------*/
 //header
 function openSub(){
@@ -86,6 +96,17 @@ function headerTabFocus(){
             closeSub();
         });
     });
+}
+
+//scroll event sectionTitle
+function sectionTitle(target){
+    var currentPos = $(window).scrollTop();
+
+    if(currentPos >= $(target).offset().top - 500 ){
+        $(target).find(".inner").find(".sectionTitle").addClass("on");
+    }else{
+        $(target).find(".inner").find(".sectionTitle").removeClass("on");
+    }
 }
 
 var swiper = new Swiper('#client .swiper-container', {

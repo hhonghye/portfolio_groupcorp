@@ -11,6 +11,8 @@ let speed = 200;
 
 headerTabFocus();
 
+
+
 /*---------- 이벤트등록 ----------*/
 //리사이즈
 // let resize;
@@ -42,6 +44,11 @@ $btn_call.on("click", function(e){
         $menu_mobile.addClass("on");
     }
 });
+
+$(window).on("scroll", function(){
+
+});
+
 
 /*---------- 함수정의 ----------*/
 //header
@@ -77,6 +84,18 @@ function closeSub(){
         });
         $gnb_li_ul.stop().slideUp(speed);
         if($(window).scrollTop()==0) $header_sub.removeClass("on");
+    }
+}
+function subTitle(target){
+    var currentPos = $(window).scrollTop();
+    console.log(currentPos);
+    console.log($(target).offset().top);
+    console.log($(target).offset().top - 300);
+
+    if(currentPos >= $(target).offset().top - 300 ){
+        $(target).prev().addClass("on");
+    }else{
+        $(target).prev().removeClass("on");
     }
 }
 

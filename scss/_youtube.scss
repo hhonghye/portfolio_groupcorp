@@ -1,83 +1,86 @@
 .youtube{
     .inner{
-        #wrap{
-            width: 100%; height: 100%;
-            overflow: hidden;
-
-            .list-wrapper{
+        #youtube{
+            #wrap{
                 width: 100%; height: 100%;
-                display: flex; flex-wrap: wrap; justify-content: flex-start;
-                position: relative;
-                &::after{
-                    content: "";
-                    display: block;
-                    width: 1px; height: 100%;
-                    background: linear-gradient(#f9f9f9, #ccc,#f9f9f9);
-                    position: absolute;
-                    top: 0; left: 50%;
-                }
+                overflow: hidden;
 
-                .list{
-                    width: 46%; //rwd
-                    margin: 0 2%;
-                    padding: 80px 30px 40px; box-sizing: border-box;
-                    &:nth-of-type(odd){padding: 20px 30px 100px;}
-    
-                    .thumbnail{
-                        width: 100%; height: 270px;
-                        filter: saturate(0); transition: 0.3s;
-                        &:hover{filter: saturate(1.2); transform: scale(1.03);}
-                        a{
-                            display: block;
-                            width: 100%; height: 100%;
-                            background-repeat: no-repeat; 
-                            background-position: center; 
-                            background-size: cover;
-                            position: relative;
-                            &::after{
-                                content:""; 
-                                font:bold 14px/1 'Noto Sans KR'; color:#fff; 
-                                display:flex; 
-                                justify-content:center; align-items:center; 
-                                width: 100%; height: 100%;
-                                position:absolute; 
-                                top: 0; left: 0;
-                                opacity: 0;
-                                transition: 0.3s;
-                            }
-                            &:hover::after{opacity: 1;}
-                        }
+                .list-wrapper{
+                    width: 100%; height: 100%;
+                    display: flex; flex-wrap: wrap; justify-content: flex-start;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        display: block;
+                        width: 1px; height: 100%;
+                        background: linear-gradient(#f9f9f9, #ccc,#f9f9f9);
+                        position: absolute;
+                        top: 0; left: 50%;
                     }
-                    .contents{
-                        position: relative;
-                        &::before{
-                            content: "";
-                            display: block;
-                            width: 75%; height: 70px;
-                            background: #fff;
-                            position: absolute;
-                            top: -60px; left: -10px;
-                        }
-                        span{
-                            position: absolute;
-                            top: -50px; left: 0;
-                            font: bold 18px/1 'Noto Sans KR'; color: orange;
-                            padding: 20px 30px; box-sizing: border-box;
-                        }
-                        h2{
-                            font: 21px/1.5 'Noto Sans KR'; color: #121212;
-                            padding: 20px 30px; box-sizing: border-box;
-                        }
-                        p{
-                            font: 14px/1.7 'Noto Sans KR'; color: #777;
-                            padding: 0 30px; box-sizing: border-box;
-                        }
-                    }
-                }
 
-            }
+                    .list{
+                        width: 46%; //rwd
+                        margin: 0 2%;
+                        padding: 80px 30px 40px; box-sizing: border-box;
+                        &:nth-of-type(odd){padding: 20px 30px 100px;}
         
+                        .thumbnail{
+                            width: 100%; height: 270px;
+                            filter: saturate(0); transition: 0.3s;
+                            &:hover{filter: saturate(1.2); transform: scale(1.03);}
+                            a{
+                                display: block;
+                                width: 100%; height: 100%;
+                                background-repeat: no-repeat; 
+                                background-position: center; 
+                                background-size: cover;
+                                position: relative;
+                                &::after{
+                                    content:""; 
+                                    font:bold 14px/1 'Noto Sans KR'; color:#fff; 
+                                    display:flex; 
+                                    justify-content:center; align-items:center; 
+                                    width: 100%; height: 100%;
+                                    position:absolute; 
+                                    top: 0; left: 0;
+                                    opacity: 0;
+                                    transition: 0.3s;
+                                }
+                                &:hover::after{opacity: 1;}
+                            }
+                        }
+                        .contents{
+                            position: relative;
+                            &::before{
+                                content: "";
+                                display: block;
+                                width: 75%; height: 70px;
+                                background: #fff;
+                                position: absolute;
+                                top: -60px; left: -10px;
+                            }
+                            span{
+                                position: absolute;
+                                top: -50px; left: 0;
+                                font: bold 18px/1 'Noto Sans KR'; color: orange;
+                                padding: 20px 30px; box-sizing: border-box;
+                            }
+                            h2{
+                                font: 21px/1.5 'Noto Sans KR'; color: #121212;
+                                padding: 20px 30px; box-sizing: border-box;
+                            }
+                            p{
+                                font: 14px/1.7 'Noto Sans KR'; color: #777;
+                                padding: 0 30px; box-sizing: border-box;
+                            }
+                        }
+                    }
+
+                }
+            
+            }
         }
+        
     }
 }
 .popup{
@@ -108,70 +111,76 @@
 /* ---------- tablet ---------- */
 @media screen and (max-width: 1179px){
     .youtube .inner{
-        #wrap{
-            .list-wrapper{
-                .list{
-                    padding: 50px 20px 20px;
-                    &:nth-of-type(odd){padding: 0 20px 70px;}
-    
-                    .thumbnail{
-                        height: 20vmax;
-                    }
-                    .contents{
-                        &::before{
-                            height: 60px; top: -55px;
-                        }
-                        span{
-                            width: 75%; height: 60px;
-                            display: flex; align-items: center; justify-content: left; flex-wrap: wrap;
-                            bottom: -10px; left: -10px;
-                            font-size: 16px;
-                            padding-left: 30px;
-                        }
-                        h2{padding: 20px;}
-                        p{padding: 0 20px;}
-                    }
-                }
-
-            }
+        #youtube{
+            #wrap{
+                .list-wrapper{
+                    .list{
+                        padding: 50px 20px 20px;
+                        &:nth-of-type(odd){padding: 0 20px 70px;}
         
+                        .thumbnail{
+                            height: 20vmax;
+                        }
+                        .contents{
+                            &::before{
+                                height: 60px; top: -55px;
+                            }
+                            span{
+                                width: 75%; height: 60px;
+                                display: flex; align-items: center; justify-content: left; flex-wrap: wrap;
+                                bottom: -10px; left: -10px;
+                                font-size: 16px;
+                                padding-left: 30px;
+                            }
+                            h2{padding: 20px;}
+                            p{padding: 0 20px;}
+                        }
+                    }
+
+                }
+            
+            }
         }
+        
     }
 }
 
 /* ---------- mobile 699---------- */
 @media screen and (max-width: 699px){
     .youtube .inner{
-        #wrap{
-            .list-wrapper{
-                &::after{display: none;}
-                .list{
-                    width: 100%;
-                    padding: 0;
-                    margin: 0;
-                    &:nth-of-type(odd){padding: 0;}
-    
-                    .thumbnail{
-                        height: 50vw; filter: saturate(1);
-                    }
-                    .contents{
-                        &::before{
-                            height: 60px; top: -55px;
-                        }
-                        span{
-                            width: 70%;
-                        }
-                        h2{font-size: 18px;}
-                        p{
-                            font-size: 12px;
-                            padding-bottom: 80px;
-                        }
-                    }
-                }
-
-            }
+        #youtube{
+            #wrap{
+                .list-wrapper{
+                    &::after{display: none;}
+                    .list{
+                        width: 100%;
+                        padding: 0;
+                        margin: 0;
+                        &:nth-of-type(odd){padding: 0;}
         
+                        .thumbnail{
+                            height: 50vw; filter: saturate(1);
+                        }
+                        .contents{
+                            &::before{
+                                height: 60px; top: -55px;
+                            }
+                            span{
+                                width: 70%;
+                            }
+                            h2{font-size: 18px;}
+                            p{
+                                font-size: 12px;
+                                padding-bottom: 80px;
+                            }
+                        }
+                    }
+
+                }
+            
+            }
         }
+        
     }
 
     .popup{

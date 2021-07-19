@@ -1,6 +1,6 @@
 const url = "data/board.json"; //상대경로x?
-const boardTarget = $(".community .inner .table_wrap");
-const faqTarget = $(".community .inner .faq_wrap");
+const boardTarget = $(".community .inner .board .table_wrap");
+const faqTarget = $(".community .inner .faq");
 const resultBoardData = callBoardData(url);
 const resultFaqData = callFaqData(url);
 

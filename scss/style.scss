@@ -252,11 +252,23 @@ main{
     p{
         text-align: left;
         font: 200 38px/1.4 'Noto Sans KR'; color: #121212;
+        clip-path: inset(100% 0% 0% 0%);
+        transition: 0.5s;
     }
     span{
         display: inline-block;
         padding-right: 30px; padding-bottom: 30px; box-sizing: border-box;
         font: 18px/1.7 'Noto Sans KR'; color: #757575;
+        clip-path: inset(100% 0% 0% 0%);
+        transition: 0.5s 0.3s;
+    }
+    &.on{
+        p{
+            clip-path: inset(0% 0% 0% 0%);
+        }
+        span{
+            clip-path: inset(0% 0% 0% 0%);
+        }
     }
     
 }

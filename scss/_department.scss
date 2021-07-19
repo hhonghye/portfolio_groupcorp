@@ -1,13 +1,13 @@
 .department{
     .inner{
-
         .story{
-            width: 80%; margin: 150px auto 200px;
+            width: 80%; margin: 0 auto;
             ul{
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
                 text-align: center;
+                margin: 60px 0 250px;
                 li{
                     width: 25%;
                     position: relative;
@@ -79,11 +79,11 @@
 /* ---------- tablet ---------- */
 @media screen and (max-width: 1179px){
    .department .inner{
-
         .story{
-            width: 500px;
-            margin: 80px auto 0px;
+            width: 100%;
             ul{
+                width: 500px;
+                margin: 100px auto 0;
                 li{
                     width: 50%;
                     justify-content: center;
@@ -112,11 +112,10 @@
 @media screen and (max-width: 599px){
     .department{
         .inner{
-            
             .story{
-                width: 100%;
-                margin: 0;
                 ul{
+                    width: 100%;
+                    margin: 0;
                     li{
                         width: 100%;
                         margin-bottom: 50px;
@@ -127,7 +126,10 @@
                     }
                 }
             }
-            .organization{display: none;}
+            .organization{
+                .subTitle{padding: 0;}
+                ul{display: none;}
+            }
             .division{
                 background-image: none;
                 height: auto;
