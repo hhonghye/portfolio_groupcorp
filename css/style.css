@@ -724,17 +724,20 @@ input, select, a, button, textarea {
         object-fit: cover; }
       .department .inner .organization ul li .mask {
         position: absolute;
-        bottom: -100%;
+        bottom: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 50%;
         background: rgba(0, 0, 0, 0.5);
-        border-top-left-radius: 30px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
         display: flex;
         flex-direction: column;
         align-content: center;
         justify-content: flex-end;
-        flex-wrap: wrap; }
+        flex-wrap: wrap;
+        clip-path: inset(100% 0% 0% 0%);
+        transition: 0.5s; }
         .department .inner .organization ul li .mask p {
           font: bold 12px/1 "Noto Sans KR";
           color: #fff;
@@ -747,6 +750,8 @@ input, select, a, button, textarea {
           font: 200 20px/1 "Noto Sans KR";
           color: #fff;
           padding-bottom: 30px; }
+      .department .inner .organization ul li:hover .mask {
+        clip-path: inset(0% 0% 0% 0%); }
 .department .inner .division {
   display: none; }
 
@@ -1646,7 +1651,7 @@ input, select, a, button, textarea {
     #header.on .btn_call span {
       background: #333; }
 
-figure {
+main figure {
   width: 100%;
   height: 100vh;
   background: rgba(255, 0, 0, 0.5); }
