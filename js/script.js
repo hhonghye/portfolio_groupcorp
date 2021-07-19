@@ -9,7 +9,13 @@ const $btn_call = $header.find(".btn_call");
 const $menu_mobile = $header.find(".menu_mobile");
 let speed = 200;
 
+
 headerTabFocus();
+
+// counter(".count1", 88, 2000);
+// counter(".count2", 120, 2000);
+// counter(".count3", 999, 2500);
+
 
 /*---------- 이벤트등록 ----------*/
 //리사이즈
@@ -112,12 +118,32 @@ function sectionTitle(target){
 }
 function subContent(target){
     var currentPos = $(window).scrollTop();
-    
+
     if(currentPos >= $(target).offset().top - 500 ){
         $(target).find(".inner").find("article").addClass("on");
     }else{
         $(target).find(".inner").find("article").removeClass("on");
     }
+}
+
+function counter(el, num, time){
+    var item = $(el);
+    var current_num = parseInt(item.text());
+    var count_num = num - current_num;
+    var interval = parseInt(time/count_num);
+
+
+    var timer = setInterval(function(){
+        current_num++;
+
+        if(current_num === num){
+            clearInterval(timer);
+        }
+
+        item.text(current_num);
+    }, interval);   
+
+    
 }
 
 var swiper = new Swiper('#client .swiper-container', {
