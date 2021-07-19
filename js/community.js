@@ -107,7 +107,7 @@ function createFaqTable(target,data){
 
 /*---------- toggle ----------*/
 
-var $faq_wrap = $(".faq_wrap");
+var $faq_wrap = $("#faq");
 var $faq_btns = $faq_wrap.find("dt");
 var $faq_boxs = $faq_wrap.find("dd");
 var enableClick = true;

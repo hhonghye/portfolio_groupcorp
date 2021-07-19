@@ -615,6 +615,20 @@ input, select, a, button, textarea {
 
 /* ---------- tablet ---------- */
 @media screen and (max-width: 1179px) {
+  .community .inner #faq {
+    padding-bottom: 80px; }
+    .community .inner #faq dl dt {
+      padding: 20px 50px;
+      font-size: 15px; }
+      .community .inner #faq dl dt::before {
+        margin-top: -15px;
+        font-size: 26px; }
+      .community .inner #faq dl dt::after {
+        margin-top: -20px;
+        font-size: 36px; }
+    .community .inner #faq dl dd {
+      padding: 30px 50px;
+      font-size: 14px; }
   .community .inner #board .search_wrap {
     justify-content: center; }
     .community .inner #board .search_wrap .search select {
@@ -642,6 +656,20 @@ input, select, a, button, textarea {
       display: none; } }
 /* ---------- mobile ---------- */
 @media screen and (max-width: 599px) {
+  .community .inner #faq {
+    padding-bottom: 50px; }
+    .community .inner #faq dl dt {
+      padding: 18px 40px;
+      font-size: 13px; }
+      .community .inner #faq dl dt::before {
+        margin-top: -13px;
+        font-size: 22px; }
+      .community .inner #faq dl dt::after {
+        margin-top: -15 px;
+        font-size: 30px; }
+    .community .inner #faq dl dd {
+      padding: 20px 30px;
+      font-size: 13px; }
   .community .inner #board .search_wrap {
     width: 100%;
     justify-content: left; }

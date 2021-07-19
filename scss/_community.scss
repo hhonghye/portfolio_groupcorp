@@ -192,6 +192,27 @@
 @media screen and (max-width: 1179px){
     .community{
         .inner{
+            #faq{
+                padding-bottom: 80px;
+                dl{
+                    dt{
+                        padding: 20px 50px; 
+                        font-size: 15px;
+                        &::before{
+                            margin-top: -15px;
+                            font-size: 26px;
+                        }
+                        &::after{
+                            margin-top: -20px;
+                            font-size: 36px;
+                        }
+                    }
+                    dd{
+                        padding: 30px 50px;
+                        font-size: 14px;
+                    }
+                }
+            }
             #board{
                 .search_wrap{
                     justify-content: center;
@@ -239,6 +260,27 @@
 @media screen and (max-width: 599px){
     .community{
         .inner{
+            #faq{
+                padding-bottom: 50px;
+                dl{
+                    dt{
+                        padding: 18px 40px; 
+                        font-size: 13px;
+                        &::before{
+                            margin-top: -13px;
+                            font-size: 22px;
+                        }
+                        &::after{
+                            margin-top: -15 px;
+                            font-size: 30px;
+                        }
+                    }
+                    dd{
+                        padding: 20px 30px;
+                        font-size: 13px;
+                    }
+                }
+            }
             #board{
                 .search_wrap{
                     width: 100%;
