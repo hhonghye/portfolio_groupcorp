@@ -46,7 +46,9 @@ $(window).on("scroll", function(){
 
     sectionTitle("#introduce");
     sectionTitle("#history");
+    subContent("#history");
     sectionTitle("#service");
+    subContent("#service");
     sectionTitle("#client");
 
 });
@@ -106,6 +108,15 @@ function sectionTitle(target){
         $(target).find(".inner").find(".sectionTitle").addClass("on");
     }else{
         $(target).find(".inner").find(".sectionTitle").removeClass("on");
+    }
+}
+function subContent(target){
+    var currentPos = $(window).scrollTop();
+    
+    if(currentPos >= $(target).offset().top - 500 ){
+        $(target).find(".inner").find("article").addClass("on");
+    }else{
+        $(target).find(".inner").find("article").removeClass("on");
     }
 }
 
