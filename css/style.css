@@ -1651,10 +1651,28 @@ input, select, a, button, textarea {
     #header.on .btn_call span {
       background: #333; }
 
-main figure {
+main {
   width: 100%;
   height: 100vh;
-  background: rgba(255, 0, 0, 0.5); }
+  position: relative;
+  background: rgba(255, 0, 0, 0.4); }
+  main figure {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    main figure video {
+      width: 100%;
+      height: 100%; }
+      main figure video:nth-of-type(1) {
+        background: rgba(255, 0, 0, 0.4); }
+      main figure video:nth-of-type(2) {
+        background: rgba(0, 255, 0, 0.4); }
+      main figure video:nth-of-type(2) {
+        background: rgba(0, 0, 255, 0.4); }
+      main figure video:nth-of-type(2) {
+        background: rgba(255, 255, 0, 0.4); }
 
 .sectionTitle {
   display: flex;
@@ -1684,10 +1702,13 @@ main figure {
       justify-content: center; }
       #introduce .inner .sectionTitle p {
         text-align: center;
-        padding-bottom: 50px; }
+        padding-bottom: 50px;
+        width: 800px; }
       #introduce .inner .sectionTitle span {
         text-align: center;
-        font-size: 16px; }
+        font-size: 16px;
+        padding-right: 0;
+        width: 745px; }
     #introduce .inner > span {
       display: block;
       margin: 0 auto;
@@ -1732,12 +1753,14 @@ main figure {
   #product .inner {
     width: 100%; }
     #product .inner ul {
+      width: 100%;
       display: flex;
       justify-content: space-between;
-      align-items: center; }
+      align-content: center;
+      flex-wrap: wrap; }
       #product .inner ul li {
         width: calc(100% / 3);
-        height: 20vw;
+        height: 310px;
         flex: 1;
         transition: 0.3s; }
         #product .inner ul li a {
@@ -1759,8 +1782,10 @@ main figure {
             background: rgba(0, 0, 0, 0.6); }
           #product .inner ul li a p {
             position: absolute;
-            top: 30px;
-            left: 30px;
+            top: 0;
+            left: 0;
+            padding: 30px;
+            box-sizing: border-box;
             z-index: 2;
             font: 200 21px/2 "Noto Sans KR";
             color: #fff; }
@@ -1840,10 +1865,14 @@ main figure {
           padding: 20px;
           box-sizing: border-box; }
           #history .inner .txt .count ul li p {
+            display: block;
             font: bold 30px/1 "Noto Sans KR";
             color: indianred;
             padding-bottom: 10px; }
           #history .inner .txt .count ul li span {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
             font: 16px/1.5 "Noto Sans KR";
             color: #777; }
 #history .pic {
@@ -1878,7 +1907,8 @@ main figure {
       #service .inner article ul {
         display: flex;
         justify-content: space-between;
-        align-items: center; }
+        align-items: center;
+        flex-wrap: wrap; }
         #service .inner article ul li {
           width: calc(100% / 3);
           padding: 40px 20px 0;
@@ -1924,23 +1954,23 @@ main figure {
         width: 100%; }
         #client .inner .swiper-container .swiper-wrapper .swiper-slide {
           width: 600px;
-          height: 400px;
           opacity: 0;
           background-color: #fff;
-          margin-bottom: 20px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           flex-wrap: wrap;
           text-align: center;
-          border-radius: 5px; }
+          border-radius: 5px;
+          padding: 20px 20px;
+          box-sizing: border-box; }
           #client .inner .swiper-container .swiper-wrapper .swiper-slide img {
             display: block;
             margin: 0 auto;
             width: 250px;
             height: 180px;
-            margin-bottom: 30px;
+            margin: 30px 0;
             border-top-left-radius: 50px;
             border-bottom-right-radius: 50px; }
           #client .inner .swiper-container .swiper-wrapper .swiper-slide p {
@@ -1953,9 +1983,11 @@ main figure {
             color: #111;
             padding-bottom: 15px; }
           #client .inner .swiper-container .swiper-wrapper .swiper-slide a {
+            display: inline-block;
             font: 200 14px/1.7 "Noto Sans KR";
             color: #555;
-            border-bottom: 1px solid #888; }
+            border-bottom: 1px solid #888;
+            margin-bottom: 20px; }
           #client .inner .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active {
             opacity: 1; }
           #client .inner .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-prev {
@@ -2082,6 +2114,66 @@ main figure {
       #header .inner .btn_call {
         display: block; }
 
+  .sectionTitle p {
+    font-size: 28px;
+    padding-bottom: 30px; }
+  .sectionTitle span {
+    display: block;
+    width: 100%;
+    font-size: 16px; }
+
+  #introduce .inner {
+    width: 100%; }
+    #introduce .inner .sectionTitle span {
+      font-size: 14px; }
+
+  #product .inner ul li {
+    height: 25vmax; }
+    #product .inner ul li a p {
+      padding: 20px;
+      font-size: 16px; }
+
+  #history .inner {
+    width: 100%; }
+    #history .inner .txt .count {
+      width: 100%; }
+      #history .inner .txt .count ul {
+        justify-content: flex-end;
+        padding-right: 0; }
+        #history .inner .txt .count ul li {
+          padding: 20px 0; }
+          #history .inner .txt .count ul li p {
+            font-size: 28px; }
+          #history .inner .txt .count ul li span {
+            font-size: 14px; }
+  #history .pic {
+    height: 35vw; }
+
+  #service .inner {
+    width: 100%; }
+    #service .inner article {
+      width: 100%; }
+      #service .inner article ul li img {
+        height: 20vmin; }
+      #service .inner article ul li p {
+        font-size: 14px; }
+
+  #pic {
+    height: 38vmin; }
+
+  #client .inner {
+    width: 100%;
+    padding: 100px 20px; }
+    #client .inner .sectionTitle p {
+      font-size: 28px; }
+    #client .inner .swiper-container {
+      margin-top: 50px; }
+      #client .inner .swiper-container .swiper-wrapper .swiper-slide {
+        width: 60vmin; }
+        #client .inner .swiper-container .swiper-wrapper .swiper-slide img {
+          width: 30vmin;
+          height: 20vmin; }
+
   #footer .inner {
     width: 100%;
     text-align: center;
@@ -2098,6 +2190,72 @@ main figure {
     #header .inner .menu_mobile {
       right: -100%;
       width: 100%; }
+
+  .sectionTitle p {
+    font-size: 22px;
+    padding-bottom: 15px; }
+  .sectionTitle span {
+    font-size: 14px; }
+
+  #introduce .inner {
+    width: 100%;
+    padding: 70px 20px; }
+    #introduce .inner .sectionTitle p {
+      font-size: 18px;
+      padding-bottom: 30px; }
+    #introduce .inner .sectionTitle span {
+      font-size: 12px; }
+
+  #product .inner ul li {
+    width: 100%;
+    flex: none; }
+    #product .inner ul li a p {
+      font-size: 14px; }
+    #product .inner ul li:hover {
+      flex: none; }
+
+  #history .inner {
+    padding: 80px 20px 30px; }
+    #history .inner .txt .count ul {
+      justify-content: center; }
+      #history .inner .txt .count ul li p {
+        font-size: 21px; }
+  #history .pic {
+    height: 40vw; }
+
+  #service .inner {
+    padding: 70px 20px; }
+    #service .inner article ul li {
+      width: 100%;
+      padding: 0; }
+      #service .inner article ul li img {
+        height: 30vw;
+        margin-bottom: 20px; }
+      #service .inner article ul li p {
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 50px; }
+
+  #pic {
+    height: 45vw; }
+
+  #client .inner {
+    padding: 70px 20px; }
+    #client .inner .sectionTitle p {
+      font-size: 22px;
+      width: 70%; }
+    #client .inner .swiper-container .swiper-wrapper .swiper-slide {
+      width: 100%; }
+      #client .inner .swiper-container .swiper-wrapper .swiper-slide img {
+        width: 50vmin;
+        height: 30vmin; }
+      #client .inner .swiper-container .swiper-wrapper .swiper-slide p {
+        font-size: 16px; }
+      #client .inner .swiper-container .swiper-wrapper .swiper-slide span {
+        width: 100%;
+        font-size: 14px; }
+      #client .inner .swiper-container .swiper-wrapper .swiper-slide a {
+        font-size: 13px; }
 
   #footer .inner {
     font: 12px/1.5 'Noto Sans KR';
