@@ -367,7 +367,7 @@ input, select, a, button, textarea {
     height: 300px; }
     .content .subpage_visual h1 {
       top: 50%;
-      font-size: 4vw; }
+      font-size: 21px; }
   .content .inner {
     width: 100%;
     min-height: none;
@@ -400,7 +400,7 @@ input, select, a, button, textarea {
     height: 200px; }
     .content .subpage_visual h1 {
       top: 55%;
-      font-size: 24px; }
+      font-size: 18px; }
   .content .inner {
     padding: 60px 20px; }
     .content .inner section .subTitle p {
