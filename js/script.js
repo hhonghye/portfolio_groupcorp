@@ -51,10 +51,16 @@ $btn_call.on("click", function(e){
 $(window).on("scroll", function(){
 
     sectionTitle("#introduce");
+    subContent("#introduce");
+
+    subContent("#product");
+
     sectionTitle("#history");
     subContent("#history");
+
     sectionTitle("#service");
     subContent("#service");
+    
     sectionTitle("#client");
 
 });
@@ -110,20 +116,41 @@ function headerTabFocus(){
 function sectionTitle(target){
     var currentPos = $(window).scrollTop();
 
-    if(currentPos >= $(target).offset().top - 500 ){
+    if(currentPos >= $(target).offset().top - 500){
         $(target).find(".inner").find(".sectionTitle").addClass("on");
+
     }else{
         $(target).find(".inner").find(".sectionTitle").removeClass("on");
     }
+
 }
 function subContent(target){
     var currentPos = $(window).scrollTop();
 
-    if(currentPos >= $(target).offset().top - 500 ){
+    if(currentPos >= $(target).offset().top - 500){
         $(target).find(".inner").find("article").addClass("on");
+
+        //introduce span(btn)
+        if(target == "#introduce") $(target).find(".inner").find("span").addClass("on");
+        //history img
+        if(target == "#history") $(target).find(".pic").addClass("on");
+
     }else{
         $(target).find(".inner").find("article").removeClass("on");
+
+        //introduce span(btn)
+        $(target).find(".inner").find("span").removeClass("on");
+        //history img
+        $(target).find(".pic").removeClass("on");
     }
+
+    //product title
+    (currentPos >= $("#product").offset().top - 700) ? $("#product").addClass("on") : $("#product").removeClass("on");
+    
+
+
+
+    
 }
 
 function counter(el, num, time){

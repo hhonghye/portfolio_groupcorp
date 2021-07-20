@@ -252,22 +252,19 @@ main{
     p{
         text-align: left;
         font: 200 38px/1.4 'Noto Sans KR'; color: #121212;
-        clip-path: inset(100% 0% 0% 0%);
-        transition: 0.5s;
+        transform: translateY(70px); opacity: 0;
+        transition: 0.4s;
     }
     span{
         display: inline-block;
         padding-right: 30px; padding-bottom: 30px; box-sizing: border-box;
         font: 18px/1.7 'Noto Sans KR'; color: #757575;
-        clip-path: inset(100% 0% 0% 0%);
-        transition: 0.5s 0.3s;
+        transform: translateY(70px); opacity: 0;
+        transition: 0.4s 0.1s;
     }
     &.on{
-        p{
-            clip-path: inset(0% 0% 0% 0%);
-        }
-        span{
-            clip-path: inset(0% 0% 0% 0%);
+        p, span{
+            transform: translateY(0); opacity: 1;
         }
     }
     
@@ -292,8 +289,9 @@ main{
             border-radius: 17px;
             position: relative;
             cursor: pointer;
-            transition: width 0.6s;
             font-size: 0;
+            transform: translateY(70px); opacity: 0;
+            transition: width 0.6s, transform 0.4s 0.2s, opacity 0.4s 0.1s; 
             &::before{
                 content: "";
                 width: 1px; height: 14px;
@@ -309,6 +307,7 @@ main{
                 top: 50%; left: 50%; transform: translate(-50%, -50%);
             }
             &:hover{
+                content: "";
                 width: 100px;
                 font: 200 14px/34px "Noto Sans KR"; color: #fff;
                 text-align: center;
@@ -316,6 +315,7 @@ main{
                 &::after{display: none;}
                 
             }
+            &.on{transform: translateY(0); opacity: 1;}
         }
         
     }
@@ -351,6 +351,8 @@ main{
                         position: absolute; top: 0; left: 0;
                         padding: 30px; box-sizing: border-box;
                         z-index: 2;
+                        transform: translateY(70px); opacity: 0;
+                        transition: 0.4s;
                         font: 200 21px/2 "Noto Sans KR"; color: #fff;
                     }
                     span{
@@ -404,6 +406,7 @@ main{
             }
         }
     }
+    &.on .inner ul li a p{transform: translateY(0); opacity: 1;}
 }
 
 #history{
@@ -419,7 +422,6 @@ main{
             
             .count{
                 position: relative;
-                clip-path: inset(0% 0% 0% 100%);
                 transition: 0.3s 0.6s;
                 ul{
                     width: 100%; height: 100%;
@@ -430,8 +432,9 @@ main{
                     text-align: center;
                     li{
                         width: 150px; 
-                        padding: 20px;
-                        box-sizing: border-box;
+                        padding: 20px; box-sizing: border-box;
+                        transform: translateY(70px); opacity: 0;
+                        transition: 0.4s;
                         p{
                             display: block;
                             font: bold 24px/1 "Noto Sans KR"; color: #222;
@@ -442,12 +445,21 @@ main{
                             width: 100px;
                             font:  16px/1.5 "Noto Sans KR"; color: #777;
                         }
-                        &:nth-of-type(1) p::after{content: " %"; font-size: 18px;}
-                        &:nth-of-type(2) p::after{content: " +"; font-size: 18px;}
-                        &:nth-of-type(3) p::after{content: ""; font-size: 18px;}
+                        &:nth-of-type(1){
+                            transition-delay: 0.4s;
+                            p::after{content: " %"; font-size: 18px;}
+                        } 
+                        &:nth-of-type(2){
+                            transition-delay: 0.5s;
+                            p::after{content: " +"; font-size: 18px;}
+                        }
+                        &:nth-of-type(3){
+                            transition-delay: 0.6s;
+                            p::after{content: ""; font-size: 18px;}
+                        } 
                     }
                 }
-                &.on{clip-path: inset(0% 0% 0% 0%);}
+                &.on ul li{transform: translateY(0); opacity: 1;}
             }
         }
     }
@@ -455,12 +467,15 @@ main{
     .pic{
         width: 80%; height: 30vw;
         position: relative;
+        transform: translateY(70px); opacity: 0;
+        transition: 0.4s 0.7s;
         img{
             width: 100%; height: 100%;
             object-fit: cover;
             position: absolute; top: 0; left: 0;
             z-index: 2;
         }
+        &.on{transform: translateY(0); opacity: 1;}
         
     }
 }
@@ -476,13 +491,12 @@ main{
             width: 900px;
             float: right;
             margin-top: 30px;
-            clip-path: inset(0% 0% 0% 100%);
-            transition: 0.5s 0.5s;
             ul{
                 display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
                 li{
                     width: calc(100% / 3);
                     padding: 40px 20px 0; box-sizing: border-box;
+                    transition: 0.4s 0.4s;
                     img{
                         display: block;
                         width: 100%; height: 150px;
@@ -492,9 +506,32 @@ main{
                     p{
                         font: 200 16px/1.5 "Noto Sans KR"; color: #121212;
                     }
+                    &:nth-of-type(1){transform: translateX(-50px); opacity: 0;} 
+                    &:nth-of-type(2){opacity: 0;} 
+                    &:nth-of-type(3){transform: translateX(50px); opacity: 0;} 
                 }
+
+                // li{
+                //     width: calc(100% / 3);
+                //     padding: 40px 20px 0; box-sizing: border-box;
+                //     transform: translateY(70px); opacity: 0;
+                //     transition: 0.4s;
+                //     img{
+                //         display: block;
+                //         width: 100%; height: 150px;
+                //         margin-bottom: 50px;
+                //         object-fit: contain;
+                //     }
+                //     p{
+                //         font: 200 16px/1.5 "Noto Sans KR"; color: #121212;
+                //     }
+                //     &:nth-of-type(1){transition-delay: 0.4s;} 
+                //     &:nth-of-type(2){transition-delay: 0.5s;} 
+                //     &:nth-of-type(3){transition-delay: 0.6s;} 
+                // }
             }
-            &.on{clip-path: inset(0% 0% 0% 0%);}
+            // &.on ul li{transform: translateY(0); opacity: 1;}
+            &.on ul li{transform: translateX(0); opacity: 1;}
         }
     }
     
