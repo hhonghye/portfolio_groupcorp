@@ -8,7 +8,9 @@ getFlickr(url,"suzi54241");
 
 
 /*--------이벤트등록--------*/
-
+$(document).ready(function() {
+    subTitle("#gallery");
+});
 //scroll subTitle event
 $(window).on("scroll", function(){
     subTitle("#gallery");

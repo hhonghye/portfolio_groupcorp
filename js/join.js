@@ -1,5 +1,7 @@
 /*---------- 이벤트등록 ----------*/
-
+$(document).ready(function() {
+    subTitle("#join");
+});
 //scroll subTitle event
 $(window).on("scroll", function(){
     subTitle("#join");
