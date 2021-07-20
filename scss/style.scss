@@ -275,7 +275,7 @@ main{
     .inner{
         width: 1180px;
         margin: 0 auto;
-        padding: 100px 20px; box-sizing: border-box; 
+        padding: 150px 20px; box-sizing: border-box; 
         .sectionTitle{
             justify-content: center;
             p{text-align: center; padding-bottom: 50px; width: 800px;}
@@ -345,7 +345,7 @@ main{
                         content: "";
                         width: 100%; height: 100%;
                         position: absolute; top: 0; left: 0;
-                        background: rgba(0, 0, 0, 0.6);
+                        background: rgba(0, 0, 0, 0.5);
                     }
                     p{
                         position: absolute; top: 0; left: 0;
@@ -353,20 +353,20 @@ main{
                         z-index: 2;
                         transform: translateY(70px); opacity: 0;
                         transition: 0.4s;
-                        font: 200 21px/2 "Noto Sans KR"; color: #fff;
+                        font: 200 21px/2 "Noto Sans KR"; color: #000;
                     }
                     span{
                         position: absolute; bottom: 30px; right: 30px;
                         content: "";
                         display: block;
                         width: 30px; height: 1px;
-                        background: #fff;
+                        background: #333;
                         z-index: 2;
                         transition: 0.3s;
                         &::before{
                             content: "";
                             width: 20px; height: 1px;
-                            background: #fff;
+                            background: #333;
                             transform-origin: right center;
                             transform: rotate(45deg);
                             position: absolute; top: 0; right: 0;
@@ -375,7 +375,7 @@ main{
                         &::after{
                             content: "";
                             width: 20px; height: 1px;
-                            background: #fff;
+                            background: #333;
                             transform-origin: right center;
                             transform: rotate(-45deg);
                             position: absolute; top: 0; right: 0;
@@ -386,15 +386,19 @@ main{
                 &:hover{
                     flex: 1.2;
                     a{
+                        p{color: #fff;}
                         &::after{
                             display: block;
                         }
                         span{
+                            background: #fff;
                             width: 100px;
                             &::before{
+                                background: #fff;
                                 transform: rotate(0);
                             }
                             &::after{
+                                background: #fff;
                                 transform: rotate(0);
                             }
                         }
@@ -413,7 +417,7 @@ main{
     .inner{
         width: 1180px;
         margin: 0 auto;
-        padding: 100px 20px 50px; box-sizing: border-box;
+        padding: 150px 20px 100px; box-sizing: border-box;
         .txt{
             display: flex;
             justify-content: space-between;
@@ -485,7 +489,7 @@ main{
     .inner{
         width: 1180px;
         margin: 0 auto;
-        padding: 100px 20px; padding-bottom: 100px; box-sizing: border-box;
+        padding: 150px 20px; box-sizing: border-box;
         &::after{content: ""; display: block; clear: both;}
         article{
             width: 900px;
@@ -551,7 +555,7 @@ main{
     .inner{
         width: 90%; 
         margin: 0 auto;
-        padding: 100px 0; box-sizing: border-box;
+        padding: 130px 0; box-sizing: border-box;
         .sectionTitle{
             justify-content: center;
             p{

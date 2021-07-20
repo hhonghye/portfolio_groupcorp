@@ -60,7 +60,7 @@ $(window).on("scroll", function(){
 
     sectionTitle("#service");
     subContent("#service");
-    
+
     sectionTitle("#client");
 
 });
@@ -132,8 +132,15 @@ function subContent(target){
 
         //introduce span(btn)
         if(target == "#introduce") $(target).find(".inner").find("span").addClass("on");
-        //history img
-        if(target == "#history") $(target).find(".pic").addClass("on");
+        //history
+        if(target == "#history"){
+            //counter
+            counter(".count1", 80, 20);
+            counter(".count2", 100, 25);
+            counter(".count3", 550, 10);
+            //img
+            $(target).find(".pic").addClass("on");
+        }
 
     }else{
         $(target).find(".inner").find("article").removeClass("on");
@@ -147,28 +154,24 @@ function subContent(target){
     //product title
     (currentPos >= $("#product").offset().top - 700) ? $("#product").addClass("on") : $("#product").removeClass("on");
     
-
-
-
-    
 }
 
 function counter(el, num, time){
     var item = $(el);
     var current_num = parseInt(item.text());
     var count_num = num - current_num;
-    var interval = parseInt(time/count_num);
 
+    if(current_num >= num) return;
 
     var timer = setInterval(function(){
         current_num++;
 
-        if(current_num === num){
+        if(current_num >= num){
             clearInterval(timer);
         }
 
         item.text(current_num);
-    }, interval);   
+    }, time);   
 
     
 }
