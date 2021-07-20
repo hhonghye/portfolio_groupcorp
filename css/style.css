@@ -2268,10 +2268,12 @@ main {
     width: 100%; }
     #service .inner article {
       width: 100%; }
-      #service .inner article ul li img {
-        height: 20vmin; }
-      #service .inner article ul li p {
-        font-size: 14px; }
+      #service .inner article ul li {
+        padding: 0 20px; }
+        #service .inner article ul li img {
+          height: 15vw; }
+        #service .inner article ul li p {
+          font-size: 14px; }
 
   #pic {
     height: 38vmin; }
