@@ -167,8 +167,8 @@ var swiper = new Swiper('#client .swiper-container', {
         prevEl: '.swiper-button-prev',
         nextEl: '.swiper-button-next',
     },
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false, //스와이프 후 자동재생
-    // }
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false, //스와이프 후 자동재생
+    }
 });
