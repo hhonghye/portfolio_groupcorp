@@ -135,9 +135,9 @@ function subContent(target){
         //history
         if(target == "#history"){
             //counter
-            counter(".count1", 80, 20);
-            counter(".count2", 100, 25);
-            counter(".count3", 550, 10);
+            counter(".count1", 120, 20);
+            counter(".count2", 95, 35);
+            counter(".count3", 550, 5);
             //img
             $(target).find(".pic").addClass("on");
         }

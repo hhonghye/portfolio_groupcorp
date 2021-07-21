@@ -36,6 +36,11 @@ $("body").on("click", ".popup .close", function(){
 $(".search_gallery button").on("click", function(){
     var tags = $(this).prev().val();
 
+    if(tags == ""){
+        alert("검색어를 입력하세요.");
+        return;
+    } 
+
     getFlickr(url_search, "", tags);
 });
 
@@ -45,6 +50,10 @@ $(window).on("keypress", function(e){
     if(e.keyCode == 13) {
         var tags = $(".search_gallery input[type=text]").val();
 
+        if(tags == ""){
+            alert("검색어를 입력하세요.");
+            return;
+        } 
         getFlickr(url_search, "", tags);
     }
 

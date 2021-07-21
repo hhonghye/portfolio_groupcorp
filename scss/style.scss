@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700;900&display=swap');
 
 @import "reset.scss";
 @import "subpage_layout.scss";
@@ -205,6 +205,7 @@
 
     &.on{
         background: #fff;
+        border-bottom: 1px solid #efefef;
         .inner h1 a{
             color: #333;
         }
@@ -235,15 +236,56 @@ main{
     figure{
         width: 100%; height: 100%;
         position: absolute; top: 0; left: 0;
-        video{
-            width: 100%; height: 100%;
-            &:nth-of-type(1){background: rgba(255,0 ,0 ,0.4);}
-            &:nth-of-type(2){background: rgba(0,255 ,0 ,0.4);}
-            &:nth-of-type(2){background: rgba(0,0 ,255 ,0.4);}
-            &:nth-of-type(2){background: rgba(255, 255, 0, 0.4);}
-            
+        video, img{
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%; object-fit: cover;
         }
+        img{display: none;}  
+    }
+    .tab_wrap{
+        width: 100%;
+        position: absolute; bottom: 0; left: 0;
+        ul{
+            width: 100%;
+            display: flex; justify-content: space-between; align-items: center;
+            li{
+                width: calc(100% / 4); height: 250px;
+                background: rgba(0, 0, 0, 0.3);
+                backdrop-filter: blur(10px);
+                clip-path: inset(50px 0% 0% 0%);
+                transition: 0.5s;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                p{
+                    position: absolute; 
+                    top: 0; left: 50%; transform: translateX(-50%);
+                    font: bold 18px/1.5 "Noto Sans KR"; color: #fff;
+                    padding-bottom: 10px;
+                    padding-top: 100px; box-sizing: border-box;
+                    transition: 0.5s;
+                    &::before{
+                        display: block;
+                        font: bold 12px/1 "Noto Sans KR"; color: #fff;
+                        padding-bottom: 10px;
+                    }
+                }
+                &:hover{
+                    clip-path: inset(0% 0% 0% 0%);
+                    background: rgba(207, 207, 207, 0.5);
+                    p{
+                        color: #333;
+                        &::before{color: #333;
+                        }
+                    }
 
+                }
+                @for $i from 1 through 4{
+                    &:nth-of-type(#{$i}) p::before{content: "0#{$i}";}
+                }
+               
+                
+            }
+        }
     }
 }
 
@@ -404,9 +446,9 @@ main{
                         }
                     }
                 }
-                &:nth-of-type(1) a{background: url(../img/main/product1.jpg);}
-                &:nth-of-type(2) a{background: url(../img/main/product2.jpg);}
-                &:nth-of-type(3) a{background: url(../img/main/product3.jpg);}
+                @for $i from 1 through 3{
+                    &:nth-of-type(#{$i}) a{background: url(../img/main/product#{$i}.jpg);}
+                }
             }
         }
     }
@@ -514,27 +556,7 @@ main{
                     &:nth-of-type(2){opacity: 0;} 
                     &:nth-of-type(3){transform: translateX(50px); opacity: 0;} 
                 }
-
-                // li{
-                //     width: calc(100% / 3);
-                //     padding: 40px 20px 0; box-sizing: border-box;
-                //     transform: translateY(70px); opacity: 0;
-                //     transition: 0.4s;
-                //     img{
-                //         display: block;
-                //         width: 100%; height: 150px;
-                //         margin-bottom: 50px;
-                //         object-fit: contain;
-                //     }
-                //     p{
-                //         font: 200 16px/1.5 "Noto Sans KR"; color: #121212;
-                //     }
-                //     &:nth-of-type(1){transition-delay: 0.4s;} 
-                //     &:nth-of-type(2){transition-delay: 0.5s;} 
-                //     &:nth-of-type(3){transition-delay: 0.6s;} 
-                // }
             }
-            // &.on ul li{transform: translateY(0); opacity: 1;}
             &.on ul li{transform: translateX(0); opacity: 1;}
         }
     }

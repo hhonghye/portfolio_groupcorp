@@ -1,0 +1,20 @@
+{
+    "video" : [
+        {
+            "vidSrc" : "img/visual/",
+            "imgSrc" : "img/visual/visual_bg.jpg"
+        },
+        {
+            "vidSrc" : "img/visual/",
+            "imgSrc" : "img/visual/visual_bg.jpg"
+        },
+        {
+            "vidSrc" : "img/visual/",
+            "imgSrc" : "img/visual/visual_bg.jpg"
+        },
+        {
+            "vidSrc" : "img/visual/",
+            "imgSrc" : "img/visual/visual_bg.jpg"
+        }
+    ]
+}
