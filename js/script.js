@@ -11,14 +11,14 @@ let speed = 200;
 /*-- main visual --*/
 const $visual = $("#visual");
 const $mainVid = $visual.find("figure").find("video");
+const $visualTab = $visual.find(".tab");
+const $visualTab_ul_li = $visualTab.children("ul").children("li");
 
 
 /*---------- 함수호출 ----------*/
 //header
 headerTabFocus();
-//main visual
-visualVid();
-
+visualVid()
 
 /*---------- 이벤트등록 ----------*/
 //리사이즈
@@ -49,6 +49,7 @@ $btn_call.on("click", function(e){
         $menu_mobile.addClass("on");
     }
 });
+
 
 /*-- scroll event --*/
 $(window).on("scroll", function(){
@@ -116,9 +117,25 @@ function headerTabFocus(){
 }
 
 /*-- visual --*/
+
 function visualVid(){
-    let mainVidSrc = $mainVid.attr("src");
-    console.log(mainVidSrc);
+    // for(var i=0 ; i<$visualTab_ul_li.length ; i++){
+    //     $visualTab_ul_li.eq(i).on("click", function(){
+    //         $mainVid.attr({src: "img/visual/visual_vid_"+i+".mp4"});
+    //     });
+    // }
+    $visualTab_ul_li.eq(0).on("click", function(){
+        $mainVid.attr({src: "img/visual/visual_vid_0.mp4"});
+    });
+    $visualTab_ul_li.eq(1).on("click", function(){
+        $mainVid.attr({src: "img/visual/visual_vid_1.mp4"});
+    });
+    $visualTab_ul_li.eq(2).on("click", function(){
+        $mainVid.attr({src: "img/visual/visual_vid_2.mp4"});
+    });
+    $visualTab_ul_li.eq(3).on("click", function(){
+        $mainVid.attr({src: "img/visual/visual_vid_3.mp4"});
+    });
 }
 
 
