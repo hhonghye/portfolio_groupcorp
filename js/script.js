@@ -1,5 +1,5 @@
 /*---------- Dom Caching ----------*/
-//header
+/*-- header --*/
 const $header = $("#header");
 const $gnb = $("#gnb");
 const $gnb_li = $gnb.children("li");
@@ -8,13 +8,16 @@ const $btn_call = $header.find(".btn_call");
 //햄버거메뉴
 const $menu_mobile = $header.find(".menu_mobile");
 let speed = 200;
+/*-- main visual --*/
+const $visual = $("#visual");
+const $mainVid = $visual.find("figure").find("video");
 
 
+/*---------- 함수호출 ----------*/
+//header
 headerTabFocus();
-
-// counter(".count1", 88, 2000);
-// counter(".count2", 120, 2000);
-// counter(".count3", 999, 2500);
+//main visual
+visualVid();
 
 
 /*---------- 이벤트등록 ----------*/
@@ -23,7 +26,7 @@ headerTabFocus();
 //     console.log($(document).width());
 // });
 
-//header
+/*-- header --*/
 $gnb_li.on("mouseenter", openSub);
 $gnb_li.on("mouseleave", closeSub);
 $(window).on("scroll", function(){
@@ -47,7 +50,7 @@ $btn_call.on("click", function(e){
     }
 });
 
-//scroll event
+/*-- scroll event --*/
 $(window).on("scroll", function(){
 
     sectionTitle("#introduce");
@@ -66,6 +69,7 @@ $(window).on("scroll", function(){
 });
 
 /*---------- 함수정의 ----------*/
+/*-- header --*/
 //header
 function openSub(){
     $header
@@ -99,7 +103,6 @@ function closeSub(){
         if($(window).scrollTop()==0) $header.removeClass("on");
     }
 }
-
 //tab focusEvent
 function headerTabFocus(){
     $gnb_li.each(function(index){
@@ -112,6 +115,14 @@ function headerTabFocus(){
     });
 }
 
+/*-- visual --*/
+function visualVid(){
+    let mainVidSrc = $mainVid.attr("src");
+    console.log(mainVidSrc);
+}
+
+
+/*-- sub --*/
 //scroll event sectionTitle
 function sectionTitle(target){
     var currentPos = $(window).scrollTop();
@@ -124,6 +135,7 @@ function sectionTitle(target){
     }
 
 }
+//scroll event subContent
 function subContent(target){
     var currentPos = $(window).scrollTop();
 
@@ -155,7 +167,7 @@ function subContent(target){
     (currentPos >= $("#product").offset().top - 700) ? $("#product").addClass("on") : $("#product").removeClass("on");
     
 }
-
+//service counter
 function counter(el, num, time){
     var item = $(el);
     var current_num = parseInt(item.text());
@@ -175,7 +187,7 @@ function counter(el, num, time){
 
     
 }
-
+//swiper 연결
 var swiper = new Swiper('#client .swiper-container', {
     effect: 'coverflow',
     grabCursor: true,
