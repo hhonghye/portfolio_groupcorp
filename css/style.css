@@ -467,7 +467,12 @@ input, select, button, textarea {
         right: 30px;
         margin-top: -22px;
         font: 200 40px/1 'Noto Sans KR';
-        color: #666; }
+        color: #666;
+        transition: 0.2s; }
+      .community .inner #faq dl dt.on::after {
+        transform: rotate(225deg);
+        right: 32px;
+        margin-top: -15px; }
     .community .inner #faq dl dd {
       font: 16px/1.7 'Noto Sans KR';
       color: #333;

@@ -25,9 +25,13 @@
                         content: "+";
                         position: absolute; top: 50%; right: 30px; margin-top: -22px;
                         font: 200 40px/1 'Noto Sans KR'; color: #666;
+                        transition: 0.2s;
                     }
                     &.on{
-                        // &::after{content: "-";}
+                        &::after{
+                            transform: rotate(225deg);
+                            right: 32px; margin-top: -15px;
+                        }
                     }
                 }
                 dd{
