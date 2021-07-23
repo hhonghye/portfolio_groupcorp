@@ -2458,6 +2458,8 @@ input, select, button, textarea {
     #header .inner .menu_mobile {
       right: -100%;
       width: 100%; }
+      #header .inner .menu_mobile #gnb_mobile > li > a {
+        font-size: 30px; }
 
   #visual .tab {
     top: 50%;

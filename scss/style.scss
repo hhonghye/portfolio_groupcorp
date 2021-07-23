@@ -811,20 +811,11 @@
         padding: 0 20px; box-sizing: border-box;
         .inner{
             width: 100%; height: 80px;
-    
             .menu_web{
-                #gnb{
-                    display: none;
-                }
-                .util{
-                    display: none;
-                }
+                #gnb{display: none;}
+                .util{display: none;}
             }
-    
-            .btn_call{
-                display: block;
-            }
-    
+            .btn_call{display: block;}
         }
     }
 
@@ -987,9 +978,12 @@
                 }
             }
             .menu_mobile{
-                right: -100%;
-                width: 100%;
+                right: -100%; width: 100%;
+                #gnb_mobile{
+                    >li >a{font-size: 30px;}
+                }
             }
+            
         }
 
     }
