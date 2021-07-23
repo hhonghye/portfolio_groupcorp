@@ -18,7 +18,7 @@ const $visualTab_ul_li = $visualTab.children("ul").children("li");
 /*---------- 함수호출 ----------*/
 //header
 headerTabFocus();
-visualVid()
+visualTabVid()
 
 /*---------- 이벤트등록 ----------*/
 //리사이즈
@@ -118,68 +118,36 @@ function headerTabFocus(){
 
 /*-- visual --*/
 
-function visualVid(){
-    var newVid;
-
+function visualTabVid(){
     $visualTab_ul_li.eq(0).on("click", function(){
-        //newVid에 새로운 영상 태그 등록
-        newVid = `<figure class="newVid">
-                        <video src="img/visual/visual_vid_0.mp4" loop muted autoplay></video> 
-                    </figure>`;
-        //추가되어있던 newVid를 제거
-        $visual.find(".newVid").fadeOut(function(){
-            this.remove();
-        });
-        //newVid를 oldVid 앞에 추가
-        $visual.prepend(newVid);
-        //oldVid 사라지게함
-        $visual.find(".defaultVid").fadeOut(function(){
-            this.remove();
-        });
-        
+        vidChange(0);
     });
     $visualTab_ul_li.eq(1).on("click", function(){
-        newVid = `<figure class="newVid">
-                        <video src="img/visual/visual_vid_1.mp4" loop muted autoplay></video> 
-                    </figure>`;
-        $visual.find(".newVid").fadeOut(function(){
-            this.remove();
-        });
-        $visual.prepend(newVid);
-        $visual.find(".defaultVid").fadeOut(function(){
-            this.remove();
-        });
-        
+        vidChange(1);
     });
     $visualTab_ul_li.eq(2).on("click", function(){
-        newVid = `<figure class="newVid">
-                        <video src="img/visual/visual_vid_2.mp4" loop muted autoplay></video> 
-                    </figure>`;
-        $visual.find(".newVid").fadeOut(function(){
-            this.remove();
-        });
-        $visual.prepend(newVid);
-        $visual.find(".defaultVid").fadeOut(function(){
-            this.remove();
-        });
-        
+        vidChange(2);
     });
     $visualTab_ul_li.eq(3).on("click", function(){
-        newVid = `<figure class="newVid">
-                        <video src="img/visual/visual_vid_3.mp4" loop muted autoplay></video> 
-                    </figure>`;
-        
-        $visual.find(".newVid").fadeOut(function(){
-            this.remove();
-        });
-        $visual.prepend(newVid);
-        $visual.find(".defaultVid").fadeOut(function(){
-            this.remove();
-        });
-        
+        vidChange(3);
     });
 }
-
+function vidChange(i){
+    //newVid에 새로운 영상 태그 등록
+    var newVid = `<figure class="newVid">
+                        <video src="img/visual/visual_vid_${i}.mp4" loop muted autoplay></video> 
+                    </figure>`;
+    //추가되어있던 newVid를 제거
+    $visual.find(".newVid").fadeOut(function(){
+        this.remove();
+    });
+    //newVid를 oldVid 앞에 추가
+    $visual.prepend(newVid);
+    //oldVid 사라지게함
+    $visual.find(".defaultVid").fadeOut(function(){
+        this.remove();
+    });
+}
 
 /*-- sub --*/
 //scroll event sectionTitle
