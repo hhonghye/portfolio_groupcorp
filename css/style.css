@@ -162,7 +162,7 @@ input, select, button, textarea {
         position: absolute;
         top: 50%;
         margin-top: -1px;
-        transition: 0.5s, opacity 0.5s 0.5s; }
+        transition: opacity 0.5s 0.5s; }
       #header_sub .inner .btn_call.on::before {
         top: calc(50% - 1px);
         transform: rotate(45deg);
@@ -1650,7 +1650,7 @@ input, select, button, textarea {
         position: absolute;
         top: 50%;
         margin-top: -1px;
-        transition: 0.5s, opacity 0.5s 0.5s; }
+        transition: opacity 0.5s 0.5s; }
       #header .inner .btn_call.on::before {
         top: calc(50% - 1px);
         transform: rotate(45deg);

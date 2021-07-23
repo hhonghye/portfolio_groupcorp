@@ -101,7 +101,6 @@
                         width: 1px; height: 10px;
                         background: #ccc;
                     }
-                    // &:nth-of-type(1) a{cursor: wait;}
                     &:last-of-type::after{display: none;}
                 }
             }
@@ -134,7 +133,7 @@
                 background: #fff;
                 text-indent: -9999px;
                 position: absolute; top: 50%; margin-top: -1px;
-                transition: 0.5s, opacity 0.5s 0.5s;
+                transition: opacity 0.5s 0.5s;
             }
             &.on{
                 &::before{
@@ -183,7 +182,6 @@
                         width: 1px; height: 10px;
                         background: #ccc;
                     }
-                    // &:nth-of-type(1) a{cursor: wait;}
                     &:last-of-type::after{display: none;}
                     
                 }
