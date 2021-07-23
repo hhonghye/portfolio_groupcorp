@@ -122,8 +122,6 @@ input, select, button, textarea {
           width: 1px;
           height: 10px;
           background: #ccc; }
-        #header_sub .inner .menu_web .util li:nth-of-type(1) a {
-          cursor: wait; }
         #header_sub .inner .menu_web .util li:last-of-type::after {
           display: none; }
     #header_sub .inner .btn_call {
@@ -213,8 +211,6 @@ input, select, button, textarea {
             width: 1px;
             height: 10px;
             background: #ccc; }
-          #header_sub .inner .menu_mobile .util_mobile li:nth-of-type(1) a {
-            cursor: wait; }
           #header_sub .inner .menu_mobile .util_mobile li:last-of-type::after {
             display: none; }
       #header_sub .inner .menu_mobile #gnb_mobile > li > a {
@@ -1593,8 +1589,6 @@ input, select, button, textarea {
           width: 1px;
           height: 10px;
           background: #ccc; }
-        #header .inner .menu_web .util li:nth-of-type(1) a {
-          cursor: wait; }
         #header .inner .menu_web .util li:last-of-type::after {
           display: none; }
     #header .inner .btn_call {
@@ -1684,8 +1678,6 @@ input, select, button, textarea {
             width: 1px;
             height: 10px;
             background: #ccc; }
-          #header .inner .menu_mobile .util_mobile li:nth-of-type(1) a {
-            cursor: wait; }
           #header .inner .menu_mobile .util_mobile li:last-of-type::after {
             display: none; }
       #header .inner .menu_mobile #gnb_mobile > li > a {
