@@ -1709,15 +1709,14 @@ input, select, button, textarea {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: #ccc;
+  background: #aaa;
   overflow: hidden; }
   #visual figure {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
-    background: #000; }
+    left: 0; }
     #visual figure video {
       position: absolute;
       top: 0;
@@ -1729,7 +1728,7 @@ input, select, button, textarea {
   #visual .tab {
     width: 100%;
     position: absolute;
-    top: 50%;
+    top: 47%;
     left: 0;
     z-index: 2; }
     #visual .tab ul {
@@ -1783,28 +1782,6 @@ input, select, button, textarea {
           background: rgba(0, 0, 0, 0.15); }
           #visual .tab ul li:hover span::after {
             width: 200%; }
-  #visual .mask {
-    width: 100%;
-    height: 100vh; }
-    #visual .mask div {
-      width: 25%;
-      height: 100%;
-      background: black;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      transition: 1s ease; }
-      #visual .mask div:nth-of-type(2) {
-        transition-delay: 0.05s;
-        left: 25%; }
-      #visual .mask div:nth-of-type(3) {
-        transition-delay: 0.1s;
-        left: 50%; }
-      #visual .mask div:nth-of-type(4) {
-        transition-delay: 0.15s;
-        left: 75%; }
-    #visual .mask.on div {
-      top: -100%; }
 
 .sectionTitle {
   display: flex;
