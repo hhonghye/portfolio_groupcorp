@@ -119,27 +119,64 @@ function headerTabFocus(){
 /*-- visual --*/
 
 function visualVid(){
+    var newVid;
 
     $visualTab_ul_li.eq(0).on("click", function(){
-        var newVid = `<video src="img/visual/visual_vid_0.mp4" loop muted autoplay></video> `;
-        $visual.find("figure").append(newVid);
-        $mainVid.fadeOut();
+        //newVid에 새로운 영상 태그 등록
+        newVid = `<figure class="newVid">
+                        <video src="img/visual/visual_vid_0.mp4" loop muted autoplay></video> 
+                    </figure>`;
+        //추가되어있던 newVid를 제거
+        $visual.find(".newVid").fadeOut(function(){
+            this.remove();
+        });
+        //newVid를 oldVid 앞에 추가
+        $visual.prepend(newVid);
+        //oldVid 사라지게함
+        $visual.find(".defaultVid").fadeOut(function(){
+            this.remove();
+        });
+        
     });
-
     $visualTab_ul_li.eq(1).on("click", function(){
-        $mainVid.animate({opacity: 0}, function(){
-            $mainVid.attr({src: "img/visual/visual_vid_1.mp4"}).animate({opacity: 1});
-        })
+        newVid = `<figure class="newVid">
+                        <video src="img/visual/visual_vid_1.mp4" loop muted autoplay></video> 
+                    </figure>`;
+        $visual.find(".newVid").fadeOut(function(){
+            this.remove();
+        });
+        $visual.prepend(newVid);
+        $visual.find(".defaultVid").fadeOut(function(){
+            this.remove();
+        });
+        
     });
     $visualTab_ul_li.eq(2).on("click", function(){
-        $mainVid.animate({opacity: 0}, function(){
-            $mainVid.attr({src: "img/visual/visual_vid_2.mp4"}).animate({opacity: 1});
-        })
+        newVid = `<figure class="newVid">
+                        <video src="img/visual/visual_vid_2.mp4" loop muted autoplay></video> 
+                    </figure>`;
+        $visual.find(".newVid").fadeOut(function(){
+            this.remove();
+        });
+        $visual.prepend(newVid);
+        $visual.find(".defaultVid").fadeOut(function(){
+            this.remove();
+        });
+        
     });
     $visualTab_ul_li.eq(3).on("click", function(){
-        $mainVid.animate({opacity: 0}, function(){
-            $mainVid.attr({src: "img/visual/visual_vid_3.mp4"}).animate({opacity: 1});
-        })
+        newVid = `<figure class="newVid">
+                        <video src="img/visual/visual_vid_3.mp4" loop muted autoplay></video> 
+                    </figure>`;
+        
+        $visual.find(".newVid").fadeOut(function(){
+            this.remove();
+        });
+        $visual.prepend(newVid);
+        $visual.find(".defaultVid").fadeOut(function(){
+            this.remove();
+        });
+        
     });
 }
 
