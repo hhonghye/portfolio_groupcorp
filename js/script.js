@@ -135,7 +135,7 @@ function visualTabVid(){
 function vidChange(i){
     //newVid에 새로운 영상 태그 등록
     var newVid = `<figure class="newVid">
-                        <video src="img/visual/visual_vid_${i}.mp4" loop muted autoplay></video> 
+                        <video src="img/main/visual/visual_vid_${i}.mp4" loop muted autoplay></video> 
                     </figure>`;
     //추가되어있던 newVid를 제거
     $visual.find(".newVid").fadeOut(function(){

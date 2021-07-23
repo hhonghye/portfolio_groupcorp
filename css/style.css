@@ -2081,7 +2081,7 @@ input, select, button, textarea {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-right: 100px;
+        padding-right: 50px;
         box-sizing: border-box;
         text-align: center; }
         #history .inner .txt .count ul li {
@@ -2122,7 +2122,7 @@ input, select, button, textarea {
         opacity: 1; }
 #history .pic {
   width: 85%;
-  height: 30vw;
+  height: 460px;
   transform: translateY(70px);
   opacity: 0;
   transition: 0.4s 0.7s;
@@ -2158,16 +2158,16 @@ input, select, button, textarea {
         flex-wrap: wrap; }
         #service .inner article ul li {
           width: calc(100% / 3);
-          padding: 40px 20px 0;
+          padding: 30px;
           box-sizing: border-box;
           transition: 0.4s 0.4s; }
           #service .inner article ul li img {
             display: block;
-            width: 100%;
             height: 150px;
-            margin-bottom: 50px;
+            margin: 30px auto;
             object-fit: contain; }
           #service .inner article ul li p {
+            padding-top: 20px;
             font: 200 16px/1.5 "Noto Sans KR";
             color: #121212; }
           #service .inner article ul li:nth-of-type(1) {
@@ -2181,15 +2181,6 @@ input, select, button, textarea {
       #service .inner article.on ul li {
         transform: translateX(0);
         opacity: 1; }
-
-#pic {
-  width: 100%;
-  height: 330px;
-  background: url(../img/main/pic1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed; }
 
 #client {
   background: rgba(239, 239, 239, 0.7); }
@@ -2419,7 +2410,8 @@ input, select, button, textarea {
           #history .inner .txt .count ul li span {
             font-size: 14px; }
   #history .pic {
-    height: 35vw; }
+    width: 100%;
+    height: 320px; }
 
   #service .inner {
     width: 100%; }
@@ -2431,9 +2423,6 @@ input, select, button, textarea {
           height: 15vw; }
         #service .inner article ul li p {
           font-size: 14px; }
-
-  #pic {
-    height: 38vmin; }
 
   #client .inner {
     width: 100%;
@@ -2536,9 +2525,6 @@ input, select, button, textarea {
         text-align: center;
         font-size: 14px;
         margin-bottom: 50px; }
-
-  #pic {
-    height: 45vw; }
 
   #client .inner {
     padding: 70px 20px; }
