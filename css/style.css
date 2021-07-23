@@ -1728,7 +1728,7 @@ input, select, button, textarea {
   #visual .tab {
     width: 100%;
     position: absolute;
-    top: 47%;
+    top: 45%;
     left: 0;
     z-index: 2; }
     #visual .tab ul {
@@ -1782,6 +1782,32 @@ input, select, button, textarea {
           background: rgba(0, 0, 0, 0.15); }
           #visual .tab ul li:hover span::after {
             width: 200%; }
+  #visual .sub {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+    #visual .sub .contact {
+      position: absolute;
+      bottom: 30px;
+      left: 30px; }
+      #visual .sub .contact p {
+        display: inline;
+        font: bold 13px/1 "Noto sans KR";
+        color: #fff; }
+      #visual .sub .contact span {
+        font: 12px/1 "Noto Sans KR";
+        color: #fff; }
+    #visual .sub .sns {
+      position: absolute;
+      bottom: 30px;
+      right: 30px; }
+      #visual .sub .sns li a {
+        display: inline-block;
+        margin-top: 15px; }
+        #visual .sub .sns li a svg {
+          font-size: 21px;
+          color: #fff; }
 
 .sectionTitle {
   display: flex;
