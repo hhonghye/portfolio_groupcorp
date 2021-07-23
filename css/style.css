@@ -244,6 +244,9 @@ input, select, button, textarea {
     width: 100%;
     height: 400px;
     background: rgba(51, 51, 51, 0.445);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative; }
     .content .subpage_visual h1 {
       position: absolute;
@@ -429,6 +432,8 @@ input, select, button, textarea {
     #footer_sub .inner h1 {
       padding-bottom: 20px;
       font: bold 18px/1 'arial'; } }
+.community .subpage_visual {
+  background: url(../img/subpage/community_visual.jpg); }
 .community .inner #faq {
   width: 100%;
   padding-bottom: 130px; }
@@ -708,6 +713,8 @@ input, select, button, textarea {
     height: 0%; }
   to {
     height: 100%; } }
+.department .subpage_visual {
+  background: url(../img/subpage/department_visual.jpg); }
 .department .inner #story {
   width: 80%;
   margin: 0 auto; }
@@ -887,6 +894,8 @@ input, select, button, textarea {
         margin-left: 140px; }
         .department .inner .division .division_tree li ul li ul li span::after {
           display: none; } }
+.youtube .subpage_visual {
+  background: url(../img/subpage/youtube_visual.jpg); }
 .youtube .inner #youtube #wrap {
   width: 100%;
   height: 100%;
@@ -1058,6 +1067,8 @@ input, select, button, textarea {
 
   .popup span {
     font-size: 14px; } }
+.gallery .subpage_visual {
+  background: url(../img/subpage/gallery_visual.jpg); }
 .gallery .inner {
   width: 85%;
   min-height: 800px; }
@@ -1205,6 +1216,8 @@ input, select, button, textarea {
     .gallery .inner #gallery .list li a img {
       height: 45vw;
       filter: saturate(1); } }
+.location .subpage_visual {
+  background: url(../img/subpage/location_visual.jpg); }
 .location .inner #location .map_wrap {
   width: 100%;
   position: relative; }
@@ -1304,6 +1317,8 @@ input, select, button, textarea {
         padding-bottom: 20px;
         margin-bottom: 20px;
         border-bottom: 1px solid #ccc; } }
+.join .subpage_visual {
+  background: url(../img/subpage/join_visual.jpg); }
 .join .inner {
   width: 90vmin;
   margin: 0 auto; }

@@ -19,8 +19,8 @@ headerTabFocus();
 // });
 
 //header
-$header_sub.on("mouseenter", openSub);
-$header_sub.on("mouseleave", closeSub);
+$gnb_li.on("mouseenter", openSub);
+$gnb_li.on("mouseleave", closeSub);
 $(window).on("scroll", function(){
     if($(window).scrollTop()==0){
         $header_sub.removeClass("on");
