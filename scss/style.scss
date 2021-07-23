@@ -1071,7 +1071,7 @@
             }
         }
     
-        .pic{height: 40vw;}
+        .pic{height: 250px;}
     }
     
     #service{
@@ -1081,8 +1081,8 @@
                 ul{
                     li{
                         width: 100%; padding: 0;
-                        img{height: 30vw; margin-bottom: 20px;}
-                        p{ text-align: center; font-size: 14px; margin-bottom: 50px;}
+                        img{height: 30vw; margin: 0 auto;}
+                        p{ text-align: center; font-size: 14px; padding: 50px;}
                     }
                 }
             }

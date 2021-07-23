@@ -2518,7 +2518,7 @@ input, select, button, textarea {
       #history .inner .txt .count ul li p {
         font-size: 21px; }
   #history .pic {
-    height: 40vw; }
+    height: 250px; }
 
   #service .inner {
     padding: 70px 20px; }
@@ -2527,11 +2527,11 @@ input, select, button, textarea {
       padding: 0; }
       #service .inner article ul li img {
         height: 30vw;
-        margin-bottom: 20px; }
+        margin: 0 auto; }
       #service .inner article ul li p {
         text-align: center;
         font-size: 14px;
-        margin-bottom: 50px; }
+        padding: 50px; }
 
   #client .inner {
     padding: 70px 20px; }
