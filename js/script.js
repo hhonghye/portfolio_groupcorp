@@ -78,7 +78,7 @@ function openSub(){
             $("<div class='bgGnb'>")
                 .css({
                     width: "100%",
-                    height: 300,
+                    height: 250,
                     backgroundColor: "#fff",
                     position: "absolute",
                     top: 0,

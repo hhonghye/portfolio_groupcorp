@@ -101,6 +101,7 @@
                         width: 1px; height: 10px;
                         background: #ccc;
                     }
+                    &:nth-of-type(1) a{cursor: wait;}
                     &:last-of-type::after{display: none;}
                 }
             }
@@ -182,6 +183,7 @@
                         width: 1px; height: 10px;
                         background: #ccc;
                     }
+                    &:nth-of-type(1) a{cursor: wait;}
                     &:last-of-type::after{display: none;}
                     
                 }
