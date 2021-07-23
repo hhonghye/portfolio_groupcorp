@@ -1855,6 +1855,20 @@ input, select, button, textarea {
         #visual .sub .sns li a svg {
           font-size: 21px;
           color: #fff; }
+    #visual .sub button {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 38px;
+      height: 38px;
+      border-radius: 19px;
+      border: 1px solid #fff;
+      background: none;
+      cursor: pointer;
+      display: none; }
+      #visual .sub button svg {
+        font-size: 16px;
+        color: #fff; }
 
 .sectionTitle {
   display: flex;
@@ -2362,6 +2376,21 @@ input, select, button, textarea {
       #header .inner .btn_call {
         display: block; }
 
+  #visual .tab ul li::after {
+    top: 40px; }
+  #visual .tab ul li div {
+    width: 100%;
+    padding: 15px; }
+    #visual .tab ul li div h2 {
+      font-size: 16px;
+      margin-bottom: 60px; }
+  #visual .sub .contact p {
+    font-size: 12px; }
+  #visual .sub .sns li a {
+    margin-top: 10px; }
+    #visual .sub .sns li a svg {
+      font-size: 18px; }
+
   .sectionTitle p {
     font-size: 28px;
     padding-bottom: 30px; }
@@ -2438,6 +2467,33 @@ input, select, button, textarea {
     #header .inner .menu_mobile {
       right: -100%;
       width: 100%; }
+
+  #visual .tab {
+    top: 50%;
+    transform: translateY(-50%); }
+    #visual .tab ul {
+      flex-direction: column; }
+      #visual .tab ul li {
+        width: 100%; }
+        #visual .tab ul li div {
+          height: auto; }
+          #visual .tab ul li div h2 {
+            margin-bottom: 10px; }
+          #visual .tab ul li div p {
+            display: none; }
+        #visual .tab ul li:hover div::after {
+          display: none; }
+  #visual .sub .contact {
+    bottom: 20px;
+    left: 20px; }
+    #visual .sub .contact p, #visual .sub .contact span {
+      display: block;
+      font-size: 10px;
+      margin-bottom: 5px; }
+  #visual .sub .sns {
+    display: none; }
+  #visual .sub button {
+    display: block; }
 
   .sectionTitle p {
     font-size: 22px;
