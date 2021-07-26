@@ -1778,7 +1778,7 @@ input, select, button, textarea {
           margin: 0 auto;
           padding: 30px;
           box-sizing: border-box;
-          transition: 1s;
+          transition: 1s ease;
           position: relative;
           cursor: pointer; }
           #visual .tab ul li div span {
