@@ -7,12 +7,14 @@ const $gnb_li_ul = $gnb_li.children("ul");
 const $btn_call = $header.find(".btn_call");
 //햄버거메뉴
 const $menu_mobile = $header.find(".menu_mobile");
-let speed = 200;
+var speed = 200;
 /*-- main visual --*/
 const $visual = $("#visual");
 const $mainVid = $visual.find("figure").find("video");
 const $visualTab = $visual.find(".tab");
 const $visualTab_ul_li = $visualTab.children("ul").children("li");
+
+var resize;
 
 
 /*---------- 함수호출 ----------*/
@@ -21,10 +23,14 @@ headerTabFocus();
 visualTabVid()
 
 /*---------- 이벤트등록 ----------*/
-//리사이즈
-// $(window).resize(function(){
-//     console.log($(document).width());
-// });
+//resize
+$(window).resize(function(){
+    resize = $(document).width();
+    if(resize >= 1180){
+        $header.find(".btn_call").removeClass("on");
+        $header.find(".menu_mobile").removeClass("on");
+    }
+});
 
 /*-- skipNavi --*/
 $("#skipNavi a").on("focusin", function(){

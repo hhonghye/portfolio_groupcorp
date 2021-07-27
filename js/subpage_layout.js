@@ -7,16 +7,28 @@ const $gnb_li_ul = $gnb_li.children("ul");
 const $btn_call = $header_sub.find(".btn_call");
 //햄버거메뉴
 const $menu_mobile = $header_sub.find(".menu_mobile");
-let speed = 200;
+var speed = 200;
+var resize;
 
 headerTabFocus();
 
 /*---------- 이벤트등록 ----------*/
-//리사이즈
-// let resize;
-// $(window).resize(function(){
-//     resize = $(document).width();
-// });
+//resize
+$(window).resize(function(){
+    resize = $(document).width();
+    if(resize >= 1180){
+        $header_sub.find(".btn_call").removeClass("on");
+        $header_sub.find(".menu_mobile").removeClass("on");
+    }
+});
+
+/*-- skipNavi --*/
+$("#skipNavi a").on("focusin", function(){
+    $(this).addClass("on");
+});
+$("#skipNavi a").on("focusout", function(){
+    $(this).removeClass("on");
+});
 
 //header
 $gnb_li.on("mouseenter", openSub);
