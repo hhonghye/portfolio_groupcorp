@@ -7,12 +7,19 @@ const $gnb_li_ul = $gnb_li.children("ul");
 const $btn_call = $header_sub.find(".btn_call");
 //햄버거메뉴
 const $menu_mobile = $header_sub.find(".menu_mobile");
+const $subpage_content = $(".content");
+const $subpage_visual = $subpage_content.children(".subpage_visual");
 var speed = 200;
 var resize;
 
 headerTabFocus();
 
 /*---------- 이벤트등록 ----------*/
+//ready
+$(document).ready(function(){
+    $subpage_visual.css({opacity: 1});
+});
+
 //resize
 $(window).resize(function(){
     resize = $(document).width();
