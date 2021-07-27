@@ -26,6 +26,14 @@ visualTabVid()
 //     console.log($(document).width());
 // });
 
+/*-- skipNavi --*/
+$("#skipNavi a").on("focusin", function(){
+    $(this).addClass("on");
+});
+$("#skipNavi a").on("focusout", function(){
+    $(this).removeClass("on");
+});
+
 /*-- header --*/
 $gnb_li.on("mouseenter", openSub);
 $gnb_li.on("mouseleave", closeSub);
